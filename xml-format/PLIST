@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/xml-format
+share/xml-format/Config/dbk/block-tags.txt
+share/xml-format/Config/dbk/line-tags.txt
+share/xml-format/Config/dbk/sectioning-tags.txt
+man/man1/xml-format.1

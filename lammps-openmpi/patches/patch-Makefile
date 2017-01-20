@@ -1,0 +1,12 @@
+$NetBSD$
+
+--- Makefile.orig	2012-08-23 14:07:14.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+ # LAMMPS multiple-machine Makefile
+ 
+-SHELL = /bin/bash
++SHELL = /bin/sh
+ #.IGNORE:
+ 
+ # Definitions

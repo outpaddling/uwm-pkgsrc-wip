@@ -1,0 +1,21 @@
+$NetBSD$
+
+--- build/Makefile_SRL1.orig	2012-01-30 12:19:35.000000000 +0000
++++ build/Makefile_SRL1
+@@ -225,11 +225,11 @@ clean:
+ 
+ # Generic target template
+ #=====================================================================
+-uknown_platform:
+-	$(MAKE) LD="path to FORTRAN90 Linker-loaDer" \
+-	LDFLAGS="appropriate flags for LD" \
+-	FC="path to FORTRAN90 compiler" \
+-	FCFLAGS="appropriate flags for FC" \
++gfortran:
++	$(MAKE) LD="gfortran" \
++	LDFLAGS="" \
++	FC="gfortran" \
++	FCFLAGS="-O2 -c" \
+ 	EX=$(EX) BINROOT=$(BINROOT) $(TYPE)
+ 
+ # System specific targets follow:

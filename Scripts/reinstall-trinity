@@ -1,0 +1,39 @@
+#!/bin/sh -e
+
+
+##########################################################################
+#   Function description:
+#       Pause until user presses return
+##########################################################################
+
+pause()
+{
+    local junk
+    
+    printf "Press return to continue..."
+    read junk
+}
+
+depends="bowtie bowtie2 samtools samtools01 jellyfish parafly p5-transdecoder \
+    slclust Trimmomatic rsem"
+
+printf "Remove everything? y/[n] "
+read remove
+if [ 0$remove = 0y ]; then
+    pkg_delete='pkg_delete -f'
+    $pkg_delete $depends || true
+    pause
+fi
+
+prefix=$(dirname $(dirname $(which bmake)) | sed -e 's|pkg|pkgsrc|g')
+echo $prefix
+cd $prefix/wip
+git pull -r
+cd trinity
+bmake clean
+bmake clean-depends
+bmake
+# Do this late to minimize uninstalled time
+bmake deinstall
+bmake install
+

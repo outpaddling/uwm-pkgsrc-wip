@@ -1,0 +1,20 @@
+@comment $NetBSD$
+bin/pyfasta
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyfasta/fasta.py
+${PYSITELIB}/pyfasta/fasta.pyc
+${PYSITELIB}/pyfasta/fasta.pyo
+${PYSITELIB}/pyfasta/__init__.py
+${PYSITELIB}/pyfasta/__init__.pyc
+${PYSITELIB}/pyfasta/__init__.pyo
+${PYSITELIB}/pyfasta/records.py
+${PYSITELIB}/pyfasta/records.pyc
+${PYSITELIB}/pyfasta/records.pyo
+${PYSITELIB}/pyfasta/split_fasta.py
+${PYSITELIB}/pyfasta/split_fasta.pyc
+${PYSITELIB}/pyfasta/split_fasta.pyo

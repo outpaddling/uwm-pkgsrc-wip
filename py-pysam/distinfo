@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (pysam/v0.8.3.tar.gz) = 2ab51450e8826c1c5026e4b485eed9e7ae3014d4
+RMD160 (pysam/v0.8.3.tar.gz) = c7d77b580f8db8484e965ad4af568176f9918be1
+Size (pysam/v0.8.3.tar.gz) = 2828558 bytes
+SHA1 (patch-htslib_cram_cram__io.c) = a0817c6e9545878dabd2f34e7010e4aaff7379be
+SHA1 (patch-pysam_TabProxies.pyx) = 8a4aac090fbd844fc6e1d758a31cc7be6be364c1
+SHA1 (patch-pysam_tabix__util.c) = 64172c7a1e794ba99b5eab2e45fa948b0d581bb7
+SHA1 (patch-samtools_bam__tview__curses.c) = 0f3cb747beaa629e0fc8f7dd2105a669099fe5fb

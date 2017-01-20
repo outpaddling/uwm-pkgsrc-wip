@@ -1,0 +1,12 @@
+
+commit patches:
+    libusb, libpaper
+
+cgal package without qt?
+
+swig2 pkgsrc buildlink changes
+
+security/munge needs security/libgcrypt on CentOS
+
+Tool to check pkgsrc binaries for non-pkgsrc libs
+

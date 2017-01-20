@@ -1,0 +1,45 @@
+#!/bin/sh -e
+
+##########################################################################
+#   Script description:
+#       
+#   Arguments:
+#       
+#   Returns:
+#       
+#   History:
+#   Date        Name        Modification
+#   2016-09-06  Jason Bacon Begin
+##########################################################################
+
+usage()
+{
+    printf "Usage: $0 prefix\n"
+    exit 1
+}
+
+
+##########################################################################
+#   Main
+##########################################################################
+
+if [ $# != 1 ]; then
+    usage
+fi
+
+prefix=$1
+
+printf "Patching $prefix with 2016Q1 patches.  Are you sure?  yes/[no] "
+read sure
+if [ 0$sure != 0yes ]; then
+    exit
+fi
+
+boost_dir=$prefix/meta-pkgs/boost
+patch_dir=$prefix/jb-wip/Patches/2016Q1
+
+echo $boost_dir
+
+cp $patch_dir/boost/patch* $boost_dir/patches
+cp $patch_dir/boost/distinfo $boost_dir
+

@@ -1,0 +1,6 @@
+
+===========================================================================
+This slave port installs only the openmpi binary.
+
+For docs, examples, and data files, install the master port, ../lammps.
+===========================================================================

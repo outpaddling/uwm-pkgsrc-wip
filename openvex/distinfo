@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (openvex-0.5.3.tar.xz) = 2f1a2424409976a43a29fb625eccd090bb3d1af6
+RMD160 (openvex-0.5.3.tar.xz) = f09b522c790fa372751327ab958b2200f56fdea0
+SHA512 (openvex-0.5.3.tar.xz) = 96ebca46e3d66b366913613225ef913f760e8bdabcb1458647db3efc1552e1c0dabdc39ed60a08c15f4d64769d76d26a31cbc4e55c03f3c9afa0335f05cf9d9f
+Size (openvex-0.5.3.tar.xz) = 377184 bytes
+SHA1 (patch-Include_Makefile.sdcc__defs) = 94c07b8c60b30075323e5f2ddf386627d81b475f

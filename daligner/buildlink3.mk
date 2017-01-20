@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	daligner
+
+.if !defined(DALIGNER_BUILDLINK3_MK)
+DALIGNER_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.daligner+=	daligner>=2015.08.17
+BUILDLINK_PKGSRCDIR.daligner?=	../../jb-wip/daligner
+.endif	# DALIGNER_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-daligner

@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (pedstats-0.6.12.tar.gz) = ff55a9d892ef85e9ab56ebe5f4fc0d4668bc1896
+RMD160 (pedstats-0.6.12.tar.gz) = 51a78a043600c8a15c0cc5926f0a432b87f2a7ea
+Size (pedstats-0.6.12.tar.gz) = 179567 bytes
+SHA1 (patch-Makefile) = 7dab440b85a85f7762af81e52bbd9d562e98fcfb

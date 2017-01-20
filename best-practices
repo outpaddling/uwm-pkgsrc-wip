@@ -1,0 +1,11 @@
+
+Document any deviations from the ideal, such as
+
+-   Using USE_GCC, CXXFLAGS+=-std=g++11, etc.
+
+-   Reasons not to run the latest release
+
+    Something depends on an older release
+    There are unacceptable known bugs with the latest
+
+-   DEPENDS use pkg-[0-9]* rather than pkg>=0

@@ -1,0 +1,54 @@
+#!/bin/sh -e
+
+##########################################################################
+#   Script description:
+#       
+#   Arguments:
+#       
+#   Returns:
+#       
+#   History:
+#   Date        Name        Modification
+#   2015-08-26  Jasson BaconBegin
+##########################################################################
+
+usage()
+{
+    printf "Usage: $0 [pkgsrc-prefix]\n"
+    exit 1
+}
+
+
+##########################################################################
+#   Main
+##########################################################################
+
+if [ $# -gt 1 ]; then
+    usage
+fi
+
+if [ $# = 1 ]; then
+    # Pkgsrc
+    prefix=$1
+    if [ -e $prefix ]; then
+	cd $prefix/jb-wip
+	svn up
+	cd py-pbfalcon
+	set +e
+	pkg_delete -rv py27-isodate
+	pkg_delete -rv dazz_db
+	pkg_delete -rv daligner
+	pkg_delete -rv py27-pypeflow
+	pkg_delete -rv py27-networkx
+	set -e
+	bmake clean
+	bmake clean-depends
+	bmake
+	# Do this late to minimize uninstalled time
+	bmake deinstall
+	bmake install
+    fi
+else
+    usage
+fi
+

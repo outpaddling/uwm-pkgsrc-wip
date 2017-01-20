@@ -1,0 +1,14 @@
+$NetBSD$
+
+SHA1 (ea-utils.1.1.2-806.tar.gz) = b8e99f04a636773e97d141ab266b9fd0474f6072
+RMD160 (ea-utils.1.1.2-806.tar.gz) = 09453ec36e985cdee8975c3dc722cefeb2910eb8
+Size (ea-utils.1.1.2-806.tar.gz) = 14030049 bytes
+SHA1 (patch-Makefile) = 4fd1e2ed5073a96da155cc6399afaa1879e60341
+SHA1 (patch-fastq-clipper.cpp) = 4af370bcaf66f9ebb4c81af36c7fee417e4038e1
+SHA1 (patch-fastq-join.cpp) = b8fe5246439553dfee867cf39aaee7bcb38fde1b
+SHA1 (patch-fastq-lib.cpp) = 399f8745d479a068c77d41b8dd99000dc30b3db2
+SHA1 (patch-fastq-mcf.cpp) = b0d3513867bc90a24bb32a8bed3f18a4d4872157
+SHA1 (patch-fastq-multx.cpp) = 00739983d7cc809c30c0eeaaae5b52aff0283f1b
+SHA1 (patch-fastq-stats.cpp) = ce4bdd47cf330c38bb577846f0520fc2e20097fd
+SHA1 (patch-tidx_tidx-lib.cpp) = 2fe46aed90b9e6d7fe3bda254faf203fc49c8142
+SHA1 (patch-varcall.cpp) = 0d7602367288939902713c78502e6f8abf605f82

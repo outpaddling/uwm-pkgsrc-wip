@@ -1,0 +1,40 @@
+#!/bin/sh -e
+
+##########################################################################
+#   Script description:
+#       
+#   Arguments:
+#       
+#   Returns:
+#       
+#   History:
+#   Date        Name        Modification
+#   2016-08-17  root        Begin
+##########################################################################
+
+usage()
+{
+    printf "Usage: $0 dir\n"
+    exit 1
+}
+
+
+##########################################################################
+#   Main
+##########################################################################
+
+if [ $# != 1 ]; then
+    usage
+fi
+
+prefix=$1
+printf "Applying 2016Q2 patches to $prefix.\n"
+printf "Are you sure you want to do this?  yes/[no] "
+read sure
+if [ 0$sure = 0yes ]; then
+    cd $prefix/devel/confuse
+    mv Makefile Makefile.orig
+    sed -e 's|\${MASTER_SITE_GITHUB:=martinh/}|https://github.com/martinh/|' \
+	Makefile.orig > Makefile
+fi
+

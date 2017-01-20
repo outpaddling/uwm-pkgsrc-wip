@@ -1,0 +1,38 @@
+#!/bin/sh -e
+
+if [ $# != 1 ]; then
+    printf "Usage: $0 pkg-name\n"
+    exit 1
+fi
+
+pkg=$1
+if [ ! -e ../wip/$pkg ]; then
+    printf "${pkg}: No such package.\n"
+    exit 1
+fi
+
+if [ -e $pkg-wip ]; then
+    printf "../wip/$pkg-wip already exists.\n"
+    exit 1
+fi
+
+if [ `uname` = 'NetBSD' ]; then
+    make='make'
+else
+    make='bmake'
+fi
+
+cd ../wip/$pkg
+$make clean
+cd ..
+cp -R $pkg ../jb-wip/$pkg-wip
+
+# Remove versioning stuff
+cd ../jb-wip/$pkg-wip
+find . -d -name CVS -exec rm -rf '{}' \;
+
+# Import to jb-wip repo
+cd ..
+svn add $pkg-wip
+svncom 'Import $pkg from wip'
+

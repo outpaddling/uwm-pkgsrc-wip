@@ -1,0 +1,37 @@
+
+PKG_DEVELOPER=yes in ${PREFIX}/etc/mk.conf
+
+Makefile:
+
+    USE_TOOLS+=perl if any perl scripts intalled
+
+    Do not use FETCH_USING in Makefile
+
+    Use MASTER_SITE_SOURCEFORGE, MASTER_SITE_GITHUB, etc. if possible
+        See mk/fetch/github for packages downloading from Github
+
+    Use REPLACE_PERL, REPLACE_PYTHON, etc.
+
+    USE_LANGUAGES=c is the default and can be omitted if only C is used
+
+    HOMEPAGE should not have /../
+    
+    INSTALLATION_DIRS instead of AUTO_MKDIRS or MKDIR
+
+DESCR:
+
+    Homepage URL in DESCR is redundant (pkg_info will display HOMEPAGE)
+
+Create buildlink3.mk only if installing libraries or headers
+
+Test on NetBSD
+
+Test on other supported platforms (CentOS, Darwin, ...)
+
+Make pkglint -Wall and pkglint -e run clean
+
+Remove extraneous files
+
+Add to pkgsrc-wip
+
+Email ?? to request a review

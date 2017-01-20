@@ -1,0 +1,13 @@
+$NetBSD$
+
+SHA1 (condor_src-8.2.6-all-all.tar.gz) = 70fcc7015655c9af35331c65fea8564e157b1857
+RMD160 (condor_src-8.2.6-all-all.tar.gz) = 7033245a2a4e33c445727b1dac0611543a90885e
+Size (condor_src-8.2.6-all-all.tar.gz) = 19137825 bytes
+SHA1 (patch-build-cmake-CondorPackageConfig.cmake) = 5b08eb63fa1d06d4027fc16860c80648e784b4ba
+SHA1 (patch-build_cmake_macros_SystemSpecificInformations.cmake) = 9d35cccfb003c62cf800eb51828e9ad86ad8a791
+SHA1 (patch-src-condor_utils-condor_config.cpp) = 278d89fdba843b0914cb8c395c4e1c2f17ce61fb
+SHA1 (patch-src_condor__includes_config.h.cmake) = cdd0078a55c52a2d358b82bc7ad576785cd89376
+SHA1 (patch-src_condor__power_power__state.cpp) = 4e7f00f7151c39c1f209b2427c36f4cb0893ada5
+SHA1 (patch-src_condor__sysapi_idle__time.cpp) = aed0897d6df2985d21e16dff47c1e303b5347edb
+SHA1 (patch-src_python-bindings_dc__tool.cpp) = 7c6151aad91d20cb8187af057793d1141a603d00
+SHA1 (patch-src_python-bindings_secman.cpp) = b973d12bf6db2403be54a37b4cadeabf6acd369b

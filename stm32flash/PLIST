@@ -1,0 +1,2 @@
+@comment $NetBSD$
+bin/stm32flash

@@ -1,0 +1,103 @@
+#!/bin/sh -e
+
+##########################################################################
+#   Function description:
+#       Pause until user presses return
+##########################################################################
+
+pause()
+{
+    local junk
+    
+    printf "Press return to continue..."
+    read junk
+}
+
+if [ $# != 1 ]; then
+    printf "Usage: $0 pkg-name\n"
+    exit 1
+fi
+
+# Strip trailing /
+pkg=`basename "$1"`
+
+if `echo $pkg | fgrep -q '/'`; then
+    printf "Package name must not contain a '/'.\n"
+    exit 1
+fi
+
+if [ ! -e $pkg ]; then
+    printf "${pkg}: No such package.\n"
+    exit 1
+fi
+
+if [ ! -e ../wip ]; then
+    printf "Missing ../wip.\n"
+    exit 1
+fi
+
+if [ -e ../wip/$pkg ]; then
+    printf "../wip/$pkg already exists.\n"
+    exit
+fi
+
+if [ -z EDITOR ]; then
+    EDITOR=vi
+fi
+
+if [ `uname` = 'NetBSD' ]; then
+    make='make'
+else
+    make='bmake'
+fi
+
+cd ../wip
+git pull --rebase || true
+
+cd ../jb-wip/$pkg
+svn ci -m 'Clean up'
+
+# Copy pkg to wip
+$make clean || true
+cd ..
+rsync -av --delete $pkg ../wip
+
+# Remove files from other version control systems
+cd ../wip/$pkg
+find . -depth -name CVS -exec rm -rf '{}' \;
+find . -depth -name .svn -exec rm -rf '{}' \;
+$make makesum || true
+
+suffix=jb-wip-to-wip
+sed -e 's|jb-wip|wip|g' Makefile > Makefile.$suffix
+mv -f Makefile.$suffix Makefile
+if [ -e buildlink3.mk ]; then
+    sed -e 's|jb-wip|wip|g' buildlink3.mk > buildlink3.mk.$suffix
+    mv -f buildlink3.mk.$suffix buildlink3.mk
+fi
+
+$EDITOR Makefile
+if [ -e buildlink3.mk ]; then
+    $EDITOR buildlink3.mk
+fi
+
+printf "Continue? y/[n] "
+read continue
+if [ 0$continue != 0y ]; then
+    exit
+fi
+
+# Add TODO file
+if [ ! -e TODO ]; then
+    printf "Clean up and test\n" > TODO
+fi
+
+# Add new package to git repo
+../../jb-wip/import-package.sh
+
+# Cleanly remove from jb-wip
+cd ../../jb-wip
+
+printf "Editing dependent packages.  Convert jb-wip/$pkg depends to wip/$pkg.\n"
+pause
+./edit-deps $pkg

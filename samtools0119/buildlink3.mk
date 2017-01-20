@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	samtools01
+
+.if !defined(SAMTOOLS_BUILDLINK3_MK)
+SAMTOOLS_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.samtools01+=	samtools01>=0.1.19
+BUILDLINK_PKGSRCDIR.samtools01?=	../../jb-wip/samtools0119
+.endif	# SAMTOOLS_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-samtools01

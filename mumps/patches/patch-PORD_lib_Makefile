@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- PORD/lib/Makefile.orig	2011-05-10 12:56:32.000000000 +0000
++++ PORD/lib/Makefile
+@@ -22,7 +22,7 @@ OBJS = graph.o gbipart.o gbisect.o ddcre
+ 	$(CC) $(COPTIONS) -c $*.c $(OUTC)$*.o
+ 
+ libpord$(LIBEXT):$(OBJS)
+-	$(AR)$@ $(OBJS)
++	$(AR) $@ $(OBJS)
+ 	$(RANLIB) $@
+ 
+ clean:

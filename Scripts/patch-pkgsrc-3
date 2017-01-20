@@ -1,0 +1,73 @@
+#!/bin/sh -e
+
+
+##########################################################################
+#   Function description:
+#       Pause until user presses return
+##########################################################################
+
+pause()
+{
+    local junk
+    
+    printf "Press return to continue..."
+    read junk
+}
+
+##########################################################################
+#   Script description:
+#       
+#   Arguments:
+#       
+#   Returns:
+#       
+#   History:
+#   Date        Name        Modification
+#   2015-08-31  Jason Bacon Begin
+##########################################################################
+
+usage()
+{
+    printf "Usage: $0 prefix\n"
+    exit 1
+}
+
+
+##########################################################################
+#   Main
+##########################################################################
+
+printf "Obsolete.\n"
+exit 1
+
+if [ $# != 1 ]; then
+    usage
+fi
+
+cd $1/pkgsrc-3/devel/nbpatch
+#cvs up -dP
+#bmake ALLOW_VULNERABLE_PACKAGES=1 install
+
+cd ../hdf5
+cvs up -dP
+
+cd ../hdf5-c++
+cvs up -dP
+
+cd ../p5-Perl4-CoreLibs
+cvs up -dP
+
+cd ../../meta-pkgs/boost
+cat << EOM
+Opening Makefile.common: Add the following:
+
+.  elif \${OPSYS} == "Linux"
+GCC-REQD+=              4.4
+
+EOM
+pause
+vi Makefile.common
+
+cd ../../devel/boost-libs
+vi buildlink3.mk
+

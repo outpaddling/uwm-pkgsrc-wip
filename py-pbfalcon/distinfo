@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (pbfalcon-2015.10.28.tar.xz) = 972b95e543a4b32c8965cbb1b09968cde6281b81
+RMD160 (pbfalcon-2015.10.28.tar.xz) = e042a996fe813ec468974458e13631cb1c76d310
+Size (pbfalcon-2015.10.28.tar.xz) = 458572 bytes
+SHA1 (patch-src_py_run__support.py) = 49621ce5cdd1907c03fd91d7afdf5a978944d7db

@@ -1,0 +1,26 @@
+$NetBSD$
+
+--- Include/Makefile.sdcc_defs.orig	2012-12-19 16:43:34.000000000 +0000
++++ Include/Makefile.sdcc_defs
+@@ -16,10 +16,10 @@ DCC     = ${CC}
+ # --optimize-df still breaks OpenVex in SDCC 3.0 and has minimal impact on size
+ # --optimize-cmp has no effect SDCC 3.0
+ # CFLAGS  = -c -I../Lib -I../Include -mpic16 -p18f8520 --extended --optimize-df --no-crt --obanksel=1 -DDEBUG=${DEBUG}
+-CFLAGS  = -c -I../Lib -I../Include -I${LOCALBASE}/share/sdcc/non-free/include/pic16 -mpic16 -p18f8520 --no-crt --obanksel=1 -DDEBUG=${DEBUG} --denable-peeps
++CFLAGS  = -c -I../Lib -I../Include -I${LOCALBASE}/share/sdcc/sdcc/non-free/include/pic16 -mpic16 -p18f8520 --no-crt --obanksel=1 -DDEBUG=${DEBUG} --denable-peeps
+ AFLAGS  = -c -p pic18f8520 -Dpic18f8520
+ ARFLAGS = -c
+-LFLAGS  = -w -c -s vexsdcc.lkr -m -I ${LOCALBASE}/share/sdcc/lib/pic16 -I ${LOCALBASE}/share/sdcc/non-free/lib/pic16 -o
++LFLAGS  = -w -c -s vexsdcc.lkr -m -I ${LOCALBASE}/share/sdcc/sdcc/lib/pic16 -I ${LOCALBASE}/share/sdcc/sdcc/non-free/lib/pic16 -o
+ DCFLAGS = ${CFLAGS}
+ 
+ # -DUSE_TIMER is only for Generate_Pwms, which is not currently used.
+@@ -34,7 +34,7 @@ FIRMWARE_OBJS   = ${BINSTEM}.o crt0iz.o
+ 
+ # SDCC 2.8 and earlier use pic18f8520.lib
+ # SDCC 2.9 and later use libdev18f8520.lib
+-PIC_LIB ?= libdev18f8520.lib
++PIC_LIB ?= pic18f8520.lib
+ 
+ LIBS    = ${PIC_LIB} libc18f.lib libm18f.lib libsdcc.lib libio18f8520.lib
+ 

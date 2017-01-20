@@ -1,0 +1,8 @@
+$NetBSD$
+
+SHA1 (tophat-2.0.12.tar.gz) = 966f8748a55820dfb64d3a5618f38105858dff3e
+RMD160 (tophat-2.0.12.tar.gz) = 0cad75b4c337e78f3442e02cb2c8831ef4eeccd3
+Size (tophat-2.0.12.tar.gz) = 1767329 bytes
+SHA1 (patch-src-bam_merge.cpp) = 87d192efc532d125433be95c20924cfa0ed6b9b9
+SHA1 (patch-src-segment_juncs.cpp) = 893cfcb833d30f9c2dc4cd20d02af114c15e6034
+SHA1 (patch-src_tophat.py) = ae9fe310e711460593ca6a534cf384e51277da94

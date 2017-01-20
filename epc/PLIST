@@ -1,0 +1,11 @@
+@comment $NetBSD$
+bin/epc
+man/man1/epc.1
+share/epc/Examples/bench.epc
+share/epc/Examples/echo.epc
+share/epc/Examples/float.epc
+share/epc/Examples/hello.epc
+share/epc/Examples/loop.epc
+share/epc/Examples/torture.epc
+share/epc/include/io.epc
+share/epc/include/macros.epc

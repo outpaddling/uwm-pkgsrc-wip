@@ -1,0 +1,14 @@
+@comment $NetBSD$
+bin/legoctl
+bin/vexctl
+include/roboctl/rct_machdep.h
+include/roboctl/rct_nxt.h
+include/roboctl/rct_nxt_output.h
+include/roboctl/rct_pic.h
+include/roboctl/rct_protos.h
+include/roboctl/rct_rcx.h
+include/roboctl/roboctl.h
+lib/libroboctl.a
+man/man1/legoctl.1
+man/man1/vexctl.1
+man/man3/roboctl.3

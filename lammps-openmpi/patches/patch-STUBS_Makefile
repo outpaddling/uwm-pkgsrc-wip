@@ -1,0 +1,24 @@
+$NetBSD$
+
+--- STUBS/Makefile.orig	2012-08-14 14:14:27.000000000 +0000
++++ STUBS/Makefile
+@@ -21,8 +21,8 @@ OBJ = 		$(SRC:.c=.o)
+ 
+ # System-specific settings
+ 
+-CC =		g++
+-CCFLAGS =	-O -fPIC
++CXX ?=		c++
++CXXFLAGS =	-O -fPIC
+ ARCHIVE =	ar
+ ARCHFLAG =	rs
+ 
+@@ -37,7 +37,7 @@ clean:
+ # Compilation rules
+ 
+ .c.o:
+-	$(CC) $(CCFLAGS) -c $<
++	$(CXX) $(CXXFLAGS) -c $<
+ 
+ # Individual dependencies
+ 

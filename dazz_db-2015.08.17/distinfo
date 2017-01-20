@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (dazz_db-2015.08.17.tar.xz) = bd162174fbb75ab09824f12bd9ae04b5516322ca
+RMD160 (dazz_db-2015.08.17.tar.xz) = ee9abf905f128f87d1d0f2756b13f6e57a06fd45
+Size (dazz_db-2015.08.17.tar.xz) = 49128 bytes
+SHA1 (patch-GNUmakefile) = bd3013171bbfe02fa1b48de6be80e7be35ad8875

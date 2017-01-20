@@ -1,0 +1,6 @@
+$NetBSD$
+
+SHA1 (fastqc_v0.10.1.zip) = d1d9c1489c46458614fcedcbbb30e799a0e796a2
+RMD160 (fastqc_v0.10.1.zip) = af70744b5ee67333e5a5a642bdae382baa835899
+Size (fastqc_v0.10.1.zip) = 596632 bytes
+SHA1 (patch-fastqc) = ef173fd8adaeaa9f9cc3a1c3fc55b4c5bb6f1bd1

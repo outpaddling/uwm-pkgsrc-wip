@@ -1,0 +1,12 @@
+# $NetBSD$
+
+BUILDLINK_TREE+=	ngs
+
+.if !defined(NGS_BUILDLINK3_MK)
+NGS_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.ngs+=	ngs>=2016.12.23
+BUILDLINK_PKGSRCDIR.ngs?=	../../jb-wip/ngs
+.endif	# NGS_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-ngs

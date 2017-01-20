@@ -1,0 +1,53 @@
+$NetBSD: patch-ai,v 1.5 2015/12/12 22:41:19 asau Exp $
+
+--- orte/etc/Makefile.in.orig	2015-06-17 19:57:45.000000000 +0000
++++ orte/etc/Makefile.in
+@@ -1451,6 +1451,7 @@ spml_ikrit_LDFLAGS = @spml_ikrit_LDFLAGS
+ spml_ikrit_LIBS = @spml_ikrit_LIBS@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
++sysconfexampledir = $(pkgdatadir)/examples
+ target = @target@
+ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+@@ -1667,19 +1668,19 @@ uninstall-am: uninstall-local
+ # details why the mkdir is in install-data-local.
+ 
+ install-data-local:
+-	$(MKDIR_P) $(DESTDIR)$(sysconfdir)
++	$(MKDIR_P) $(DESTDIR)$(sysconfexampledir)
+ 	@ p="$(orte_config_files)"; \
+ 	for file in $$p; do \
+-	  if test -f $(DESTDIR)$(sysconfdir)/$$file; then \
++	  if test -f $(DESTDIR)$(sysconfexampledir)/$$file; then \
+ 	    echo "******************************* WARNING ************************************"; \
+ 	    echo "*** Not installing new $$file over existing file in:"; \
+-	    echo "***   $(DESTDIR)$(sysconfdir)/$$file"; \
++	    echo "***   $(DESTDIR)$(sysconfexampledir)/$$file"; \
+ 	    echo "******************************* WARNING ************************************"; \
+ 	  else \
+ 	    if test -f "$$file"; then d=; else d="$(srcdir)/"; fi; \
+ 	    f="`echo $$file | sed -e 's|^.*/||'`"; \
+-	    echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfdir)/$$f"; \
+-	    $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfdir)/$$f; \
++	    echo " $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfexampledir)/$$f"; \
++	    $(INSTALL_DATA) $$d$$file $(DESTDIR)$(sysconfexampledir)/$$f; \
+ 	  fi; \
+ 	done
+ 
+@@ -1690,11 +1691,11 @@ install-data-local:
+ uninstall-local:
+ 	@ p="$(orte_config_files)"; \
+ 	for file in $$p; do \
+-	  if test -f "$(DESTDIR)$(sysconfdir)/$$file"; then \
++	  if test -f "$(DESTDIR)$(sysconfexampledir)/$$file"; then \
+ 	  	if test -f "$$file"; then d=; else d="$(srcdir)/"; fi; \
+-	    if diff "$(DESTDIR)$(sysconfdir)/$$file" "$$d$$file" > /dev/null 2>&1 ; then \
+-	      echo "rm -f $(DESTDIR)$(sysconfdir)/$$file" ; \
+-	      rm -f "$(DESTDIR)$(sysconfdir)/$$file" ; \
++	    if diff "$(DESTDIR)$(sysconfexampledir)/$$file" "$$d$$file" > /dev/null 2>&1 ; then \
++	      echo "rm -f $(DESTDIR)$(sysconfexampledir)/$$file" ; \
++	      rm -f "$(DESTDIR)$(sysconfexampledir)/$$file" ; \
+ 	    fi ; \
+ 	  fi ; \
+ 	done

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+sbin/pkg-diff
+sbin/pkg-grep
+sbin/pkg-reinstall
+sbin/pkg-remake
+sbin/pkg-vuln

@@ -1,0 +1,18 @@
+@comment $NetBSD$
+${PYSITELIB}/Levenshtein/__init__.py
+${PYSITELIB}/Levenshtein/__init__.pyc
+${PYSITELIB}/Levenshtein/__init__.pyo
+${PYSITELIB}/Levenshtein/_levenshtein.c
+${PYSITELIB}/Levenshtein/_levenshtein.h
+${PYSITELIB}/Levenshtein/_levenshtein.so
+${PYSITELIB}/Levenshtein/StringMatcher.py
+${PYSITELIB}/Levenshtein/StringMatcher.pyc
+${PYSITELIB}/Levenshtein/StringMatcher.pyo
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/entry_points.txt
+${PYSITELIB}/${EGG_FILE}/namespace_packages.txt
+${PYSITELIB}/${EGG_FILE}/not-zip-safe
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/requires.txt
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt

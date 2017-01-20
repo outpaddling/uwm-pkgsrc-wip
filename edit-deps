@@ -1,0 +1,37 @@
+#!/bin/sh -e
+
+##########################################################################
+#   Script description:
+#       
+#   Arguments:
+#       
+#   Returns:
+#       
+#   History:
+#   Date        Name        Modification
+#   2016-09-17  Jason Wayne BaconBegin
+##########################################################################
+
+usage()
+{
+    printf "Usage: $0 package\n"
+    exit 1
+}
+
+
+##########################################################################
+#   Main
+##########################################################################
+
+if [ $# != 1 ]; then
+    usage
+fi
+
+pkg=$1
+if [ -z "$EDITOR" ]; then
+    EDITOR=vi
+fi
+deps="`grep -l jb-wip/$pkg */Makefile`"
+if [ ! -z "$deps" ]; then
+    $EDITOR $deps
+fi

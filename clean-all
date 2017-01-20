@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if ! which bmake; then
+    MAKE=make
+else
+    MAKE=bmake
+fi
+
+for pkg in *; do
+    if [ -e $pkg/DESCR ] && [ -e $pkg/work ]; then
+	printf "$pkg\n"
+	cd $pkg
+	${MAKE} clean
+	# ${MAKE} clean-depends takes too long
+	cd ..
+    fi
+done
+find . -name '.*.bak' -exec rm '{}' \;
+

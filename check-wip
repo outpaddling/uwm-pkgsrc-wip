@@ -1,0 +1,34 @@
+#!/bin/sh
+
+
+##########################################################################
+#   Function description:
+#       Pause until user presses return
+##########################################################################
+
+pause()
+{
+    local junk
+    
+    printf "Press return to continue..."
+    read junk
+}
+
+for dir in *; do
+    if [ -e ../wip/$dir/Makefile ]; then
+	rm -rf $dir/work ../wip/$dir/work
+	printf "=============================================================\n"
+	grep ^DISTNAME ../wip/$dir/Makefile $dir/Makefile
+	printf "Remove from jb-wip? y/[n] "
+	read remove
+	if [ 0$remove = 0y ]; then
+	    diff -ruN ../wip/$dir $dir
+	    printf "Are you sure? y/[n] "
+	    read sure
+	    if [ 0$sure = 0y ]; then
+		svn rm $dir
+	    fi
+	fi
+    fi
+done
+

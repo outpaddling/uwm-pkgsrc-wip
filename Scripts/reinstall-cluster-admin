@@ -1,0 +1,24 @@
+#!/bin/sh -e
+
+prefix=$(dirname $(dirname $(which bmake)) | sed -e 's|pkg|pkgsrc|g')
+echo $prefix
+yes | auto-clean-pkgsrc $prefix
+cd $prefix/jb-wip
+pwd
+svn up
+
+pkg_delete cluster-admin || true
+
+cd $prefix/jb-wip/auto-admin
+pwd
+yes | pkg-reinstall
+
+cd $prefix/jb-wip/cluster-admin
+pwd
+yes | pkg-reinstall
+
+cd ..
+yes | ./clean-all
+
+yes | cluster-sync-pkgsrc
+

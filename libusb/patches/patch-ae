@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- Makefile.in.orig	2006-03-04 02:54:03.000000000 +0000
++++ Makefile.in
+@@ -271,7 +271,7 @@ pkgconfig_DATA = libusb.pc
+ @BSD_API_FALSE@@DARWIN_API_TRUE@@LINUX_API_FALSE@OS_SUPPORT = darwin.c
+ @BSD_API_TRUE@@LINUX_API_FALSE@OS_SUPPORT = bsd.c
+ @LINUX_API_TRUE@OS_SUPPORT = linux.c linux.h
+-@BSD_API_FALSE@@DARWIN_API_TRUE@@LINUX_API_FALSE@AM_CFLAGS_EXT = -no-cpp-precomp
++# @BSD_API_FALSE@@DARWIN_API_TRUE@@LINUX_API_FALSE@AM_CFLAGS_EXT = -no-cpp-precomp
+ @BSD_API_FALSE@@DARWIN_API_TRUE@@LINUX_API_FALSE@LDADDS = -Wl,-framework -Wl,IOKit -Wl,-framework -Wl,CoreFoundation -Wl,-prebind -no-undefined
+ @BSD_API_FALSE@@DARWIN_API_TRUE@@LINUX_API_FALSE@PREBIND_FLAGS = -Wl,-seg1addr,0x01666000
+ @BSD_API_FALSE@@DARWIN_API_TRUE@@LINUX_API_FALSE@PREBIND_FLAGSPP = -Wl,-seg1addr,0x01676000
+@@ -295,7 +295,7 @@ libusbpp_la_LDFLAGS = \
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
+ 	-release $(LT_RELEASE) \
+ 	-export-dynamic \
+-	$(LDADDS) -lusb $(PREBIND_FLAGSPP)
++	$(LDADDS) libusb.la $(PREBIND_FLAGSPP)
+ 
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive

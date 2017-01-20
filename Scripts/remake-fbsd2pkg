@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+if [ `basename $(pwd)` != fbsd2pkg ]; then
+    printf "$0 must be run from within the pkg dir.\n"
+    exit 1
+fi
+
+pkg_delete -f fbsd2pkg
+pkg-remake
+

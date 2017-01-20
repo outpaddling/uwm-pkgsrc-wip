@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (stm32flash-2011.05.30.tar.gz) = 2097ba8b0bbe313fd113b06af7c3ce01a601993a
+RMD160 (stm32flash-2011.05.30.tar.gz) = 1c9394e3bfc44d5af571fa564a494ba75c2a2651
+Size (stm32flash-2011.05.30.tar.gz) = 376821 bytes
+SHA1 (patch-Makefile) = 03e4ad805998b7af1712464be4395b3b863de2f4
+SHA1 (patch-serial_posix.c) = 8678551becf1143b90d027a7f48a1aec7d6ebaab

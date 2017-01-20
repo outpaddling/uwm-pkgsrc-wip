@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (decrypt.c.gz) = e0140f1f45f4373c8a0e8cb4eed522cbbde716e9
+RMD160 (decrypt.c.gz) = 57ed4b530d5dbd3fb82e6f2b115fad4e32a45258
+Size (decrypt.c.gz) = 913 bytes
+SHA1 (dl_poly_4.03.tar.gE) = eba11f5ce6ff90306358c90fde82ba4020eff6b1
+RMD160 (dl_poly_4.03.tar.gE) = 46bce394c32c3976fca1e270b5f79f573f39f1c8
+Size (dl_poly_4.03.tar.gE) = 3214255 bytes
+SHA1 (patch-build_Makefile__SRL1) = ab29a327e732fc737dbc5a838ea3018dd9bc6d50

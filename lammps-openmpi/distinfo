@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (lammps-2012.09.14.tar.gz) = aae24f694af8b8abd0082687f1245ac8cb67535f
+RMD160 (lammps-2012.09.14.tar.gz) = ab7b3c76049c226ebfa7a967076c943ab21f989e
+Size (lammps-2012.09.14.tar.gz) = 41639672 bytes
+SHA1 (patch-Makefile) = 07a03d56c5a1a564413dda4a92b247f58307dcd2
+SHA1 (patch-STUBS_Makefile) = d87250df44c98b61a7164fad74f4797e3c0bdba9

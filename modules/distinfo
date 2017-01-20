@@ -1,0 +1,12 @@
+$NetBSD$
+
+SHA1 (modules-3.2.10.tar.gz) = a42b03cf59f10c4d06cd8cc1b176f172484a3205
+RMD160 (modules-3.2.10.tar.gz) = 8e6833c1679d31c905cee695c3d3b14ea000fef7
+Size (modules-3.2.10.tar.gz) = 419970 bytes
+SHA1 (patch-Makefile.in) = 6df8f440c7087b6d3e0d1adf6dceb119376b288e
+SHA1 (patch-configure) = 8d3650b54f1132e2bff445b2f3da4e7d993f46f2
+SHA1 (patch-doc__Makefile.in) = 7e768a078ebe893db0d03e732e72686e4a78ea10
+SHA1 (patch-doc__module.1.in) = 7ec881e13e6a848238c94d5f35e6a8052f7de058
+SHA1 (patch-doc__modulefile.5.in) = d5522ef351a713a91b2624097e1366d744f25715
+SHA1 (patch-etc__Makefile.in) = 3536a00f8e936369e984932a9241eb0ccfb7458a
+SHA1 (patch-init__Makefile.in) = 77331439fbc22dce59530b923cd1e55cd81c8a27
