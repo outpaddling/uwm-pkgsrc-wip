@@ -19,7 +19,7 @@ for dir in *; do
 	rm -rf $dir/work ../wip/$dir/work
 	printf "=============================================================\n"
 	grep ^DISTNAME ../wip/$dir/Makefile $dir/Makefile
-	printf "Remove from jb-wip? y/[n] "
+	printf "Remove from uwm-pkgsrc-wip? y/[n] "
 	read remove
 	if [ 0$remove = 0y ]; then
 	    diff -ruN ../wip/$dir $dir

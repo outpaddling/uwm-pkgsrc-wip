@@ -25,13 +25,13 @@ fi
 cd ../wip/$pkg
 $make clean
 cd ..
-cp -R $pkg ../jb-wip/$pkg-wip
+cp -R $pkg ../uwm-pkgsrc-wip/$pkg-wip
 
 # Remove versioning stuff
-cd ../jb-wip/$pkg-wip
+cd ../uwm-pkgsrc-wip/$pkg-wip
 find . -d -name CVS -exec rm -rf '{}' \;
 
-# Import to jb-wip repo
+# Import to uwm-pkgsrc-wip repo
 cd ..
 svn add $pkg-wip
 svncom 'Import $pkg from wip'

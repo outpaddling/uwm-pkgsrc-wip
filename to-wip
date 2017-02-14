@@ -54,7 +54,7 @@ fi
 cd ../wip
 git pull --rebase || true
 
-cd ../jb-wip/$pkg
+cd ../uwm-pkgsrc-wip/$pkg
 svn ci -m 'Clean up'
 
 # Copy pkg to wip
@@ -68,11 +68,11 @@ find . -depth -name CVS -exec rm -rf '{}' \;
 find . -depth -name .svn -exec rm -rf '{}' \;
 $make makesum || true
 
-suffix=jb-wip-to-wip
-sed -e 's|jb-wip|wip|g' Makefile > Makefile.$suffix
+suffix=uwm-pkgsrc-wip-to-wip
+sed -e 's|uwm-pkgsrc-wip|wip|g' Makefile > Makefile.$suffix
 mv -f Makefile.$suffix Makefile
 if [ -e buildlink3.mk ]; then
-    sed -e 's|jb-wip|wip|g' buildlink3.mk > buildlink3.mk.$suffix
+    sed -e 's|uwm-pkgsrc-wip|wip|g' buildlink3.mk > buildlink3.mk.$suffix
     mv -f buildlink3.mk.$suffix buildlink3.mk
 fi
 
@@ -93,11 +93,11 @@ if [ ! -e TODO ]; then
 fi
 
 # Add new package to git repo
-../../jb-wip/import-package.sh
+../../uwm-pkgsrc-wip/import-package.sh
 
-# Cleanly remove from jb-wip
-cd ../../jb-wip
+# Cleanly remove from uwm-pkgsrc-wip
+cd ../../uwm-pkgsrc-wip
 
-printf "Editing dependent packages.  Convert jb-wip/$pkg depends to wip/$pkg.\n"
+printf "Editing dependent packages.  Convert uwm-pkgsrc-wip/$pkg depends to wip/$pkg.\n"
 pause
 ./edit-deps $pkg
