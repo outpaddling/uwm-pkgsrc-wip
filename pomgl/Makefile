@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	pomgl-1.0
-CATEGORIES=	jb-wip
+CATEGORIES=	uwm-pkgsrc-wip
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
 MAINTAINER=	bacon4000@gmail.com
@@ -11,5 +11,5 @@ COMMENT=	TODO: Short description of the package
 
 USE_LANGUAGES=	fortran
 
-.include "../../jb-wip/glerl-lib/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/glerl-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -7,7 +7,7 @@ LIBUSB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.7
 BUILDLINK_ABI_DEPENDS.libusb+=	libusb>=0.1.8nb2
-BUILDLINK_PKGSRCDIR.libusb?=	../../jb-wip/libusb
+BUILDLINK_PKGSRCDIR.libusb?=	../../uwm-pkgsrc-wip/libusb
 .endif # LIBUSB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libusb

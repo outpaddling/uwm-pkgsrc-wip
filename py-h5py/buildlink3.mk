@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py27-h5py
 PY27_H5PY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py27-h5py+=	py27-h5py>=2.4.0
-BUILDLINK_PKGSRCDIR.py27-h5py?=	../../jb-wip/py-h5py
+BUILDLINK_PKGSRCDIR.py27-h5py?=	../../uwm-pkgsrc-wip/py-h5py
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly

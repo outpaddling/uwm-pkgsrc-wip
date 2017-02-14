@@ -72,5 +72,5 @@ do-install:
 	${AR} rs ${DESTDIR}${PREFIX}/lib/libdaligner.a \
 		${WRKSRC}/align.o
 
-.include "../../jb-wip/dazz_db-${PORTVERSION}/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/dazz_db-${PORTVERSION}/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

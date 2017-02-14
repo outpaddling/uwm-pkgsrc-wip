@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	biom
 BIOM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.biom+=	biom>=2.1
-BUILDLINK_PKGSRCDIR.biom?=	../../jb-wip/py-biom-format
+BUILDLINK_PKGSRCDIR.biom?=	../../uwm-pkgsrc-wip/py-biom-format
 .endif	# BIOM_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-biom

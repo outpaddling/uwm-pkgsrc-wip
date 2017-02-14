@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	mcrypt
 MCRYPT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mcrypt+=	mcrypt>=2.6.8nb2
-BUILDLINK_PKGSRCDIR.mcrypt?=	../../jb-wip/mcrypt
+BUILDLINK_PKGSRCDIR.mcrypt?=	../../uwm-pkgsrc-wip/mcrypt
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly

@@ -15,8 +15,8 @@ MAKE_ENV+=	STAGEDIR=${DESTDIR}
 pre-build:
 	cd ${WRKSRC} && ${MAKE} LOCALBASE=${PREFIX} depend
 
-.include "../../jb-wip/libpare/buildlink3.mk"
-.include "../../jb-wip/libbacon/buildlink3.mk"
-.include "../../jb-wip/twintk/buildlink3.mk"
-.include "../../jb-wip/webbrowser/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/libpare/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/libbacon/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/twintk/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/webbrowser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

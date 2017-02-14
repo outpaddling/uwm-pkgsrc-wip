@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	py27-rdflib
 PY27_RDFLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py27-rdflib+=	py27-rdflib>=3.4.0
-BUILDLINK_PKGSRCDIR.py27-rdflib?=	../../jb-wip/py-rdflib340
+BUILDLINK_PKGSRCDIR.py27-rdflib?=	../../uwm-pkgsrc-wip/py-rdflib340
 .endif	# PY27_RDFLIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py27-rdflib

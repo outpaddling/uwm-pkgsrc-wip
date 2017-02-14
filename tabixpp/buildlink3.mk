@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tabixpp
 TABIXPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tabixpp+=	tabixpp>=38607a5128b4e61828d4961f588e7a185bf396b7
-BUILDLINK_PKGSRCDIR.tabixpp?=	../../jb-wip/tabixpp
+BUILDLINK_PKGSRCDIR.tabixpp?=	../../uwm-pkgsrc-wip/tabixpp
 .endif	# TABIXPP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-tabixpp

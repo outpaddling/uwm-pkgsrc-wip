@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	flann
 FLANN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.flann+=	flann>=1.8.4
-BUILDLINK_PKGSRCDIR.flann?=	../../jb-wip/flann
+BUILDLINK_PKGSRCDIR.flann?=	../../uwm-pkgsrc-wip/flann
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly

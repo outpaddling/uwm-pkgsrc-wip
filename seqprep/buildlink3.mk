@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	seqprep
 SEQPREP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.seqprep+=	seqprep>=1.1
-BUILDLINK_PKGSRCDIR.seqprep?=	../../jb-wip/seqprep
+BUILDLINK_PKGSRCDIR.seqprep?=	../../uwm-pkgsrc-wip/seqprep
 .endif	# SEQPREP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-seqprep

@@ -18,7 +18,7 @@ COMMENT=	Detecting and extracting spikes from raw recordings
 
 # Should probably be klustakwik-0.3.0, but doesn't work with 0.3.0.rc2,
 # which is an illegal cersion number.
-DEPENDS=	klustakwik:../../jb-wip/klustakwik030
+DEPENDS=	klustakwik:../../uwm-pkgsrc-wip/klustakwik030
 
 PYDISTUTILSPKG=	yes
 

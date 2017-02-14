@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	master
-CATEGORIES=	jb-wip
+CATEGORIES=	uwm-pkgsrc-wip
 MASTER_SITES=	https://github.com/rossant/qtools/archive/
 EXTRACT_SUFX=	.zip
 #PKGNAME=	qtools

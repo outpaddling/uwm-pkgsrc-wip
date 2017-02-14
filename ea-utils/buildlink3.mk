@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	ea-utils
 EA_UTILS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ea-utils+=	ea-utils>=1.1.2
-BUILDLINK_PKGSRCDIR.ea-utils?=	../../jb-wip/ea-utils
+BUILDLINK_PKGSRCDIR.ea-utils?=	../../uwm-pkgsrc-wip/ea-utils
 .endif	# EA_UTILS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ea-utils

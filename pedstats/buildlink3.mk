@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pedstats
 PEDSTATS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pedstats+=	pedstats>=0.6.12
-BUILDLINK_PKGSRCDIR.pedstats?=	../../jb-wip/pedstats
+BUILDLINK_PKGSRCDIR.pedstats?=	../../uwm-pkgsrc-wip/pedstats
 .endif	# PEDSTATS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-pedstats

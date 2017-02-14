@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	plasm
 PLASM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plasm+=	plasm>=0.1
-BUILDLINK_PKGSRCDIR.plasm?=	../../jb-wip/plasm
+BUILDLINK_PKGSRCDIR.plasm?=	../../uwm-pkgsrc-wip/plasm
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly

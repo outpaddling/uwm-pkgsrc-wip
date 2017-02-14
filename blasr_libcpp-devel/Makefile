@@ -75,7 +75,7 @@ do-install:
 .include "../../lang/python/application.mk"
 .include "../../wip/pbbam/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
-.include "../../jb-wip/hdf5-c++/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/hdf5-c++/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../wip/htslib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

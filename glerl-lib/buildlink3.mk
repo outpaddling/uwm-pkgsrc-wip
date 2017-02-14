@@ -9,7 +9,7 @@ BUILDLINK_TREE+=	glerl-lib
 GLERL_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.glerl-lib+=	glerl-lib>=1.0
-BUILDLINK_PKGSRCDIR.glerl-lib?=	../../jb-wip/glerl-lib
+BUILDLINK_PKGSRCDIR.glerl-lib?=	../../uwm-pkgsrc-wip/glerl-lib
 .endif	# GLERL_LIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-glerl-lib

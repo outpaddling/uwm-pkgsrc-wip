@@ -43,5 +43,5 @@ do-install:
 # Link fails with non-pkgsrc openmpi on RHEL
 # mpif77 cannot find -lmpi_f77
 #.include "../../mk/bsd.prefs.mk"
-.include "../../jb-wip/openmpi-prefixed/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/openmpi-prefixed/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

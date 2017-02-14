@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	liblemon
 LIBLEMON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.liblemon+=	liblemon>=1.3.1
-BUILDLINK_PKGSRCDIR.liblemon?=	../../jb-wip/liblemon
+BUILDLINK_PKGSRCDIR.liblemon?=	../../uwm-pkgsrc-wip/liblemon
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly

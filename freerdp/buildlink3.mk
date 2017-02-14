@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	freerdp
 FREERDP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.freerdp+=	freerdp>=1.0.2
-BUILDLINK_PKGSRCDIR.freerdp?=	../../jb-wip/freerdp
+BUILDLINK_PKGSRCDIR.freerdp?=	../../uwm-pkgsrc-wip/freerdp
 
 .endif	# FREERDP_BUILDLINK3_MK
 

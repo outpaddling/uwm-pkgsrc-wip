@@ -20,5 +20,5 @@ INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 pre-build:
 	(cd ${WRKSRC} && ${MAKE} depend)
 
-.include "../../jb-wip/papp/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/papp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	ceres-solver
 CERES_SOLVER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ceres-solver+=	ceres-solver>=1.11.0
-BUILDLINK_PKGSRCDIR.ceres-solver?=	../../jb-wip/ceres-solver
+BUILDLINK_PKGSRCDIR.ceres-solver?=	../../uwm-pkgsrc-wip/ceres-solver
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly

@@ -23,5 +23,5 @@ pre-build:
 
 .include "../../wip/twintk/buildlink3.mk"
 .include "../../wip/libbacon/buildlink3.mk"
-.include "../../jb-wip/plasm/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/plasm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

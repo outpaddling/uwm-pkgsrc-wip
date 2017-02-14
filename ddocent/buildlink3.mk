@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ddocent
 DDOCENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ddocent+=	ddocent>=2015.11.30
-BUILDLINK_PKGSRCDIR.ddocent?=	../../jb-wip/ddocent
+BUILDLINK_PKGSRCDIR.ddocent?=	../../uwm-pkgsrc-wip/ddocent
 .endif	# DDOCENT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ddocent

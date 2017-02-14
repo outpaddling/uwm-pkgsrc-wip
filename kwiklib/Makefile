@@ -3,7 +3,7 @@
 PKGNAME=	kwiklib
 DISTNAME=	${GHCOMMIT}
 GHCOMMIT=	2c249f8c31e913ce8f48f2e3a3b6ac9d9c274a39
-CATEGORIES=	jb-wip
+CATEGORIES=	uwm-pkgsrc-wip
 #MASTER_SITES=	https://github.com/klusta-team/spikedetekt2/archive/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klusta-team/kwiklib/archive/}
 PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}
@@ -23,7 +23,7 @@ PYDISTUTILSPKG=	yes
 
 PYSETUP=	setup.py
 
-DEPENDS+=		klustakwik:../../jb-wip/klustakwik030
+DEPENDS+=		klustakwik:../../uwm-pkgsrc-wip/klustakwik030
 
 .include "../../lang/python/distutils.mk"
 .include "../../lang/python/application.mk"

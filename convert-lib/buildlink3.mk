@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	convert-lib
 CONVERT_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.convert-lib+=	convert-lib>=0.1
-BUILDLINK_PKGSRCDIR.convert-lib?=	../../jb-wip/convert-lib
+BUILDLINK_PKGSRCDIR.convert-lib?=	../../uwm-pkgsrc-wip/convert-lib
 .endif	# CONVERT_LIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-convert-lib

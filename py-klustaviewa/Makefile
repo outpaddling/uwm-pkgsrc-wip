@@ -3,7 +3,7 @@
 PKGNAME=	klustaviewa
 DISTNAME=	${GHCOMMIT}
 GHCOMMIT=	e1c02e8b8cacfd1c0c565d4cbbd5cd7b19b54d45
-CATEGORIES=	jb-wip
+CATEGORIES=	uwm-pkgsrc-wip
 #MASTER_SITES=	https://github.com/klusta-team/spikedetekt2/archive/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klusta-team/klustaviewa/archive/}
 PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}
@@ -23,8 +23,8 @@ PYDISTUTILSPKG=	yes
 
 PYSETUP=	setup.py
 
-DEPENDS+=		klustakwik:../../jb-wip/klustakwik030
-DEPENDS+=		py27-qtools:../../jb-wip/py-qtools
+DEPENDS+=		klustakwik:../../uwm-pkgsrc-wip/klustakwik030
+DEPENDS+=		py27-qtools:../../uwm-pkgsrc-wip/py-qtools
 
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/distutils.mk"

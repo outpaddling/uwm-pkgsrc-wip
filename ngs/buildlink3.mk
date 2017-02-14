@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ngs
 NGS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ngs+=	ngs>=2016.12.23
-BUILDLINK_PKGSRCDIR.ngs?=	../../jb-wip/ngs
+BUILDLINK_PKGSRCDIR.ngs?=	../../uwm-pkgsrc-wip/ngs
 .endif	# NGS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ngs

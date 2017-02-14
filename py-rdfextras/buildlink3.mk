@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py27-rdfextras
 PY27_RDFEXTRAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py27-rdfextras+=	py27-rdfextras>=0.4
-BUILDLINK_PKGSRCDIR.py27-rdfextras?=	../../jb-wip/py-rdfextras
+BUILDLINK_PKGSRCDIR.py27-rdfextras?=	../../uwm-pkgsrc-wip/py-rdfextras
 .endif	# PY27_RDFEXTRAS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py27-rdfextras

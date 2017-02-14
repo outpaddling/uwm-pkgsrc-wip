@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	condor
 CONDOR_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.condor+=	condor>=8.2.6
-BUILDLINK_PKGSRCDIR.condor?=	../../jb-wip/condor
+BUILDLINK_PKGSRCDIR.condor?=	../../uwm-pkgsrc-wip/condor
 .endif	# CONDOR_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-condor

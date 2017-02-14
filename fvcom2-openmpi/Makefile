@@ -56,5 +56,5 @@ do-install:
 # Current netcdf package missing mod file
 # No netcdf support until this is resolved
 #.include "../../devel/netcdf/buildlink3.mk"
-.include "../../jb-wip/openmpi-prefixed/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/openmpi-prefixed/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

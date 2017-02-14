@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	dazz_db
 DAZZ_DB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dazz_db+=	dazz_db>=2015.08.17
-BUILDLINK_PKGSRCDIR.dazz_db?=	../../jb-wip/dazz_db
+BUILDLINK_PKGSRCDIR.dazz_db?=	../../uwm-pkgsrc-wip/dazz_db
 .endif	# DAZZ_DB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-dazz_db

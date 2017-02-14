@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cutadapt
 CUTADAPT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cutadapt+=	cutadapt>=1.8.3
-BUILDLINK_PKGSRCDIR.cutadapt?=	../../jb-wip/py-cutadapt
+BUILDLINK_PKGSRCDIR.cutadapt?=	../../uwm-pkgsrc-wip/py-cutadapt
 .endif	# CUTADAPT_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-cutadapt

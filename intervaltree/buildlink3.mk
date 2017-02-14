@@ -16,7 +16,7 @@ INTERVALTREE_BUILDLINK3_MK:=
 BUILDLINK_DEPMETHOD.intervaltree?=	build
 
 BUILDLINK_API_DEPENDS.intervaltree+=	intervaltree>=49a0e290efaaa760e0b03e52ca18ac03e7582f23
-BUILDLINK_PKGSRCDIR.intervaltree?=	../../jb-wip/intervaltree
+BUILDLINK_PKGSRCDIR.intervaltree?=	../../uwm-pkgsrc-wip/intervaltree
 .endif	# INTERVALTREE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-intervaltree

@@ -12,7 +12,7 @@ COMMENT=	TODO: Short description of the package
 
 GNU_CONFIGURE=	yes
 
-.include "../../jb-wip/netcdf-ftn/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/netcdf-ftn/buildlink3.mk"
 # .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

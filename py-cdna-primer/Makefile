@@ -61,9 +61,9 @@ post-install:
 
 .include "../../lang/python/distutils.mk"
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../jb-wip/py-pbh5tools/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/py-pbh5tools/buildlink3.mk"
 # Is this the right place for this dep?
 .include "../../wip/blasr/buildlink3.mk"
-.include "../../jb-wip/pbdagcon/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/pbdagcon/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

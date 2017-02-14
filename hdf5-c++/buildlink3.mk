@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hdf5-c++
 HDF5_C++_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hdf5-c+++=	hdf5-c++>=1.8.14
-BUILDLINK_PKGSRCDIR.hdf5-c++?=	../../jb-wip/hdf5-c++
+BUILDLINK_PKGSRCDIR.hdf5-c++?=	../../uwm-pkgsrc-wip/hdf5-c++
 
 .include "../../devel/hdf5/buildlink3.mk"
 .endif	# HDF5_C++_BUILDLINK3_MK

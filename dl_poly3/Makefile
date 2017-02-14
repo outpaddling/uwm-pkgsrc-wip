@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	dl_poly_3.10
-CATEGORIES=	jb-wip
+CATEGORIES=	uwm-pkgsrc-wip
 MASTER_SITES=	ftp://ftp.dl.ac.uk/ccp5/DL_POLY/TRANSFERS/
 EXTRACT_SUFX=	.tar.gz
 

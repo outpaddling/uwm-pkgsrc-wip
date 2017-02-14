@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	plinkseq
 PLINKSEQ_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.plinkseq+=	plinkseq>=0.10
-BUILDLINK_PKGSRCDIR.plinkseq?=	../../jb-wip/plinkseq
+BUILDLINK_PKGSRCDIR.plinkseq?=	../../uwm-pkgsrc-wip/plinkseq
 .endif	# PLINKSEQ_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-plinkseq

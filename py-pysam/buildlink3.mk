@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	pysam
 PYSAM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pysam+=	${PYPKGPREFIX}-pysam>=0.8.3
-BUILDLINK_PKGSRCDIR.pysam?=	../../jb-wip/py-pysam
+BUILDLINK_PKGSRCDIR.pysam?=	../../uwm-pkgsrc-wip/py-pysam
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly

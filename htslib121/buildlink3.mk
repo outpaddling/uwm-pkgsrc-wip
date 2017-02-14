@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	htslib
 HTSLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.htslib+=	htslib>=1.2.1
-BUILDLINK_PKGSRCDIR.htslib?=	../../jb-wip/htslib121
+BUILDLINK_PKGSRCDIR.htslib?=	../../uwm-pkgsrc-wip/htslib121
 .endif	# HTSLIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-htslib

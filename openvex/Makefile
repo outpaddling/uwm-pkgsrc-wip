@@ -25,5 +25,5 @@ SUBST_FILES.prefix=	openvex-new-project \
 			Doc/openvex.man
 SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|g"
 
-.include "../../jb-wip/roboctl/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/roboctl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

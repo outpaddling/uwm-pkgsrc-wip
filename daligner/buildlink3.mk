@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	daligner
 DALIGNER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.daligner+=	daligner>=2015.08.17
-BUILDLINK_PKGSRCDIR.daligner?=	../../jb-wip/daligner
+BUILDLINK_PKGSRCDIR.daligner?=	../../uwm-pkgsrc-wip/daligner
 .endif	# DALIGNER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-daligner

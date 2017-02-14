@@ -7,7 +7,7 @@ NETCDF_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.netcdf-ftn+=	netcdf-ftn>=4.1.3
 BUILDLINK_ABI_DEPENDS.netcdf-ftn+=	netcdf-ftn>=4.1.3
-BUILDLINK_PKGSRCDIR.netcdf-ftn?=	../../jb-wip/netcdf-ftn
+BUILDLINK_PKGSRCDIR.netcdf-ftn?=	../../uwm-pkgsrc-wip/netcdf-ftn
 .endif # NETCDF_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-netcdf-ftn

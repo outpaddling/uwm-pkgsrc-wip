@@ -27,6 +27,6 @@ PORTVERSION=	0.9.1
 .include "../../lang/python/distutils.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../jb-wip/py-h5py/buildlink3.mk"
-.include "../../jb-wip/py-pysam/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/py-h5py/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/py-pysam/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

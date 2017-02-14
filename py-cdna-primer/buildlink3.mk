@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	py27-cDNA_primer
 PY27_CDNA_PRIMER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py27-cDNA_primer+=	py27-cDNA_primer>=2015.08.17
-BUILDLINK_PKGSRCDIR.py27-cDNA_primer?=	../../jb-wip/py-cdna-primer
+BUILDLINK_PKGSRCDIR.py27-cDNA_primer?=	../../uwm-pkgsrc-wip/py-cdna-primer
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly
@@ -25,8 +25,8 @@ BUILDLINK_PKGSRCDIR.py27-cDNA_primer?=	../../jb-wip/py-cdna-primer
 # XXX buildlink3 lines below to dependencies, remove them.
 # XXX
 #.include "../../devel/py-cython/buildlink3.mk"
-#.include "../../jb-wip/py-pbh5tools/buildlink3.mk"
-#.include "../../jb-wip/blasr/buildlink3.mk"
+#.include "../../uwm-pkgsrc-wip/py-pbh5tools/buildlink3.mk"
+#.include "../../uwm-pkgsrc-wip/blasr/buildlink3.mk"
 #.include "../../math/py-numpy/buildlink3.mk"
 .endif	# PY27_CDNA_PRIMER_BUILDLINK3_MK
 

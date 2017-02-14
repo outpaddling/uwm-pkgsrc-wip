@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	stm32flash
 STM32FLASH_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.stm32flash+=	stm32flash>=2011.05.30
-BUILDLINK_PKGSRCDIR.stm32flash?=	../../jb-wip/stm32flash
+BUILDLINK_PKGSRCDIR.stm32flash?=	../../uwm-pkgsrc-wip/stm32flash
 .endif	# STM32FLASH_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-stm32flash

@@ -40,6 +40,6 @@ post-install:
 .endif
 
 # Not working yet
-# .include "../../jb-wip/libgamepad/buildlink3.mk"
-.include "../../jb-wip/libusb/buildlink3.mk"
+# .include "../../uwm-pkgsrc-wip/libgamepad/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/libusb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

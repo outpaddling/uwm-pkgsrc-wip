@@ -17,5 +17,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
-.include "../../jb-wip/libbacon/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/libbacon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

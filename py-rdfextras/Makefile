@@ -29,5 +29,5 @@ PORTVERSION=	0.4
 
 .include "../../lang/python/distutils.mk"
 # FIXME: Actually requires exactly rdflib 3.4.0, but bl3 doesn't take ==
-.include "../../jb-wip/py-rdflib340/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/py-rdflib340/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

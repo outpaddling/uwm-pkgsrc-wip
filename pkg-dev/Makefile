@@ -18,7 +18,7 @@ DEPENDS=	url2pkg:../../pkgtools/url2pkg \
 		pkglint:../../pkgtools/pkglint \
 		pkgdiff:../../pkgtools/pkgdiff \
 		createbuildlink:../../pkgtools/createbuildlink \
-		fbsd2pkg:../../jb-wip/fbsd2pkg
+		fbsd2pkg:../../uwm-pkgsrc-wip/fbsd2pkg
 
 NO_BUILD=	yes
 

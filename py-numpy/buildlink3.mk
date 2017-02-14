@@ -8,7 +8,7 @@ PY_NUMPY_BUILDLINK3_MK:=
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pynumpy+=	${PYPKGPREFIX}-numpy>=1.0
-BUILDLINK_PKGSRCDIR.pynumpy?=	../../jb-wip/py-numpy
+BUILDLINK_PKGSRCDIR.pynumpy?=	../../uwm-pkgsrc-wip/py-numpy
 
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"

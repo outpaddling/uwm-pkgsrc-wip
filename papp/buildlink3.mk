@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	papp
 PAPP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.papp+=	papp>=0.3.2
-BUILDLINK_PKGSRCDIR.papp?=	../../jb-wip/papp
+BUILDLINK_PKGSRCDIR.papp?=	../../uwm-pkgsrc-wip/papp
 .endif	# PAPP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-papp

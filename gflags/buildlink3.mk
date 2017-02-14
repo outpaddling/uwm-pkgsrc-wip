@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	gflags
 GFLAGS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gflags+=	gflags>=2.1.2
-BUILDLINK_PKGSRCDIR.gflags?=	../../jb-wip/gflags
+BUILDLINK_PKGSRCDIR.gflags?=	../../uwm-pkgsrc-wip/gflags
 .endif	# GFLAGS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-gflags

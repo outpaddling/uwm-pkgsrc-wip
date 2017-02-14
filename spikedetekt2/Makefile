@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	v0.3.0
-CATEGORIES=	jb-wip
+CATEGORIES=	uwm-pkgsrc-wip
 #MASTER_SITES=	https://github.com/klusta-team/spikedetekt2/archive/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klusta-team/spikedetekt2/archive/}
 PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}
@@ -21,7 +21,7 @@ PYDISTUTILSPKG=	yes
 
 PYSETUP=	setup.py
 
-DEPENDS+=		klustakwik:../../jb-wip/klustakwik030
+DEPENDS+=		klustakwik:../../uwm-pkgsrc-wip/klustakwik030
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"

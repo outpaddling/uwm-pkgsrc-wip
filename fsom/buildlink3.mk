@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	fsom
 FSOM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.fsom+=	fsom>=23c8bb0b0a1de866ef05ed2be283f67bca4d2f47
-BUILDLINK_PKGSRCDIR.fsom?=	../../jb-wip/fsom
+BUILDLINK_PKGSRCDIR.fsom?=	../../uwm-pkgsrc-wip/fsom
 .endif	# FSOM_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-fsom

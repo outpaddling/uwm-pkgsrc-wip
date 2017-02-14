@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	modules
 MODULES_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.modules+=	modules>=3.2.10
-BUILDLINK_PKGSRCDIR.modules?=	../../jb-wip/modules
+BUILDLINK_PKGSRCDIR.modules?=	../../uwm-pkgsrc-wip/modules
 .endif	# MODULES_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-modules

@@ -6,12 +6,12 @@ BUILDLINK_TREE+=	py27-pbcore
 PY27_PBCORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py27-pbcore+=	py27-pbcore>=0.9.1
-BUILDLINK_PKGSRCDIR.py27-pbcore?=	../../jb-wip/py-pbcore
+BUILDLINK_PKGSRCDIR.py27-pbcore?=	../../uwm-pkgsrc-wip/py-pbcore
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../jb-wip/py-h5py/buildlink3.mk"
-.include "../../jb-wip/py-pysam/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/py-h5py/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/py-pysam/buildlink3.mk"
 .endif	# PY27_PBCORE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py27-pbcore

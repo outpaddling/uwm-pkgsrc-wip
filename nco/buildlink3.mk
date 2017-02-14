@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	nco
 NCO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.nco+=	nco>=4.4.8
-BUILDLINK_PKGSRCDIR.nco?=	../../jb-wip/nco
+BUILDLINK_PKGSRCDIR.nco?=	../../uwm-pkgsrc-wip/nco
 .endif	# NCO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-nco

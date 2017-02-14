@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	tophat
 TOPHAT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tophat+=	tophat>=2.0.11
-BUILDLINK_PKGSRCDIR.tophat?=	../../jb-wip/tophat
+BUILDLINK_PKGSRCDIR.tophat?=	../../uwm-pkgsrc-wip/tophat
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly

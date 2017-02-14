@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py27-avro
 PY27_AVRO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py27-avro+=	py27-avro>=1.7.4
-BUILDLINK_PKGSRCDIR.py27-avro?=	../../jb-wip/py-avro
+BUILDLINK_PKGSRCDIR.py27-avro?=	../../uwm-pkgsrc-wip/py-avro
 .endif	# PY27_AVRO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-py27-avro

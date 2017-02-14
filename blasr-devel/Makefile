@@ -96,7 +96,7 @@ do-install:
 		${DESTDIR}${PREFIX}/bin
 #		${WRKSRC}/utils/bam2bax/bin/* \
 
-.include "../../jb-wip/blasr_libcpp-devel/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/blasr_libcpp-devel/buildlink3.mk"
 .include "../../wip/pbbam/buildlink3.mk"
 .include "../../devel/hdf5-c++/buildlink3.mk"
 .include "../../wip/htslib/buildlink3.mk"

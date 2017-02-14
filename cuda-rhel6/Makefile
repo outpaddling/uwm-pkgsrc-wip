@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	cuda-repo-rhel6-7-5-local-7.5-18.x86_64
-CATEGORIES=	jb-wip
+CATEGORIES=	uwm-pkgsrc-wip
 MASTER_SITES=	http://developer.download.nvidia.com/compute/cuda/7.5/Prod/local_installers/
 EXTRACT_SUFX=	.rpm
 

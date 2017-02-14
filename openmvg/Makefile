@@ -62,9 +62,9 @@ COMMENT=	Open Multiple View Geometry library
 # Test and change if necessary.
 # MAKE_JOBS_SAFE=	no
 
-DEPENDS+=	ceres-solver:../../jb-wip/ceres-solver \
-		liblemon:../../jb-wip/liblemon \
-		flann:../../jb-wip/flann
+DEPENDS+=	ceres-solver:../../uwm-pkgsrc-wip/ceres-solver \
+		liblemon:../../uwm-pkgsrc-wip/liblemon \
+		flann:../../uwm-pkgsrc-wip/flann
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
@@ -117,7 +117,7 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/doc share/examples
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../devel/google-glog/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../jb-wip/flann/buildlink3.mk"
-.include "../../jb-wip/ceres-solver/buildlink3.mk"
-.include "../../jb-wip/liblemon/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/flann/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/ceres-solver/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/liblemon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

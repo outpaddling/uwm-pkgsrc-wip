@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	klustakwik2
 KLUSTAKWIK2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.klustakwik2+=	klustakwik2>=0.2.4
-BUILDLINK_PKGSRCDIR.klustakwik2?=	../../jb-wip/py-klustakwik2
+BUILDLINK_PKGSRCDIR.klustakwik2?=	../../uwm-pkgsrc-wip/py-klustakwik2
 .endif	# KLUSTAKWIK2_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-klustakwik2

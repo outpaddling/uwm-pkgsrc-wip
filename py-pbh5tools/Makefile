@@ -26,6 +26,6 @@ PORTVERSION=	2.3.0p4
 
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../jb-wip/py-avro/buildlink3.mk"
-.include "../../jb-wip/py-pbcore/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/py-avro/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/py-pbcore/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

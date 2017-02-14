@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	pbdagcon
 PBDAGCON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pbdagcon+=	pbdagcon>=2015.08.19
-BUILDLINK_PKGSRCDIR.pbdagcon?=	../../jb-wip/pbdagcon
+BUILDLINK_PKGSRCDIR.pbdagcon?=	../../uwm-pkgsrc-wip/pbdagcon
 .endif	# PBDAGCON_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-pbdagcon

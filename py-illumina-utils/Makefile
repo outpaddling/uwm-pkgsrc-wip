@@ -18,7 +18,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-[0-9]*:../../graphics/py-matplotlib
 DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
-DEPENDS+=	${PYPKGPREFIX}-levenshtein-[0-9]*:../../jb-wip/py-levenshtein
+DEPENDS+=	${PYPKGPREFIX}-levenshtein-[0-9]*:../../uwm-pkgsrc-wip/py-levenshtein
 
 USE_LANGUAGES=	# empty
 

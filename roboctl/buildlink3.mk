@@ -6,9 +6,9 @@ BUILDLINK_TREE+=	roboctl
 ROBOCTL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.roboctl+=	roboctl>=0.3.8
-BUILDLINK_PKGSRCDIR.roboctl?=	../../jb-wip/roboctl
+BUILDLINK_PKGSRCDIR.roboctl?=	../../uwm-pkgsrc-wip/roboctl
 
-# .include "../../jb-wip/libgamepad/buildlink3.mk"
+# .include "../../uwm-pkgsrc-wip/libgamepad/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
 .endif	# ROBOCTL_BUILDLINK3_MK
 

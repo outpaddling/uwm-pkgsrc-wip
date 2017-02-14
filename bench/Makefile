@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	bench-0.2
-CATEGORIES=	jb-wip
+CATEGORIES=	uwm-pkgsrc-wip
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
 MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
