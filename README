@@ -1,4 +1,23 @@
 
+This is a collection of work-in-progress pkgsrc packages developed by
+the research computing support group at the University of Wisconsin
+Milwaukee.
+
+It supplements the global pkgsrc-wip project:
+
+    https://pkgsrc.org/wip/
+
+Most of these packages will be moved to pkgsrc-wip eventually.
+
+Packages exist here for one of a few reasons:
+
+1.  To experiment with variations of packages in pkgsrc-wip
+
+2.  To allow development and testing on hosts not registered to commit
+    to pkgsrc-wip
+
+3.  We just haven't gotten around to moving them to pkgsrc-wip yet.
+
 svn co https://[username@]github.com/outpaddling/uwm-pkgsrc-wip/trunk \
 	uwm-pkgsrc-wip
 
