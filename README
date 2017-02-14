@@ -18,11 +18,16 @@ Packages exist here for one of a few reasons:
 
 3.  We just haven't gotten around to moving them to pkgsrc-wip yet.
 
-svn co https://[username@]github.com/outpaddling/uwm-pkgsrc-wip/trunk \
+
+To use these packages:
+
+1.  cd prefix/pkgsrc[-suffix]
+
+2.  svn co https://[username@]github.com/outpaddling/uwm-pkgsrc-wip/trunk \
 	uwm-pkgsrc-wip
 
-or
+    or
 
-git clone https://[username@]github.com/outpaddling/uwm-pkgsrc-wip \
+    git clone https://[username@]github.com/outpaddling/uwm-pkgsrc-wip \
 	uwm-pkgsrc-wip
 
