@@ -1,0 +1,9 @@
+
+svn co https://[username@]github.com/outpaddling/uwm-pkgsrc-wip/trunk \
+	uwm-pkgsrc-wip
+
+or
+
+git clone https://[username@]github.com/outpaddling/uwm-pkgsrc-wip \
+	uwm-pkgsrc-wip
+
