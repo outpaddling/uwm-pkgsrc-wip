@@ -31,7 +31,7 @@ if [ $# = 1 ]; then
     # Pkgsrc
     prefix=$1
     if [ -e $prefix ]; then
-	cd $prefix/jb-wip
+	cd $prefix/uwm-pkgsrc-wip
 	svn up
 	cd py-pbfalcon
 	set +e

@@ -11,7 +11,7 @@ fi
 
 prefix=$(dirname $(dirname $(which bmake)) | sed -e 's|pkg|pkgsrc|g')
 echo $prefix
-cd $prefix/jb-wip/ddocent
+cd $prefix/uwm-pkgsrc-wip/ddocent
 bmake clean
 bmake clean-depends
 bmake

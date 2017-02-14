@@ -33,7 +33,7 @@ if [ $# = 1 ]; then
     # Pkgsrc
     prefix=$1
     if [ -e $prefix ]; then
-	cd $prefix/jb-wip
+	cd $prefix/uwm-pkgsrc-wip
 	pwd
 	svn up
 	cd py-cdna-primer

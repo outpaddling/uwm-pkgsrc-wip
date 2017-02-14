@@ -36,7 +36,7 @@ if [ 0$sure != 0yes ]; then
 fi
 
 boost_dir=$prefix/meta-pkgs/boost
-patch_dir=$prefix/jb-wip/Patches/2016Q1
+patch_dir=$prefix/uwm-pkgsrc-wip/Patches/2016Q1
 
 echo $boost_dir
 

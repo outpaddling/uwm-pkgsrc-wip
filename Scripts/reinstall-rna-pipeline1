@@ -25,7 +25,7 @@ fi
 
 prefix=$(dirname $(dirname $(which bmake)) | sed -e 's|pkg|pkgsrc|g')
 echo $prefix
-cd $prefix/jb-wip
+cd $prefix/uwm-pkgsrc-wip
 svn up
 cd rna-pipeline1
 bmake clean
