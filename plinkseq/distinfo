@@ -3,3 +3,4 @@ $NetBSD$
 SHA1 (plinkseq-src-0.10.tgz) = 50d4b4f9b9518fd899150c1bbd1c600d8abdb9d4
 RMD160 (plinkseq-src-0.10.tgz) = 88158d8b04fba8199086a4afa056531b890a3c16
 Size (plinkseq-src-0.10.tgz) = 6090698 bytes
+SHA1 (patch-sources_plinkseq_sources_lib_r8lib.cpp) = f7030d82263d5b1267194a914b21fd4e483a7d00
