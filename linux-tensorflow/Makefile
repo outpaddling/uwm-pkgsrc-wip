@@ -11,10 +11,12 @@ COMMENT=	TODO: Short description of the package
 
 LICENSE=	apache-2.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27 35 36
+PYTHON_VERSIONS_ACCEPTED=	34
 
 EMUL_PLATFORMS=		linux-x86_64
 EMUL_MODULES.linux=	base compat
+
+DEPENDS+=	${PYPKGPREFIX}-pip-[0-9]*:../../devel/py-pip
 
 do-extract:
 
@@ -22,7 +24,8 @@ do-build:
 
 do-install:
 	pip3.4 install --no-deps --isolated --ignore-installed \
-		--root=${WRKDIR} ${DISTDIR}/${DISTFILES}
+		--root=${DESTDIR}${PREFIX} ${DISTDIR}/${DISTFILES}
 
 # url2pkg-marker (please do not remove this line.)
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
