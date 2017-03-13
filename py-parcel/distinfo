@@ -1,9 +1,0 @@
-$NetBSD$
-
-SHA1 (parcel-0.2.13.tar.gz) = 51dc4e937135cbb79f54eb7bcb73612eaa7cd3e2
-RMD160 (parcel-0.2.13.tar.gz) = 4efd231298c017431cb5458f5fd6515cb776a3e6
-SHA512 (parcel-0.2.13.tar.gz) = 73584e1119cc12832fea5707f88c4d607b9acb2bddef940004f06e0d3820b144cd6d55adde51f08efa8f0bca802a159a015d3589c7e268118af6c03d7741c2b4
-Size (parcel-0.2.13.tar.gz) = 202619 bytes
-SHA1 (patch-parcel_src_Makefile) = 29ce1e63c917314aee130d946b0e3b8fb9e75a08
-SHA1 (patch-parcel_src_udt4_src_Makefile) = de764b3a1dd2e98ccd3e9f1240646e82bf488048
-SHA1 (patch-setup.py) = 86856e3cafb520cc62dd914e0d5f8961f1e3c7c3
