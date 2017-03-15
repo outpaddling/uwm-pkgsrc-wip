@@ -20,13 +20,16 @@ COMMENT=	Versatile open-source tool for metagenomics
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--disable-pdfman
+#CONFIGURE_ARGS+=	--disable-pdfman
 
 # sse2 required to compile on 32-bit archs
-CXXFLAGS+=	-I${LOCALBASE}/include -msse2
+# CXXFLAGS+=	-I${LOCALBASE}/include -msse2
 
-PORTVERSION=	1.10.2
+PORTVERSION=	2.4.2
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fi
 
 .include "../../mk/bsd.pkg.mk"
