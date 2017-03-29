@@ -5,8 +5,6 @@
 #              Fri May 20 17:39:48 CDT 2016               #
 ###########################################################
 
-# LIB_DEPENDS=	libsysinfo.so:devel/libsysinfo
-
 DISTNAME=	vsearch-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=torognes/}
@@ -16,16 +14,12 @@ GITHUB_TAG=	v${PORTVERSION}
 MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	https://github.com/torognes/vsearch
 COMMENT=	Versatile open-source tool for metagenomics
-# Check this
 LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoconf automake autoreconf gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-pdfman
-
-# sse2 required to compile on 32-bit archs
-# CXXFLAGS+=	-I${LOCALBASE}/include -msse2
 
 PORTVERSION=	2.4.2
 

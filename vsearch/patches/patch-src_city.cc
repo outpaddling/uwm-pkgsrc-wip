@@ -1,5 +1,7 @@
 $NetBSD$
 
+# Handle non-standardized swap macros
+
 --- src/city.cc.orig	2016-01-25 19:23:36 UTC
 +++ src/city.cc
 @@ -69,6 +69,13 @@ static uint32 UNALIGNED_LOAD32(const cha
