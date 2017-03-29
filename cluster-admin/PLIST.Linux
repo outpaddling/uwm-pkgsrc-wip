@@ -76,6 +76,8 @@ sbin/cluster-user-admin
 sbin/cluster-useradd
 sbin/cluster-users
 sbin/compute-node-yum-packages
+sbin/condor-build-R-packages
+sbin/condor-list-packages
 sbin/enable-icmp-redirects
 sbin/enable-x11-forward
 sbin/fix-keys
