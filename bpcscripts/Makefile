@@ -28,7 +28,7 @@ SUBST_SED.perllib=	-e "s|use Taxonomy;|use lib(\"${SITE_PERL}/${PORTNAME}\"); &|
 SUBST_FILES.perllib+=	&|g"
 SUBST_FILES.perllib+=	${WRKSRC}/gast_ill
 
-DEPENDS+=	vsearch-[0-9]*:../../uwm-pkgsrc-wip/vsearch
+DEPENDS+=	vsearch-[0-9]*:../../wip/vsearch
 DEPENDS+=	fastaunique-[0-9]*:../../uwm-pkgsrc-wip/fastaunique
 
 PORTNAME=	bpcscripts
