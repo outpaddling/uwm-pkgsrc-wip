@@ -31,7 +31,7 @@ pkg=$1
 if [ -z "$EDITOR" ]; then
     EDITOR=vi
 fi
-deps="`grep -l uwm-pkgsrc-wip/$pkg */Makefile`"
+deps="`grep -l uwm-pkgsrc-wip/$pkg */Makefile`" || true
 if [ ! -z "$deps" ]; then
     $EDITOR $deps
 fi
