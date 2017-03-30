@@ -108,7 +108,7 @@ printf "Editing dependent packages.  Convert uwm-pkgsrc-wip/$pkg depends to wip/
 pause
 ./edit-deps $pkg
 
-./wip-diff $pkg
+./wip-diff $pkg || true
 printf "Remove $pkg? y/[n] "
 read remove
 if [ 0$remove = 0y ]; then
