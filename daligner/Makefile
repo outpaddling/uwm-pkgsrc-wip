@@ -32,8 +32,8 @@ USE_TOOLS+=	gmake
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	post-patch
 SUBST_FILES.makefile=	${WRKSRC}/GNUmakefile
-SUBST_SED.makefile=	-e 's|-Wno-unused-result||g' \
-			-e 's|-O3|-O|g'
+SUBST_SED.makefile=	-e 's|-Wno-unused-result||g'
+SUBST_SED.makefile+=	-e 's|-O3|-O|g'
 
 CFLAGS+=	-I${PREFIX}/include
 MAKE_FILE=	GNUmakefile
