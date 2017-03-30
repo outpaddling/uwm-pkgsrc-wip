@@ -96,8 +96,8 @@ do-install:
 
 .include "../../lang/python/application.mk"
 .include "../../wip/blasr_libcpp/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/dazz_db/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/daligner/buildlink3.mk"
+.include "../../wip/dazz_db/buildlink3.mk"
+.include "../../wip/daligner/buildlink3.mk"
 # .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/hdf5-c++/buildlink3.mk"

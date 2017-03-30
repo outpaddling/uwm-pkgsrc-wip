@@ -47,8 +47,8 @@ post-patch:
 
 .include "../../lang/python/distutils.mk"
 .include "../../wip/dazz_db/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/daligner/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/py-pypeflow/buildlink3.mk"
+.include "../../wip/daligner/buildlink3.mk"
+.include "../../wip/py-pypeflow/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/py-rdflib340/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/py-rdfextras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
