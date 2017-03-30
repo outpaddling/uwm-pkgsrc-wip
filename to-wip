@@ -41,6 +41,12 @@ if [ -e ../wip/$pkg ]; then
     exit
 fi
 
+if fgrep uwm-pkgsrc-wip $pkg/Makefile; then
+    printf "$pkg has dependencies in uwm-pkgsrc-wip.\n"
+    printf "Move them to wip first.\n"
+    exit 1
+fi
+
 if [ -z EDITOR ]; then
     EDITOR=vi
 fi
