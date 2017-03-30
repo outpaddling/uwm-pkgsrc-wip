@@ -33,6 +33,6 @@ CHEESESHOP=	http://pypi.python.org/packages/source/r/rdflib/
 #AUTO_MKDIRS=	yes
 
 .include "../../lang/python/distutils.mk"
-.include "../../uwm-pkgsrc-wip/py-sparqlwrapper/buildlink3.mk"
+.include "../../wip/py-sparqlwrapper/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/py-isodate/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
