@@ -50,5 +50,5 @@ post-patch:
 .include "../../wip/daligner/buildlink3.mk"
 .include "../../wip/py-pypeflow/buildlink3.mk"
 .include "../../wip/py-rdflib340/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/py-rdfextras/buildlink3.mk"
+.include "../../wip/py-rdfextras/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
