@@ -111,6 +111,6 @@ pause
 printf "Remove $pkg? y/[n] "
 read remove
 if [ 0$remove = 0y ]; then
-    svn rm $pkg
+    svn rm --force $pkg
     svn ci -m "$pkg: Move to wip"
 fi

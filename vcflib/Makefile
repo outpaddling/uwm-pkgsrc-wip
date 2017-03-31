@@ -64,7 +64,7 @@ CFLAGS+=	-msse2
 .include "../../wip/htslib/buildlink3.mk"
 .include "../../wip/tabixpp/buildlink3.mk"
 .include "../../wip/smithwaterman/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/fastahack/buildlink3.mk"
+.include "../../wip/fastahack/buildlink3.mk"
 .include "../../wip/filevercmp/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/fsom/buildlink3.mk"
 .include "../../wip/multichoose/buildlink3.mk"
