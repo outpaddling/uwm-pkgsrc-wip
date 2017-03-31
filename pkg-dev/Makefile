@@ -24,8 +24,8 @@ NO_BUILD=	yes
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
-SUBST_SED.prefix=	-e 's|/usr/pkgsrc|${WRKDIR}/../../..|g'
-SUBST_FILES.prefix=	Scripts/*
+SUBST_SED.prefix=	-e 's|/usr/pkgsrc|${BUILD_DIR}/../..|g'
+SUBST_FILES.prefix=	Scripts/pkg-grep
 
 post-patch:
 	echo ${SRCPREFIX}
