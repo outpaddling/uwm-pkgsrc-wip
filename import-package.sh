@@ -19,6 +19,7 @@ pkg=$(basename $(pwd))
 cd ..
 printf "Importing $pkg...\n"
 pwd
+git pull
 git pull -r
 git add $pkg
 
@@ -32,5 +33,9 @@ pause
 
 msg=`awk -F = '$1 ~ "^COMMENT" { print $2 }' $pkg/Makefile`
 git commit -m "Add $pkg: $msg"
-git commit --ammend
-#git push
+git log
+printf "Push commit? y/[n] "
+read commit
+if [ 0$commit = 0y ]; then
+    git push
+fi
