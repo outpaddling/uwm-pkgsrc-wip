@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (samtools-1.2.tar.gz) = 9fabb4903b9d1521aeea8a5538e64aefe8e85526
-RMD160 (samtools-1.2.tar.gz) = a9f9f771f5b32a83fac2be4b8a4c1d45c0ca2bb0
-Size (samtools-1.2.tar.gz) = 4318615 bytes
-SHA1 (patch-Makefile) = 8ce7b1915204903d847b1e05ad30be45bc480bd1
-SHA1 (patch-errmod.c) = 3b0059fe10266a4c7c5901e784fb5acd5698725c
