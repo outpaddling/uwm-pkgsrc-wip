@@ -28,10 +28,9 @@ if [ $# != 1 ]; then
 fi
 
 pkg=$1
-if [ -z "$EDITOR" ]; then
-    EDITOR=vi
-fi
-deps="`grep -l uwm-pkgsrc-wip/$pkg */Makefile`" || true
-if [ ! -z "$deps" ]; then
-    $EDITOR $deps
-fi
+deps="`grep -l uwm-pkgsrc-wip/$pkg */*`" || true
+for file in $deps; do
+    printf "Replacing uwm-pkgsrc-wip/$pkg with wip/$pkg in $file...\n"
+    sed -e 's|uwm-pkgsrc-wip/$pkg|wip/$pkg|g' $file > $file.edit-deps
+    mv -f $file.edit-deps $file
+done
