@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	multichoose
 MULTICHOOSE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.multichoose+=	multichoose>=d60d639af93f8720e019d824bb2405eb4523fb16
-BUILDLINK_PKGSRCDIR.multichoose?=	../../uwm-pkgsrc-wip/multichoose
+BUILDLINK_PKGSRCDIR.multichoose?=	../../wip/multichoose
 .endif	# MULTICHOOSE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-multichoose

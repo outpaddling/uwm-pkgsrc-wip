@@ -105,6 +105,7 @@ fi
 cd ../../uwm-pkgsrc-wip
 
 ./edit-deps $pkg
+pause
 
 ./wip-diff $pkg || true
 printf "Remove $pkg? y/[n] "

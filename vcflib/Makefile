@@ -62,12 +62,12 @@ CFLAGS+=	-msse2
 .endif
 
 .include "../../wip/htslib/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/tabixpp/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/smithwaterman/buildlink3.mk"
+.include "../../wip/tabixpp/buildlink3.mk"
+.include "../../wip/smithwaterman/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/fastahack/buildlink3.mk"
 .include "../../wip/filevercmp/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/fsom/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/multichoose/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/intervaltree/buildlink3.mk"
+.include "../../wip/multichoose/buildlink3.mk"
+.include "../../wip/intervaltree/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

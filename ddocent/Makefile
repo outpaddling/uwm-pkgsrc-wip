@@ -52,5 +52,5 @@ do-install:
 .include "../../wip/bamtools/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/freebayes/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/samtools0119/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/vcflib/buildlink3.mk"
+.include "../../wip/vcflib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	vcflib
 VCFLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.vcflib+=	vcflib>=790904320065e603c6af5b8a32f635134354467c
-BUILDLINK_PKGSRCDIR.vcflib?=	../../uwm-pkgsrc-wip/vcflib
+BUILDLINK_PKGSRCDIR.vcflib?=	../../wip/vcflib
 .endif	# VCFLIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-vcflib
