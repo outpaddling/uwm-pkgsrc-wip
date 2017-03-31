@@ -33,7 +33,7 @@ pause
 
 msg=`awk -F = '$1 ~ "^COMMENT" { print $2 }' $pkg/Makefile`
 git commit -m "Add $pkg: $msg"
-git log
+git log || true
 printf "Push commit? y/[n] "
 read commit
 if [ 0$commit = 0y ]; then
