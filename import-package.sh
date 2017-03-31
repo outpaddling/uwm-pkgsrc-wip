@@ -31,6 +31,6 @@ git status
 pause
 
 msg=`awk -F = '$1 ~ "^COMMENT" { print $2 }' $pkg/Makefile`
-git commit -m "'Add $pkg: $msg'"
-git push
-
+git commit -m "Add $pkg: $msg"
+git commit --ammend
+#git push
