@@ -22,6 +22,11 @@ DEPENDS=	url2pkg:../../pkgtools/url2pkg \
 
 NO_BUILD=	yes
 
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_SED.prefix=	-e 's|/usr/pkg|${PREFIX}|g'
+SUBST_FILES.prefix=	Scripts/*
+
 do-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/* ${DESTDIR}${PREFIX}/sbin
