@@ -28,7 +28,7 @@ if [ $# != 1 ]; then
 fi
 
 pkg=$1
-deps="`grep -l uwm-pkgsrc-wip/$pkg */*`" || true
+deps="`fgrep -ls uwm-pkgsrc-wip/$pkg */*`" || true
 for file in $deps; do
     printf "Replacing uwm-pkgsrc-wip/$pkg with wip/$pkg in $file...\n"
     sed -e 's|uwm-pkgsrc-wip/$pkg|wip/$pkg|g' $file > $file.edit-deps
