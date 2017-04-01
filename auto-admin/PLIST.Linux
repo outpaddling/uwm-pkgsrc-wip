@@ -20,6 +20,7 @@ sbin/auto-insert-line
 sbin/auto-ldap-adduser
 sbin/auto-ldap-client-setup
 sbin/auto-ostype
+sbin/auto-passwd-user-expiration
 sbin/auto-pkgsrc-add-license
 sbin/auto-pkgsrc-setup
 sbin/auto-pkgsrc-wip-checkout
