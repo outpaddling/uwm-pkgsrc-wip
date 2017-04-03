@@ -1,4 +1,10 @@
 
+Exact version needed:
+	DEPENDS+=	pkgname-version{,nb*}
+	Allows for revisions
+
+PKGNAME should match directory name
+
 Document any deviations from the ideal, such as
 
 -   Using USE_GCC, CXXFLAGS+=-std=g++11, etc.
