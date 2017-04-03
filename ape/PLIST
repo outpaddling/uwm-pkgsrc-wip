@@ -135,6 +135,10 @@ share/ape/Languages/Python/Macros/macros
 share/ape/Languages/Python/Macros/menu.txt
 share/ape/Languages/Python/language_opts
 share/ape/Languages/Python/syntax_highlighting
+share/ape/Languages/R/Macros/macros
+share/ape/Languages/R/Macros/menu.txt
+share/ape/Languages/R/language_opts
+share/ape/Languages/R/syntax_highlighting
 share/ape/Languages/Rust/language_opts
 share/ape/Languages/Rust/syntax_highlighting
 share/ape/Languages/SAL/Macros/macros
