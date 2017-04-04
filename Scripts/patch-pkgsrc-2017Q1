@@ -1,0 +1,40 @@
+#!/bin/sh -e
+
+##########################################################################
+#   Script description:
+#       
+#   Arguments:
+#       
+#   Returns:
+#       
+#   History:
+#   Date        Name        Modification
+#   2016-09-06  Jason Bacon Begin
+##########################################################################
+
+usage()
+{
+    printf "Usage: $0\n"
+    exit 1
+}
+
+
+##########################################################################
+#   Main
+##########################################################################
+
+if [ $# != 0 ]; then
+    usage
+fi
+
+name=patch-pkgsrc-2017Q1
+
+if [ $0 != ./$name ]; then
+    printf "Must be run as ./$name.\n"
+    exit 1
+fi
+
+# MesaLib uses c++11
+file=../../graphics/MesaLib/Makefile
+sed -e 's|4.2|4.8|' $file > $file.patch
+mv -f $file.patch $file
