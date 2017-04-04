@@ -24,7 +24,7 @@ SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|g"
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	post-patch
 SUBST_FILES.pkgsrc=	${WRKSRC}/Common/Scripts/auto-clean-pkgsrc
-SUBST_SED.pkgsrc=	-e "s|/usr/pkgsrc|${PREFIX}|g"
+SUBST_SED.pkgsrc=	-e "s|/usr/pkgsrc|${BUILD_DIR}/../..|g"
 
 .include "../../mk/bsd.prefs.mk"
 
