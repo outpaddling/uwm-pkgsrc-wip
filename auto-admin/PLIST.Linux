@@ -4,6 +4,10 @@ sbin/auto-admin
 sbin/auto-append-line
 sbin/auto-ask
 sbin/auto-backup-file
+sbin/auto-change-group-gid
+sbin/auto-change-group-ownership
+sbin/auto-change-primary-group
+sbin/auto-change-uid
 sbin/auto-clean-pkgsrc
 sbin/auto-clean-tmp
 sbin/auto-cuda-install
