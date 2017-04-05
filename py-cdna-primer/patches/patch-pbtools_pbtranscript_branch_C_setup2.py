@@ -1,3 +1,6 @@
+$NetBSD$
+
+# Use external numpy instead of importing
 --- pbtools/pbtranscript/branch/C/setup2.py.orig	2015-08-13 21:46:35.000000000 -0500
 +++ pbtools/pbtranscript/branch/C/setup2.py	2015-08-17 15:00:05.662700853 -0500
 @@ -1,9 +1,10 @@
