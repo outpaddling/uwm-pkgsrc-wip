@@ -3,4 +3,4 @@ $NetBSD$
 SHA1 (cDNA_primer-2015.08.17.tar.xz) = 64b6b9e0712db50df4325775d77378c89f6b6f5c
 RMD160 (cDNA_primer-2015.08.17.tar.xz) = 609bb19107a308342d84fc7355d660ee1760d59b
 Size (cDNA_primer-2015.08.17.tar.xz) = 36990740 bytes
-SHA1 (patch-pbtools_pbtranscript_branch_C_setup2.py) = a4f417831ebcb63ed6c01aef337689628525b602
+SHA1 (patch-pbtools_pbtranscript_branch_C_setup2.py) = 42fd54790b222572aaa381c95d388eb07c37ede7

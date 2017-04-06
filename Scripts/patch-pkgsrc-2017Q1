@@ -38,3 +38,8 @@ fi
 file=../../graphics/MesaLib/Makefile
 sed -e 's|4.2|4.8|' $file > $file.patch
 mv -f $file.patch $file
+
+# Boost fiber does not compile with GCC 4.4
+file=../../devel/boost-libs/Makefile
+sed -e 's|^PLIST.fiber=.*yes|PLIST.fiber=no|' $file > $file.patch
+mv -f $file.patch $file

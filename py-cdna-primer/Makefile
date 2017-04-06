@@ -24,7 +24,6 @@ MAKE_JOBS_SAFE=	no
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
-PYDISTUTILSPKG=	yes
 REPLACE_PYTHON=	pbtools/pbtranscript/cleanup_ice.py \
 		pbtools/pbtranscript/collapse_isoforms_by_sam.py \
 		pbtools/pbtranscript/fusion_finder.py \
@@ -59,7 +58,7 @@ post-install:
 		cd ${WRKSRC}/../external_daligner/DAZZ_DB-40bb7e4b2041cdfd3c50b22201301b8df06342fa && ${INSTALL_PROGRAM} Catrack DAM2fasta DB2fasta DB2quiva DBdust DBrm DBshow DBsplit DBstats fasta2DAM fasta2DB quiva2DB simulator ${DESTDIR}${PREFIX}/${PORTNAME}/bin
 		${CHMOD} -R a+rX ${DESTDIR}${PREFIX}/${PYSITELIB}/pbtools/pbtranscript/data/
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/py-pbh5tools/buildlink3.mk"
 # Is this the right place for this dep?
