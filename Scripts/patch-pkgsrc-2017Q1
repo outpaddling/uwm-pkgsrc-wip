@@ -41,5 +41,5 @@ mv -f $file.patch $file
 
 # Boost fiber does not compile with GCC 4.4
 file=../../devel/boost-libs/Makefile
-sed -e 's|^PLIST.fiber=.*yes|PLIST.fiber=no|' $file > $file.patch
+sed -e 's|^PLIST.fiber=.*yes|BJAM_ARGS+=\t\t--without-fiber|' $file > $file.patch
 mv -f $file.patch $file
