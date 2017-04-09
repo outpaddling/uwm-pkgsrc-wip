@@ -8,8 +8,8 @@ EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	Miscellaneous functions that needed a home
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 EXTRACT_SUFX=	.tar.xz
