@@ -1,4 +1,5 @@
 @comment $NetBSD$
+sbin/pkg-check
 sbin/pkg-diff
 sbin/pkg-grep
 sbin/pkg-reinstall
