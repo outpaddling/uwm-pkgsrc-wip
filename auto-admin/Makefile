@@ -11,6 +11,8 @@ COMMENT=	Automate common systems administration tasks
 #LICENSE=	original-bsd
 EXTRACT_SUFX=	.tar.xz
 
+LICENSE=	2-clause-bsd
+
 USE_LANGUAGES=	# none
 
 NO_BUILD=	yes
@@ -28,8 +30,9 @@ SUBST_SED.pkgsrc=	-e "s|/usr/pkgsrc|${BUILD_DIR}/../..|g"
 
 .include "../../mk/bsd.prefs.mk"
 
+INSTALLATION_DIRS=	sbin
+
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/Common/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin
 # Why doesn't this work?
