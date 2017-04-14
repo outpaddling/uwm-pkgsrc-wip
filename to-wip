@@ -57,13 +57,22 @@ else
     make='bmake'
 fi
 
+# Clean up before moving
+cd ../uwm-pkgsrc-wip/$pkg
+
+printf "Running pkg-check...\n"
+pkg-check
+
+printf "Continue? y/[n] "
+read continue
+if [ 0$continue != 0y ]; then
+    exit
+fi
+
+# Copy pkg to wip
 cd ../wip
 git pull --rebase || true
 
-cd ../uwm-pkgsrc-wip/$pkg
-svn ci -m 'Clean up'
-
-# Copy pkg to wip
 $make clean || true
 cd ..
 rsync -av --delete $pkg ../wip

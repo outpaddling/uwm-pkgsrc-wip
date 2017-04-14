@@ -1,14 +1,14 @@
 # $NetBSD$
 
 DISTNAME=	siesta-3.2-pl-4
-CATEGORIES=	uwm-pkgsrc-wip
+CATEGORIES=	math
 MASTER_SITES=	http://departments.icmab.es/leem/siesta/CodeAccess/Code/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://departments.icmab.es/leem/siesta/CodeAccess/Code/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	Electronic structure calculations and ab initio molecular dynamics
+LICENSE=	gnu-gpl-v3
 
 USE_LANGUAGES=	fortran c
 USE_TOOLS=	gmake
@@ -26,6 +26,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/Obj
 
 MAKE_ENV+=	TARGET=""
 
+INSTALLATION_DIRS=	bin
+
 pre-configure:
 	(cd ${WRKSRC} && sh ../Src/obj_setup.sh && ${CP} ../Src/configure .)
 
@@ -35,7 +37,6 @@ do-build:
 	(cd ${WRKSRC} && ${GMAKE} clean transiesta)
 
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/siesta.save ${DESTDIR}${PREFIX}/bin/siesta
 	${INSTALL_PROGRAM} ${WRKSRC}/transiesta ${DESTDIR}${PREFIX}/bin
 
