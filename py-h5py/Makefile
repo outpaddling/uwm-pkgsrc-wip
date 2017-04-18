@@ -2,7 +2,7 @@
 
 DISTNAME=	h5py-2.4.0
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel python
+CATEGORIES=	science python
 MASTER_SITES=	https://pypi.python.org/packages/source/h/h5py/
 
 MAINTAINER=	jihbed.research@gmail.com

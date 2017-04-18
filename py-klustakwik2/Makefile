@@ -16,7 +16,7 @@
 
 DISTNAME=	klustakwik2-${PORTVERSION}
 PKGNAME=        ${PYPKGPREFIX}-klustakwik2-${PORTVERSION}
-CATEGORIES=	python
+CATEGORIES=	science python
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klusta-team/}
 GITHUB_PROJECT= klustakwik2
 #GITHUB_TAG=	v${PORTVERSION}

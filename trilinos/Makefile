@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	trilinos-10.10.2-Source
-CATEGORIES=	math
+CATEGORIES=	science
 # Requires registration
 MASTER_SITES=	http://trilinos.sandia.gov/download/trilinos-10.10.html/
 

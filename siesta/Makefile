@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	siesta-3.2-pl-4
-CATEGORIES=	math
+CATEGORIES=	science
 MASTER_SITES=	http://departments.icmab.es/leem/siesta/CodeAccess/Code/
 EXTRACT_SUFX=	.tgz
 

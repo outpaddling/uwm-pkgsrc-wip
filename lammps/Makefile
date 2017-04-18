@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	lammps-2013.04.04
-CATEGORIES=	math
+CATEGORIES=	science
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
 MAINTAINER=	bacon4000@gmail.com

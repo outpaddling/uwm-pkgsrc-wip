@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	v0.3.0
-CATEGORIES=	uwm-pkgsrc-wip
+CATEGORIES=	science
 #MASTER_SITES=	https://github.com/klusta-team/spikedetekt2/archive/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klusta-team/spikedetekt2/archive/}
 PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}

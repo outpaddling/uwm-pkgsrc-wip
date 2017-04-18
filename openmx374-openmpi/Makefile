@@ -3,7 +3,7 @@
 
 DISTNAME=	openmx3.7
 PKGNAME=	openmx-openmpi-3.7p4
-CATEGORIES=	math
+CATEGORIES=	science
 DISTFILES=	openmx3.7.tar.gz patch3.7.4.tar.gz
 EXTRACT_ONLY=	openmx3.7.tar.gz
 MASTER_SITES=	http://www.openmx-square.org/ \

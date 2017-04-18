@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	KlustaKwik-2.0.1
-CATEGORIES=	math
+CATEGORIES=	science
 MASTER_SITES=	http://downloads.sourceforge.net/project/klustakwik/klustakwik/
 EXTRACT_SUFX=	.tar.bz2
 

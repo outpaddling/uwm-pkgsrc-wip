@@ -3,7 +3,7 @@
 
 DISTNAME=	lammps-2012.09.14
 PKGNAME=	lammps-openmpi-2012.09.14
-CATEGORIES=	math
+CATEGORIES=	science
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
 MAINTAINER=	bacon4000@gmail.com

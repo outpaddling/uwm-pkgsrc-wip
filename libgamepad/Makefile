@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	libgamepad-0.1.2
-CATEGORIES=	uwm-pkgsrc-wip
+CATEGORIES=	devel
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
 MAINTAINER=	bacon4000@gmail.com

@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	angora-0.18.5
-CATEGORIES=	math
+CATEGORIES=	science
 MASTER_SITES=	http://angorafdtd.org/angora/
 
 MAINTAINER=	bacon4000@gmail.com

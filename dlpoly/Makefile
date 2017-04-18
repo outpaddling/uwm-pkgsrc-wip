@@ -3,7 +3,7 @@
 
 DISTNAME=	dl_poly_4.03
 PKGNAME=	dlpoly-4.03
-CATEGORIES=	math parallel
+CATEGORIES=	science parallel
 MASTER_SITES=	http://www.stfc.ac.uk/CSE/randd/ccg/software/DL_POLY/25526.aspx
 DISTFILES=	decrypt.c.gz \
 		dl_poly_4.03.tar.gE

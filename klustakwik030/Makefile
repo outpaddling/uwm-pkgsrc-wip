@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	klustakwik-${PORTVERSION}
-CATEGORIES=	math
+CATEGORIES=	science
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klusta-team/}
 PORTVERSION=	0.3.0.rc3
 

@@ -2,7 +2,7 @@
 #
 
 DISTNAME=	dl_poly_3.10
-CATEGORIES=	uwm-pkgsrc-wip
+CATEGORIES=	science
 MASTER_SITES=	ftp://ftp.dl.ac.uk/ccp5/DL_POLY/TRANSFERS/
 EXTRACT_SUFX=	.tar.gz
 

@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	glerl-lib-1.0
-CATEGORIES=	uwm-pkgsrc-wip
+CATEGORIES=	science
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
 MAINTAINER=	bacon4000@gmail.com

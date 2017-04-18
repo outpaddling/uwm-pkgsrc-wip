@@ -3,7 +3,7 @@
 PKGNAME=	klustaviewa
 DISTNAME=	${GHCOMMIT}
 GHCOMMIT=	e1c02e8b8cacfd1c0c565d4cbbd5cd7b19b54d45
-CATEGORIES=	uwm-pkgsrc-wip
+CATEGORIES=	science
 #MASTER_SITES=	https://github.com/klusta-team/spikedetekt2/archive/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klusta-team/klustaviewa/archive/}
 PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}
