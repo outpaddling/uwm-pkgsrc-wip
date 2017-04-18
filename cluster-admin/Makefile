@@ -30,5 +30,5 @@ DEPENDS+=		auto-admin>=0.3.8:../../uwm-pkgsrc-wip/auto-admin
 
 MAKE_ENV+=	PREFIX=${PREFIX} DATADIR=${DATADIR}
 
-.include "../../uwm-pkgsrc-wip/py-hostlist/buildlink3.mk"
+.include "../../wip/py-hostlist/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
