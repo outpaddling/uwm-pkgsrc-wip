@@ -5,12 +5,10 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	bacon4000@gmail.com
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
-
-# USE_LANGUAGES=	C
+COMMENT=	HPC cluster admin tools
+LICENSE=	2-clause-bsd
 
 DATADIR=	${PREFIX}/share/cluster-admin
 
@@ -30,7 +28,7 @@ DEPENDS+=		auto-admin>=0.3.8:../../uwm-pkgsrc-wip/auto-admin
 
 .include "../../mk/bsd.prefs.mk"
 
-MAKE_ENV+=		PREFIX=${PREFIX} DATADIR=${DATADIR}
+MAKE_ENV+=	PREFIX=${PREFIX} DATADIR=${DATADIR}
 
-.include "../../wip/py-hostlist/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/py-hostlist/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
