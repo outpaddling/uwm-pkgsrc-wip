@@ -84,6 +84,19 @@ USE_TOOLS+=	pkg-config autoconf automake gmake
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
+MAKE_ENV=	INSTALL_LIB="${INSTALL_LIB}" \
+ 		INSTALL_DATA="${INSTALL_DATA}" \
+ 		INSTALL_PROGRAM="${INSTALL_PROGRAM}" \
+ 		INSTALL_DIR="${MKDIR}"
+
+pre-configure:
+	cd ${WRKSRC} && ./bootstrap
+
+post-patch:
+.	for f in sesman/sesman.ini sesman/startwm.sh xrdp/rsakeys.ini xrdp/xrdp.ini
+		@${CP} ${WRKSRC}/$f ${WRKSRC}/$f.sample
+.	endfor
+
 CONFIGURE_ARGS=	--localstatedir=/var
 
 PORTVERSION=	0.6.2
@@ -91,19 +104,19 @@ DATADIR=	${PREFIX}/share/xrdp
 DOCSDIR=	${PREFIX}/share/doc/xrdp
 EXAMPLESDIR=	${PREFIX}/share/examples/xrdp
 
-DEPENDS+=	tigervnc>=1:../../net/tigervnc
+DEPENDS+=	tigervnc>=1:../../uwm-pkgsrc-wip/tigervnc
 
-WRKSRC=			${WRKDIR}/xrdp
+#WRKSRC=			${WRKDIR}/xrdp
 EGDIR=			${PREFIX}/share/examples/xrdp
 AUTO_MKDIRS=		yes
 MAKE_DIRS=		share/examples/pam.d
 INSTALLATION_DIRS=	share/xrdp share/examples/xrdp
 
 
-PKG_SYSCONFSUBDIR=	xrdp
-CONF_FILES+=		${EGDIR}/sesman.ini	${PKG_SYSCONFDIR}/sesman.ini
-CONF_FILES+=		${EGDIR}/rsakeys.ini	${PKG_SYSCONFDIR}/rsakeys.ini
-CONF_FILES+=		${EGDIR}/xrdp.ini	${PKG_SYSCONFDIR}/xrdp.ini
+#PKG_SYSCONFSUBDIR=	xrdp
+#CONF_FILES+=		${EGDIR}/sesman.ini	${PKG_SYSCONFDIR}/sesman.ini
+#CONF_FILES+=		${EGDIR}/rsakeys.ini	${PKG_SYSCONFDIR}/rsakeys.ini
+#CONF_FILES+=		${EGDIR}/xrdp.ini	${PKG_SYSCONFDIR}/xrdp.ini
 
 
 SUBST_CLASSES+=		paths

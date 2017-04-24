@@ -1,9 +1,9 @@
 $NetBSD: distinfo,v 1.11 2017/01/24 08:30:25 wiz Exp $
 
-SHA1 (tigervnc-1.7.90.tar.gz) = ead932c5dd4bf8a24a6cbd896a041fdca4c07943
-RMD160 (tigervnc-1.7.90.tar.gz) = 6410292e883202862ea90db969ee8d2fceca11d9
-SHA512 (tigervnc-1.7.90.tar.gz) = 8c4b78538658fc1b1f485c4fc01c35eb6487fba6947b27ea76f89d5a7c4fbeac150c8bb22393c223fdae82bf95be73461118cf1cab93e210cbbcabcd38393afb
-Size (tigervnc-1.7.90.tar.gz) = 1431708 bytes
+SHA1 (tigervnc-1.7.1.tar.gz) = e6924a1c0a092d3f4b4d389087592a1279cf1728
+RMD160 (tigervnc-1.7.1.tar.gz) = 7578bbb7ab3d3f261dcd8b3529a35937bfa75f1b
+SHA512 (tigervnc-1.7.1.tar.gz) = babdc362b28d7af80c7efbb3a1aadf158d7f29621afe36d785748af45e515e2718cf1011359db7b39c218770b3f3ee2767e08abc58091f018c08ba9739a3e68d
+Size (tigervnc-1.7.1.tar.gz) = 1406032 bytes
 SHA1 (xorg-server-1.17.2.tar.bz2) = 56ac29a82b99bcf4c7ba2fca41a44cfa18748262
 RMD160 (xorg-server-1.17.2.tar.bz2) = bf575a269f1e7b729992a20989be84e09fcc88a2
 SHA512 (xorg-server-1.17.2.tar.bz2) = 7e7b7620890cc8db696695758fa22fa879f9d3c33946663611ec0b37f02116e9c6f08779f9eece59907b430d3df93f0c0548939683ea156b3c4cbe02571b7551

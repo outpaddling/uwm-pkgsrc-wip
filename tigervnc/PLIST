@@ -7,11 +7,11 @@ bin/vncviewer
 bin/x0vncserver
 lib/xorg/modules/extensions/libvnc.la
 man/man1/Xvnc.1
-man/man1/vncconfig.1
-man/man1/vncpasswd.1
-man/man1/vncserver.1
-man/man1/vncviewer.1
-man/man1/x0vncserver.1
+share/man/man1/vncconfig.1
+share/man/man1/vncpasswd.1
+share/man/man1/vncserver.1
+share/man/man1/vncviewer.1
+share/man/man1/x0vncserver.1
 share/applications/vncviewer.desktop
 share/doc/${PKGNAME}/LICENCE.TXT
 share/doc/${PKGNAME}/README.txt

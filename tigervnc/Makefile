@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.17 2017/01/25 23:17:08 wiz Exp $
 
-DISTNAME=	tigervnc-1.7.90
+DISTNAME=	tigervnc-1.7.1
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=TigerVNC/}
@@ -27,9 +27,8 @@ USE_TOOLS+=	msgmerge patch perl:run autoconf automake autoreconf pkg-config gmak
 BUILD_DIRS=	. unix/xserver
 INSTALL_DIRS=	. unix/xserver/hw/vnc
 
-#LDFLAGS+=	${BUILDLINK_LDADD.gettext} -lpng
+#LDFLAGS+=	${BUILDLINK_LDADD.gettext}
 LDFLAGS+=	-lpng
-
 CONFIGURE_ENV+=	ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 OVERRIDE_GNU_CONFIG_SCRIPTS= yes
 LIBTOOL_OVERRIDE=unix/xserver/libtool
@@ -56,7 +55,7 @@ XORG_CONFIGURE_ARGS+=	--disable-static --disable-xinerama --without-dtrace
 XORG_CONFIGURE_ARGS+=	--disable-xorg --disable-xnest --disable-xvfb --disable-dmx
 XORG_CONFIGURE_ARGS+=	--disable-config-hal --disable-config-udev --with-pic
 XORG_CONFIGURE_ARGS+=	--disable-unit-tests --disable-devel-docs --disable-selective-werror
-XORG_CONFIGURE_ARGS+=	--disable-dri --enable-dri2 --disable-dri3 --enable-glx --enable-glx-tls
+XORG_CONFIGURE_ARGS+=	--disable-dri --disable-dri2 --disable-dri3 --enable-glx --enable-glx-tls
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -103,6 +102,5 @@ BUILDLINK_API_DEPENDS.fltk+=	fltk>=1.3.3
 .include "../../x11/resourceproto/buildlink3.mk"
 .include "../../x11/scrnsaverproto/buildlink3.mk"
 .include "../../x11/videoproto/buildlink3.mk"
-.include "../../security/openpam/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

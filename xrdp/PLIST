@@ -1,1 +1,46 @@
 @comment $NetBSD$
+bin/xrdp-dis
+bin/xrdp-genkeymap
+bin/xrdp-keygen
+bin/xrdp-sesadmin
+bin/xrdp-sesrun
+bin/xrdp-sestest
+etc/pam.d/xrdp-sesman
+etc/xrdp/km-0407.ini
+etc/xrdp/km-0409.ini
+etc/xrdp/km-040c.ini
+etc/xrdp/km-0410.ini
+etc/xrdp/km-0419.ini
+etc/xrdp/km-041d.ini
+etc/xrdp/rsakeys.ini
+etc/xrdp/sesman.ini
+etc/xrdp/startwm.sh
+etc/xrdp/xrdp.ini
+etc/xrdp/xrdp.sh
+lib/xrdp/libcommon.la
+lib/xrdp/libmc.la
+lib/xrdp/librdp.la
+lib/xrdp/libscp.la
+lib/xrdp/libvnc.la
+lib/xrdp/libxrdp.la
+lib/xrdp/libxup.la
+man/man5/sesman.ini.5
+man/man5/xrdp.ini.5
+man/man8/xrdp-sesman.8
+man/man8/xrdp-sesrun.8
+man/man8/xrdp.8
+sbin/xrdp
+sbin/xrdp-chansrv
+sbin/xrdp-sesman
+sbin/xrdp-sessvc
+share/xrdp/ad24b.bmp
+share/xrdp/ad256.bmp
+share/xrdp/cursor0.cur
+share/xrdp/cursor1.cur
+share/xrdp/sans-10.fv1
+share/xrdp/xrdp24b.bmp
+share/xrdp/xrdp256.bmp
+@pkgdir share/examples
+@pkgdir share/doc
+@pkgdir man/man1
+@pkgdir include
