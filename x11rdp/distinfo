@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (xrdp/x11rdp_xorg71_r299.tar.gz) = 960687bffb8e2d21b987a9344a5b1221d6931569
+RMD160 (xrdp/x11rdp_xorg71_r299.tar.gz) = 8b719ce24d43d1db8bb578d1ad27c1876ab06f90
+SHA512 (xrdp/x11rdp_xorg71_r299.tar.gz) = f1e9843172af5ad138f0dee253be4b7b6407522c5a24fe86f17c1b609660d42011701d4dc46acbea4e7cb4a527134defcb82631514a1cd87dd2e6f1d518a9c62
+Size (xrdp/x11rdp_xorg71_r299.tar.gz) = 51051954 bytes
+SHA1 (patch-buildx_sh) = 593f71d75a812c26b330cccdc9c14c52ba9506cc
+SHA1 (patch-xorg-server-X11R7.1-1.1.0__hw__common__compiler.h) = a2d42e37fa7492b9588a3e912252fca218e7d0b6
+SHA1 (patch-xorg-server-X11R7.1-1.1.0__hw__rdp__Makefile) = c45501b4755817a77d5e15801efac5b32d536121
+SHA1 (patch-xorg-server-X11R7.1-1.1.0__hw__rdp__rdp.h) = d7847200e89f2add42b587012472268afa4dfc1d
+SHA1 (patch-xtrans-X11R7.0-1.0.0__Xtranssock.c) = 9279c1709f71f8acff4c0e58ec41ef594c6485ef
