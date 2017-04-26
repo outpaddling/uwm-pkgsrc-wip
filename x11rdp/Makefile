@@ -94,6 +94,7 @@ LICENSE=	mit
 # Test and change if necessary.
 # MAKE_JOBS_SAFE=	no
 
+USE_LIBTOOL=	yes
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	fortran c c++
 USE_TOOLS+=	gmake pkg-config
