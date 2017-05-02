@@ -91,7 +91,7 @@ sbin/ganglia-web-setup
 sbin/head-mount-shares
 sbin/node-sync-all-users
 sbin/node-sync-groups
-sbin/node-sync-user
+sbin/node-sync-users
 sbin/remount-all-nfs
 sbin/remount-nfs
 sbin/slurm-admin
