@@ -14,11 +14,9 @@ EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	# none
 
-DEPENDS=	url2pkg>0:../../pkgtools/url2pkg \
-		pkglint>0:../../pkgtools/pkglint \
+DEPENDS=	pkglint>0:../../pkgtools/pkglint \
 		pkgdiff>0:../../pkgtools/pkgdiff \
 		createbuildlink>0:../../pkgtools/createbuildlink \
-		fbsd2pkg>0:../../uwm-pkgsrc-wip/fbsd2pkg
 
 NO_BUILD=	yes
 
