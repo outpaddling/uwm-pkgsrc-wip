@@ -43,6 +43,7 @@ sbin/cluster-init-all
 sbin/cluster-init-node
 sbin/cluster-install-rpms
 sbin/cluster-iptables
+sbin/cluster-iptables-config
 sbin/cluster-lowest-uid
 sbin/cluster-munge-enable
 sbin/cluster-net-mon
