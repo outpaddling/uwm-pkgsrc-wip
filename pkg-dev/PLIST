@@ -5,4 +5,5 @@ sbin/pkg-grep
 sbin/pkg-pbulk-setup
 sbin/pkg-reinstall
 sbin/pkg-remake
+sbin/pkg-start-chroot
 sbin/pkg-vuln
