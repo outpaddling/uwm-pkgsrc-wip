@@ -8,7 +8,7 @@ Makefile:
     Do not use FETCH_USING in Makefile
 
     Use MASTER_SITE_SOURCEFORGE, MASTER_SITE_GITHUB, etc. if possible
-        See mk/fetch/github for packages downloading from Github
+	See mk/fetch/github for packages downloading from Github
 
     Use REPLACE_PERL, REPLACE_PYTHON, etc.
 
@@ -17,6 +17,12 @@ Makefile:
     HOMEPAGE should not have /../
     
     INSTALLATION_DIRS instead of AUTO_MKDIRS or MKDIR
+
+Patching:
+
+    Use BSD_INSTALL_*_DIR to create directories
+    
+    pkgconfigdir= $(exec_prefix)/lib/pkgconfig
 
 DESCR:
 
