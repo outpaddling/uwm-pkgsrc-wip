@@ -43,3 +43,6 @@ mv -f $file.patch $file
 file=../../devel/boost-libs/Makefile
 sed -e 's|^PLIST.fiber=.*yes|BJAM_ARGS+=\t\t--without-fiber|' $file > $file.patch
 mv -f $file.patch $file
+
+# gettext configure on Linux produces one more file
+printf 'lib/preloadable_libintl.so\n' > ../../devel/gettext/PLIST.Linux
