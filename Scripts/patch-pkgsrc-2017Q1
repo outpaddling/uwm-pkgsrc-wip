@@ -34,6 +34,9 @@ if [ $0 != ./$name ]; then
     exit 1
 fi
 
+# Make sure patches are readable by non-root users, e.g. for pbulk
+umask 022
+
 # MesaLib uses c++11
 file=../../graphics/MesaLib/Makefile
 sed -e 's|4.2|4.8|' $file > $file.patch
