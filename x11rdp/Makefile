@@ -11,6 +11,7 @@
 # can be used fully functionally without the other.
 # Simply saying, net/xrdp is front-end, x11-servers/x11rdp is back-end.
 
+# What's the pkgsrc equivalent?
 # RUN_DEPENDS=	xorg-fonts>=0:x11-fonts/xorg-fonts
 #USE_OPENSSL=	yes
 
@@ -20,17 +21,16 @@ PKGNAME=	x11rdp-${PORTVERSION}
 PKGNAME=	x11rdp-${PORTVERSION}
 DIST_SUBDIR=	xrdp
 CATEGORIES=	x11-servers
-MASTER_SITES=	https://xrdp.vmeta.jp/pub/xrdp/ \
+MASTER_SITES=	https://xrdp.vmeta.jp/pub/xrdp/:x11rdp \
 		http://www.club.kyutech.ac.jp/~meta/distfiles/:x11rdp
 DISTFILES=	x11rdp_xorg71_r${X11RDPREVISION}.tar.gz
-#:x11rdp
 
 MAINTAINER=	dsiercks
 HOMEPAGE=	http://www.xrdp.org/
 COMMENT=	X11 server for xrdp
-# Check this
 LICENSE=	mit
 
+# Careful here: substis on top of patches
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_SED.prefix+=	-e "s|%%PREFIX%%|${PREFIX}|g"
@@ -56,6 +56,7 @@ SUBST_STAGE.make=	post-patch
 SUBST_SED.make+=	-e "s|%%MAKE_CMD%%|${MAKE_PROGRAM}|g"
 SUBST_FILES.make+=	${WRKSRC}/buildx.sh
 
+# FIXME: Come up with a better patch that can be sent upstream
 SUBST_CLASSES+=		libz
 SUBST_STAGE.libz=	post-patch
 SUBST_SED.libz+=	-e "s|\"-lz|\"-L${PREFIX}/lib -lz|g"
@@ -68,7 +69,8 @@ SUBST_SED.libz2+=	-e "s|-lz|-L${PREFIX}/lib -lz|g"
 SUBST_FILES.libz2+=	${WRKSRC}/xorg-server-X11R7.1-1.1.0/configure
 SUBST_FILES.libz2+=	${WRKSRC}/xorg-server-X11R7.1-1.1.0/hw/rdp/Makefile
 
-# Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
+# FIXME: Reverts a static patch.  Better to eliminate the patch and
+# subst GNU_SOURCE to BSD_SOURCE.
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == Linux
 SUBST_CLASSES+=		source
@@ -76,9 +78,6 @@ SUBST_STAGE.source=	post-patch
 SUBST_SED.source+=	-e "s|BSD_SOURCE|GNU_SOURCE|g"
 SUBST_FILES.source+=	${WRKSRC}/buildx.sh
 .endif
-
-# Test and change if necessary.
-MAKE_JOBS_SAFE=	no
 
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	fortran c c++
@@ -88,9 +87,6 @@ LDFLAGS+=	-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib
 
 PORTVERSION=	0.5.0.${X11RDPREVISION}
 X11RDPREVISION=	299
-
-# Keep this if there are user-selectable options.
-# .include "options.mk"
 
 INSTALLATION_DIRS=	bin
 
@@ -106,7 +102,6 @@ do-install:
 	${INSTALL_PROGRAM} \
 		${WRKSRC}/build_dir/bin/X11rdp ${DESTDIR}${PREFIX}/bin/
 
-# Linux doesn't have zlib in the base, so just in case...
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
