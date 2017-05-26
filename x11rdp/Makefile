@@ -5,74 +5,14 @@
 #              Wed Apr 26 12:04:04 CDT 2017               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
+# Do not confuse net/xrdp with x11-servers/x11rdp.  This port is not
+# former version or name of net/xrdp. x11rdp is fundamentally an X server.
+# xrdp is a RDP server.  They work together.  Neither xrdp nor x11rdp
+# can be used fully functionally without the other.
+# Simply saying, net/xrdp is front-end, x11-servers/x11rdp is back-end.
 
-## Created by: Koichiro IWAO <meta+ports@vmeta.jp>
-## $FreeBSD: head/x11-servers/x11rdp/Makefile 413746 2016-04-21 16:43:14Z swills $
-## Do not confuse net/xrdp with x11-servers/x11rdp.  This port is not
-## former version or name of net/xrdp. x11rdp is fundamentally an X server.
-## xrdp is a RDP server.  They work together.  Neither xrdp nor x11rdp
-## can be used fully functionally without the other.
-##
-## Simply saying, net/xrdp is front-end, x11-servers/x11rdp is back-end.
-#PORTREVISION=	1
-#BROKEN_powerpc64=	Does not build
 # RUN_DEPENDS=	xorg-fonts>=0:x11-fonts/xorg-fonts
-## SVN revision of x11rdp
-X11RDPREVISION=	299
 #USE_OPENSSL=	yes
-#CONFLICTS_INSTALL=	xrdp-devel-[0-9]* x11rdp-devel-[0-9]*
-#PLIST_FILES=	bin/X11rdp
-
-# Best guess translation of REINPLACE above.  Replace 1 with a
-# meaningful name.  Assuming post-patch: Change if necessary.
-SUBST_CLASSES+=		1
-SUBST_STAGE.1=	post-patch
-SUBST_SED.1+=	-e "s|%%PREFIX%%|${PREFIX}|g"
-SUBST_FILES.1+=	${WRKSRC}/buildx.sh
-
-# 	@${REINPLACE_CMD} -e "s|%%CC%%|${CC}|g" ${WRKSRC}/buildx.sh
-
-# Best guess translation of REINPLACE above.  Replace 2 with a
-# meaningful name.  Assuming post-patch: Change if necessary.
-SUBST_CLASSES+=		2
-SUBST_STAGE.2=	post-patch
-SUBST_SED.2+=	-e "s|%%CC%%|${CC}|g"
-SUBST_FILES.2+=	${WRKSRC}/buildx.sh
-
-# 	@${REINPLACE_CMD} -e "s|%%CXX%%|${CXX}|g" ${WRKSRC}/buildx.sh
-
-# Best guess translation of REINPLACE above.  Replace 3 with a
-# meaningful name.  Assuming post-patch: Change if necessary.
-SUBST_CLASSES+=		3
-SUBST_STAGE.3=	post-patch
-SUBST_SED.3+=	-e "s|%%CXX%%|${CXX}|g"
-SUBST_FILES.3+=	${WRKSRC}/buildx.sh
-
-# 	@${REINPLACE_CMD} -e "s|%%CPP%%|${CPP}|g" ${WRKSRC}/buildx.sh
-
-# Best guess translation of REINPLACE above.  Replace 4 with a
-# meaningful name.  Assuming post-patch: Change if necessary.
-SUBST_CLASSES+=		4
-SUBST_STAGE.4=	post-patch
-SUBST_SED.4+=	-e "s|%%CPP%%|${CPP}|g"
-SUBST_FILES.4+=	${WRKSRC}/buildx.sh
-
-# 	@${REINPLACE_CMD} -e "s|%%MAKE_CMD%%|${MAKE_CMD}|g" ${WRKSRC}/buildx.sh
-
-# Best guess translation of REINPLACE above.  Replace 5 with a
-# meaningful name.  Assuming post-patch: Change if necessary.
-SUBST_CLASSES+=		5
-SUBST_STAGE.5=	post-patch
-SUBST_SED.5+=	-e "s|%%MAKE_CMD%%|${MAKE_CMD}|g"
-SUBST_FILES.5+=	${WRKSRC}/buildx.sh
-
-do-build:
-	cd ${WRKSRC} && GNUMAKE=${MAKE_CMD} ${SH} ${WRKSRC}/buildx.sh ${WRKSRC}/build_dir
-#	cd ${WRKSRC} &&	bash buildx.sh ~/Pkgsrc/pkgsrc-2017Q1/uwm-pkgsrc-wip/x11rdp/work/x11rdp_xorg71/build_dir/
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/build_dir/bin/X11rdp ${DESTDIR}${PREFIX}/bin/
 
 DISTNAME=	x11rdp_xorg71
 PKGNAME=	x11rdp-${PORTVERSION}
@@ -91,37 +31,67 @@ COMMENT=	X11 server for xrdp
 # Check this
 LICENSE=	mit
 
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_SED.prefix+=	-e "s|%%PREFIX%%|${PREFIX}|g"
+SUBST_FILES.prefix+=	${WRKSRC}/buildx.sh
+
+SUBST_CLASSES+=		cc
+SUBST_STAGE.cc=		post-patch
+SUBST_SED.cc+=		-e "s|%%CC%%|${CC}|g"
+SUBST_FILES.cc+=	${WRKSRC}/buildx.sh
+
+SUBST_CLASSES+=		cxx
+SUBST_STAGE.cxx=	post-patch
+SUBST_SED.cxx+=		-e "s|%%CXX%%|${CXX}|g"
+SUBST_FILES.cxx+=	${WRKSRC}/buildx.sh
+
+SUBST_CLASSES+=		cpp
+SUBST_STAGE.cpp=	post-patch
+SUBST_SED.cpp+=		-e "s|%%CPP%%|${CPP}|g"
+SUBST_FILES.cpp+=	${WRKSRC}/buildx.sh
+
+SUBST_CLASSES+=		make
+SUBST_STAGE.make=	post-patch
+SUBST_SED.make+=	-e "s|%%MAKE_CMD%%|${MAKE_PROGRAM}|g"
+SUBST_FILES.make+=	${WRKSRC}/buildx.sh
+
+# Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == Linux
+SUBST_CLASSES+=		source
+SUBST_STAGE.source=	post-patch
+SUBST_SED.source+=	-e "s|BSD_SOURCE|GNU_SOURCE|g"
+SUBST_FILES.source+=	${WRKSRC}/buildx.sh
+.endif
+
 # Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
+MAKE_JOBS_SAFE=	no
 
 USE_LIBTOOL=	yes
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	fortran c c++
 USE_TOOLS+=	gmake pkg-config
 
 PORTVERSION=	0.5.0.${X11RDPREVISION}
-SITE_PERL=	${PREFIX}/share
-DATADIR=	${PREFIX}/share/x11rdp
-DOCSDIR=	${PREFIX}/share/doc/x11rdp
-EXAMPLESDIR=	${PREFIX}/share/examples/x11rdp
+X11RDPREVISION=	299
 
 post-extract:
 	@${MKDIR} ${WRKSRC}/build_dir
-#post-patch:
-#	@${REINPLACE_CMD} -e "s|%%PREFIX%%|${PREFIX}|g" ${WRKSRC}/buildx.sh
-
-# Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
-# .include "../../mk/bsd.prefs.mk"
 
 # Keep this if there are user-selectable options.
 # .include "options.mk"
 
-# Specify which directories to create before install.
-# You should only need this if using your own install target.
-INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/doc share/examples
+INSTALLATION_DIRS=	bin
 
-# Convert any _DEPENDS above that have a buildlink3.mk
-# .include "../..///buildlink3.mk"
+do-build:
+	cd ${WRKSRC} && \
+		GNUMAKE=${MAKE_PROGRAM} ${SH} ${WRKSRC}/buildx.sh \
+		${WRKSRC}/build_dir
+
+do-install:
+	${INSTALL_PROGRAM} \
+		${WRKSRC}/build_dir/bin/X11rdp ${DESTDIR}${PREFIX}/bin/
+
 # Linux doesn't have zlib in the base, so just in case...
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
