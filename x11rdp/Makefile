@@ -75,7 +75,7 @@ MAKE_JOBS_SAFE=	no
 
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	fortran c c++
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	gmake perl pkg-config
 
 PORTVERSION=	0.5.0.${X11RDPREVISION}
 X11RDPREVISION=	299
