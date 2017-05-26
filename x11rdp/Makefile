@@ -56,6 +56,11 @@ SUBST_STAGE.make=	post-patch
 SUBST_SED.make+=	-e "s|%%MAKE_CMD%%|${MAKE_PROGRAM}|g"
 SUBST_FILES.make+=	${WRKSRC}/buildx.sh
 
+SUBST_CLASSES+=		libz
+SUBST_STAGE.libz=	post-patch
+SUBST_SED.libz+=	-e "s|\"-lz|\"-L${PREFIX}/lib -lz|g"
+SUBST_FILES.libz+=	${WRKSRC}/libXfont-X11R7.1-1.1.0/configure
+
 # Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == Linux
