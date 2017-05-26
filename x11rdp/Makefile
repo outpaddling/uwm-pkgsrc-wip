@@ -66,6 +66,7 @@ SUBST_CLASSES+=		libz2
 SUBST_STAGE.libz2=	post-patch
 SUBST_SED.libz2+=	-e "s|-lz|-L${PREFIX}/lib -lz|g"
 SUBST_FILES.libz2+=	${WRKSRC}/xorg-server-X11R7.1-1.1.0/configure
+SUBST_FILES.libz2+=	${WRKSRC}/xorg-server-X11R7.1-1.1.0/hw/rdp/Makefile
 
 # Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
 .include "../../mk/bsd.prefs.mk"
