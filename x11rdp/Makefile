@@ -59,7 +59,13 @@ SUBST_FILES.make+=	${WRKSRC}/buildx.sh
 SUBST_CLASSES+=		libz
 SUBST_STAGE.libz=	post-patch
 SUBST_SED.libz+=	-e "s|\"-lz|\"-L${PREFIX}/lib -lz|g"
+SUBST_SED.libz+=	-e "s|Z_LIBS=-lz|Z_LIBS=\"-L${PREFIX}/lib -lz\"|g"
 SUBST_FILES.libz+=	${WRKSRC}/libXfont-X11R7.1-1.1.0/configure
+
+SUBST_CLASSES+=		libz2
+SUBST_STAGE.libz2=	post-patch
+SUBST_SED.libz2+=	-e "s|-lz|-L${PREFIX}/lib -lz|g"
+SUBST_FILES.libz2+=	${WRKSRC}/xorg-server-X11R7.1-1.1.0/configure
 
 # Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
 .include "../../mk/bsd.prefs.mk"
@@ -76,6 +82,8 @@ MAKE_JOBS_SAFE=	no
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	fortran c c++
 USE_TOOLS+=	gmake perl pkg-config
+
+LDFLAGS+=	-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib
 
 PORTVERSION=	0.5.0.${X11RDPREVISION}
 X11RDPREVISION=	299
