@@ -1,5 +1,6 @@
 $NetBSD$
 
+# FreeBSD does not define PF_INET
 --- xorg-server-X11R7.1-1.1.0/hw/rdp/rdp.h.orig	2013-01-28 10:50:46.908229086 +0000
 +++ xorg-server-X11R7.1-1.1.0/hw/rdp/rdp.h	2013-01-28 11:01:31.760225231 +0000
 @@ -23,6 +23,11 @@

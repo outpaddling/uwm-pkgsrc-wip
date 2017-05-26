@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Respect commands in build env
 --- buildx.sh.orig	2013-01-28 16:29:10.000000000 +0000
 +++ buildx.sh
 @@ -1,6 +1,10 @@

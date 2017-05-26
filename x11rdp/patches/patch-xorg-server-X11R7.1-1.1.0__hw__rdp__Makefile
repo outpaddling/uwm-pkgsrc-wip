@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Missing include dir
 --- xorg-server-X11R7.1-1.1.0/hw/rdp/Makefile.orig	2013-01-28 16:28:24.000000000 +0000
 +++ xorg-server-X11R7.1-1.1.0/hw/rdp/Makefile	2013-11-13 05:21:49.199495983 +0000
 @@ -25,7 +25,7 @@

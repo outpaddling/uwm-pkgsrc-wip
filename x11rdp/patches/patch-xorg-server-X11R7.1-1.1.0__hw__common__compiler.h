@@ -1,5 +1,6 @@
 $NetBSD$
 
+# More portable test
 --- xorg-server-X11R7.1-1.1.0/hw/xfree86/common/compiler.h.orig	2013-12-19 04:09:03.884558740 +0000
 +++ xorg-server-X11R7.1-1.1.0/hw/xfree86/common/compiler.h	2013-12-19 04:10:29.576270046 +0000
 @@ -1364,7 +1364,7 @@

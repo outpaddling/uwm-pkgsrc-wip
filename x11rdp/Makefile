@@ -20,12 +20,12 @@ PKGNAME=	x11rdp-${PORTVERSION}
 
 PKGNAME=	x11rdp-${PORTVERSION}
 DIST_SUBDIR=	xrdp
-CATEGORIES=	x11-servers
+CATEGORIES=	x11
 MASTER_SITES=	https://xrdp.vmeta.jp/pub/xrdp/:x11rdp \
 		http://www.club.kyutech.ac.jp/~meta/distfiles/:x11rdp
 DISTFILES=	x11rdp_xorg71_r${X11RDPREVISION}.tar.gz
 
-MAINTAINER=	dsiercks
+MAINTAINER=	dsiercks@uwm.edu
 HOMEPAGE=	http://www.xrdp.org/
 COMMENT=	X11 server for xrdp
 LICENSE=	mit
@@ -83,7 +83,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	fortran c c++
 USE_TOOLS+=	gmake perl pkg-config
 
-LDFLAGS+=	-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib
+# LDFLAGS+=	-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 PORTVERSION=	0.5.0.${X11RDPREVISION}
 X11RDPREVISION=	299
@@ -91,7 +91,7 @@ X11RDPREVISION=	299
 INSTALLATION_DIRS=	bin
 
 post-extract:
-	@${MKDIR} ${WRKSRC}/build_dir
+	${MKDIR} ${WRKSRC}/build_dir
 
 do-build:
 	cd ${WRKSRC} && \
