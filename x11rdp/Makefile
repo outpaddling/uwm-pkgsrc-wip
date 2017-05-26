@@ -75,13 +75,13 @@ USE_TOOLS+=	gmake pkg-config
 PORTVERSION=	0.5.0.${X11RDPREVISION}
 X11RDPREVISION=	299
 
-post-extract:
-	@${MKDIR} ${WRKSRC}/build_dir
-
 # Keep this if there are user-selectable options.
 # .include "options.mk"
 
 INSTALLATION_DIRS=	bin
+
+post-extract:
+	@${MKDIR} ${WRKSRC}/build_dir
 
 do-build:
 	cd ${WRKSRC} && \

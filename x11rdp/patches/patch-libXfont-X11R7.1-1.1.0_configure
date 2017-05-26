@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- libXfont-X11R7.1-1.1.0/configure.orig	2013-01-28 16:28:56.000000000 +0000
++++ libXfont-X11R7.1-1.1.0/configure
+@@ -19649,7 +19649,7 @@ if test "${ac_cv_lib_z_gzopen+set}" = se
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lz  $LIBS"
++LIBS="-L${PREFIX} -lz  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
