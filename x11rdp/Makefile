@@ -102,6 +102,8 @@ do-install:
 	${INSTALL_PROGRAM} \
 		${WRKSRC}/build_dir/bin/X11rdp ${DESTDIR}${PREFIX}/bin/
 
+# FIXME: Can these explicit dependencies be replaced by a more general
+# construct?  These assume modular X11.
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
