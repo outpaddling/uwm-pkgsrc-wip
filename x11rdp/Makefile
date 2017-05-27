@@ -21,8 +21,8 @@ PKGNAME=	x11rdp-${PORTVERSION}
 PKGNAME=	x11rdp-${PORTVERSION}
 DIST_SUBDIR=	xrdp
 CATEGORIES=	x11
-MASTER_SITES=	https://xrdp.vmeta.jp/pub/xrdp/:x11rdp \
-		http://www.club.kyutech.ac.jp/~meta/distfiles/:x11rdp
+MASTER_SITES=	https://xrdp.vmeta.jp/pub/xrdp/ \
+		http://www.club.kyutech.ac.jp/~meta/distfiles/
 DISTFILES=	x11rdp_xorg71_r${X11RDPREVISION}.tar.gz
 
 MAINTAINER=	dsiercks@uwm.edu
