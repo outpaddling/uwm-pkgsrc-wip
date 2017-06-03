@@ -1,0 +1,19 @@
+$NetBSD: patch-configure.ac,v 1.3 2016/11/19 21:53:12 maya Exp $
+
+install .oct loadable modules with INSTALL_LIB to avoid stripping them
+
+--- configure.ac.orig	2016-11-13 15:19:37.000000000 +0000
++++ configure.ac
+@@ -208,8 +208,11 @@ AC_PROG_LN_S
+ AC_PROG_MKDIR_P
+ 
+ AC_PROG_INSTALL
+-INSTALL_SCRIPT="${INSTALL}"
++test -z "$INSTALL_SCRIPT" && INSTALL_SCRIPT='${INSTALL}'
+ AC_SUBST(INSTALL_SCRIPT)
++test -z "$INSTALL_LIB" && INSTALL_LIB='${INSTALL_SCRIPT}'
++AC_SUBST(INSTALL_LIB)
++
+ 
+ OCTAVE_PROG_DESKTOP_FILE_INSTALL
+ 
