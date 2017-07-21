@@ -13,8 +13,8 @@ DISTNAME=	JAGS-${PORTVERSION}
 #DIST_SUBDIR=	mcmc-jags
 CATEGORIES=	math
 # FreeBSD MASTER_SITES: SF/mcmc-jags/JAGS/${S}.x/Source/:1
-#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcmc-jags/}
-MASTER_SITES=	http://downloads.sourceforge.net/project/mcmc-jags/JAGS/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcmc-jags/}
+# MASTER_SITES=	http://downloads.sourceforge.net/project/mcmc-jags/JAGS/
 
 #DISTFILES=	JAGS-4.3.0.tar.gz
 
