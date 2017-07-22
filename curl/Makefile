@@ -20,8 +20,8 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 # CONFIGURE_ARGS+=	--with-ca-path=${SSLCERTS}
-CONFIGURE_ARGS+=	--with-ca-path=/etc/ssl/certs
-# CONFIGURE_ARGS+=	--with-ca-bundle=/etc/ssl/certs/ca-bundle.crt
+# CONFIGURE_ARGS+=	--with-ca-path=/etc/ssl/certs
+CONFIGURE_ARGS+=	--with-ca-bundle=/etc/ssl/certs/ca-bundle.crt
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 # CONFIGURE_ARGS+=	--with-ca-fallback=yes
 PKGCONFIG_OVERRIDE=	libcurl.pc.in
