@@ -18,7 +18,8 @@ COMMENT=	Single molecule sequence assembler for genomes large and small
 # Check this
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	gnuplot>0:../../graphics/gnuplot
+# Too heavy.  Disable check in canu command instead.
+# DEPENDS+=	gnuplot>0:../../graphics/gnuplot
 
 # Screwy Makefile compiles directly into ${DESTDIR}${PREFIX}
 SUBST_CLASSES+=		optimize
