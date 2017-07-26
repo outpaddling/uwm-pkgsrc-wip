@@ -18,6 +18,8 @@ COMMENT=	Single molecule sequence assembler for genomes large and small
 # Check this
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	gnuplot>0:../../graphics/gnuplot
+
 # Screwy Makefile compiles directly into ${DESTDIR}${PREFIX}
 SUBST_CLASSES+=		optimize
 SUBST_STAGE.optimize=	post-patch
@@ -25,6 +27,16 @@ SUBST_SED.optimize+=	-e 's|-O4|-O2|g'
 SUBST_SED.optimize+=	-e 's|-funroll-loops||g'
 SUBST_SED.optimize+=	-e 's|-fexpensive-optimizations||g'
 SUBST_FILES.optimize+=	${WRKSRC}/Makefile
+
+SUBST_CLASSES+=		jar
+SUBST_STAGE.jar=	post-patch
+SUBST_SED.jar=		-e 's|\\$$bin/mhap-|${PREFIX}/${JAVAJARDIR}/mhap-|g'
+SUBST_FILES.jar=	${WRKSRC}/pipelines/canu/OverlapMhap.pm
+
+SUBST_CLASSES+=		perl
+SUBST_STAGE.perl=	post-patch
+SUBST_SED.perl=		-e 's|RealBin/lib|RealBin/../${SITE_PERL_REL}|g'
+SUBST_FILES.perl=	${WRKSRC}/pipelines/canu.pl
 
 REPLACE_PERL+=	bogart/plotErrorProfile.pl \
 		bogart/findOverlappingReads.pl \
@@ -78,12 +90,26 @@ MAKE_ENV+=	DESTDIR=${WRKSRC}
 
 PORTVERSION=	1.5
 
-INSTALLATION_DIRS=	canu-${PORTVERSION}/bin
+TMP_INST=	${WRKSRC}${PREFIX}/${OPSYS}-${MACHINE_ARCH:S/x86_64/amd64/}
+SITE_PERL_REL=	lib/perl5/site_perl
+JAVAJARDIR=	share/java/classes
+INSTALLATION_DIRS=	bin \
+			${SITE_PERL_REL} \
+			${JAVAJARDIR}
 
-# FIXME: Unravel the willy-nilly directory structure.
+post-build:
+	${MKDIR} ${TMP_INST}/${SITE_PERL_REL}
+	${MV} ${TMP_INST}/bin/lib/canu ${TMP_INST}/${SITE_PERL_REL}
+	${RMDIR} ${TMP_INST}/bin/lib
+	${MV} ${TMP_INST}/bin/*.a ${TMP_INST}/lib
+	${MKDIR} ${TMP_INST}/${JAVAJARDIR}
+	${MV} ${TMP_INST}/bin/*.jar ${TMP_INST}/${JAVAJARDIR}
+
 do-install:
-	cd ${WRKSRC}${PREFIX}/${OPSYS}-${MACHINE_ARCH:S/x86_64/amd64/}/bin && \
-		${PAX} -wr * ${DESTDIR}${PREFIX}/canu-${PORTVERSION}/bin
+	cd ${TMP_INST}/bin && ${PAX} -wr * ${DESTDIR}${PREFIX}/bin
+	cd ${TMP_INST}/lib && ${PAX} -wr * ${DESTDIR}${PREFIX}/lib
+	cd ${TMP_INST}/share && ${PAX} -wr * ${DESTDIR}${PREFIX}/share
 
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
