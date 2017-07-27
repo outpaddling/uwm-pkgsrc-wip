@@ -81,6 +81,7 @@ ONLY_FOR_PLATFORM=	 *-*-x86_64
 
 USE_LANGUAGES=	c c++
 USE_JAVA=	run
+USE_JAVA2=	8
 USE_TOOLS+=	gmake pax perl
 
 GCC_REQD+=	4.8
