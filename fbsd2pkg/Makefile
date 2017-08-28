@@ -21,13 +21,14 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	${WRKSRC}/fbsd2pkg
 SUBST_SED.prefix=	\
-	's|fbsd2pkg.awk|${PREFIX}/libexec/fbsd2pkg/fbsd2pkg.awk|g'
+	-e 's|fbsd2pkg.awk|${PREFIX}/libexec/fbsd2pkg/fbsd2pkg.awk|g'
 
-DEPENDS+=	createbuildlink:../../pkgtools/createbuildlink \
-		pkglint:../../pkgtools/pkglint
+DEPENDS+=	createbuildlink>=0:../../pkgtools/createbuildlink \
+		pkglint>=0:../../pkgtools/pkglint
+
+INSTALLATION_DIRS=	bin libexec/fbsd2pkg
 
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/libexec/fbsd2pkg
 	${INSTALL_SCRIPT} ${WRKSRC}/fbsd2pkg ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/fbsd2pkg.awk \
 		${DESTDIR}${PREFIX}/libexec/fbsd2pkg
