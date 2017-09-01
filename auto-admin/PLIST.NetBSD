@@ -4,7 +4,12 @@ sbin/auto-admin
 sbin/auto-append-line
 sbin/auto-ask
 sbin/auto-backup-file
+sbin/auto-change-group-gid
+sbin/auto-change-group-ownership
+sbin/auto-change-primary-group
+sbin/auto-change-uid
 sbin/auto-clean-pkgsrc
+sbin/auto-clean-tmp
 sbin/auto-denyhosts-remove-ip
 sbin/auto-denyhosts-setup
 sbin/auto-desktop-setup
@@ -20,6 +25,7 @@ sbin/auto-install-pkgsrc-tree
 sbin/auto-ldap-adduser
 sbin/auto-ostype
 sbin/auto-package-installed
+sbin/auto-passwd-user-expiration
 sbin/auto-pkgsrc-add-license
 sbin/auto-pkgsrc-setup
 sbin/auto-pkgsrc-wip-checkout
