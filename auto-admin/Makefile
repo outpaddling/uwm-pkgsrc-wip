@@ -35,8 +35,16 @@ INSTALLATION_DIRS=	sbin
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Common/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin
-# Why doesn't this work?
-#.if exists(${WRKSRC}/Scripts/${OPSYS})
+#	ls ${WRKSRC}/${OPSYS}/Scripts
+# This does not work
+#.if exists(${WRKSRC}/${OPSYS}/Scripts)
+# This does not work
+#.if exists(/usr/pkgsrc/wip/auto-admin/work/auto-admin-0.4.0)
+# This works
+# .if exists(/usr/pkgsrc/wip/auto-admin/work)
+# This works after mkdir /etc/auto-admin-0.4.0
+# .if exists(/etc/auto-admin-0.4.0)
+# Temporary hack
 .if ${OPSYS} == NetBSD
 	${INSTALL_SCRIPT} ${WRKSRC}/${OPSYS}/Scripts/* \
 		${DESTDIR}${PREFIX}/sbin
