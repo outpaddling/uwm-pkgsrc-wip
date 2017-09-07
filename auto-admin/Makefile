@@ -20,6 +20,7 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	${WRKSRC}/Common/Scripts/auto-denyhosts-remove-ip
 SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|g"
+SUBST_SED.prefix+=	-e "s|/usr/pkgsrc|${PREFIX}|g"
 
 INSTALLATION_DIRS=	sbin
 
