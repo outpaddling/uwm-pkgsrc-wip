@@ -1,5 +1,4 @@
 # $NetBSD$
-#
 
 DISTNAME=	auto-admin-0.4.1
 CATEGORIES=	pkgtools
