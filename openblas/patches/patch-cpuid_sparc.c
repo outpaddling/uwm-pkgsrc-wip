@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Add sparc support
 --- cpuid_sparc.c.orig	2015-10-27 20:44:50 UTC
 +++ cpuid_sparc.c
 @@ -49,6 +49,7 @@ void get_subdirname(void){

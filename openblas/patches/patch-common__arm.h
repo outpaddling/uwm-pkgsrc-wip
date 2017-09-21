@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Add clang support
 --- common_arm.h.orig	2016-09-01 03:58:42 UTC
 +++ common_arm.h
 @@ -93,6 +93,13 @@ static inline int blas_quickdivide(blasi

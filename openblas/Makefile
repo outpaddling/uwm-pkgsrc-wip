@@ -5,57 +5,13 @@
 #              Thu Sep 21 12:36:18 CDT 2017               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-#LICENSE_FILE=	${WRKSRC}/LICENSE
-#USE_LDCONFIG=	yes
-#OPTIONS_DEFINE=		INTERFACE64 OPENMP
-#OPTIONS_DEFINE_i386=	DYNAMIC_ARCH AVX AVX2
-#OPTIONS_DEFINE_amd64=	${OPTIONS_DEFINE_i386}
-#.if defined(BATCH) || defined(PACKAGE_BUILDING)
-#OPTIONS_DEFAULT_i386=	DYNAMIC_ARCH
-#OPTIONS_DEFAULT_amd64=	DYNAMIC_ARCH
-#.endif
-#DYNAMIC_ARCH_DESC=	Support multiple CPU types on i386 and amd64
-#INTERFACE64_DESC=	Use 8 byte integers on 64-bit architectures
-#OPENMP_DESC=		Use OpenMP for threading
-#AVX_DESC=		Support Advanced Vector Extensions (AVX)
-#AVX2_DESC=		Support Advanced Vector Extensions 2 (AVX2)
-#.if defined(TARGET_CPU_ARCH)
-#BUILDFLAGS+=	TARGET=${TARGET_CPU_ARCH}
-#.endif
-#.if ${ARCH:M*64} == ""
-#BUILDFLAGS+=	BINARY32=1
-#.else
-#BUILDFLAGS+=	BINARY64=1
-#.endif
-#.if ! ${PORT_OPTIONS:MDYNAMIC_ARCH} && ( ${ARCH} == "amd64" || ${ARCH} == "i386" )
-#MANUAL_PACKAGE_BUILD=	Optimizes for the build machine.
-#.endif
-#.if ${PORT_OPTIONS:MDYNAMIC_ARCH}
-#BUILDFLAGS+=	DYNAMIC_ARCH=1
-#.endif
-#.if ${PORT_OPTIONS:MINTERFACE64}
-#BUILDFLAGS+=	INTERFACE64=1
-#.endif
-#.if ${PORT_OPTIONS:MOPENMP}
-#BUILDFLAGS_THREAD+=	USE_OPENMP=1
-#.endif
-#.if ! ${PORT_OPTIONS:MAVX}
-#BUILDFLAGS+=	NO_AVX=1
-#.endif
-#.if ! ${PORT_OPTIONS:MAVX2}
-#BUILDFLAGS+=	NO_AVX2=1
-#.endif
-
-DISTNAME=	openblas-${PORTVERSION}
-
+DISTNAME=	OpenBLAS-${PORTVERSION}
 PKGNAME=	openblas-${PORTVERSION}
 DIST_SUBDIR=	openblas
 CATEGORIES=	math
-MASTER_SITES=	${MASTER_SITE_GITHUB:=xianyi/}
-DISTFILES=	large.tgz:lapack_tmg
+MASTER_SITES=	${MASTER_SITE_GITHUB:=xianyi/} \
+		http://www.netlib.org/lapack/timing/
+DISTFILES=	${DISTNAME}.tar.gz large.tgz timing.tgz
 GITHUB_PROJECT=	OpenBLAS
 GITHUB_TAG=	v${PORTVERSION}
 
@@ -72,12 +28,6 @@ LICENSE=	modified-bsd
 USE_LANGUAGES=	c c++ fortran
 USE_TOOLS+=	gmake perl:build
 
-CFLAGS=		-fopenmp 
-
-CXXFLAGS=	-fopenmp 
-
-FFLAGS=		-fopenmp 
-
 PORTVERSION=	0.2.20
 
 LARGE_FILE=	large.tgz
@@ -85,14 +35,40 @@ TIMING_FILE=	timing.tgz
 OPENBLAS_SUFX=	r${PORTVERSION}
 OPENBLAS_LIBS=	libopenblas libopenblasp
 OPENBLAS_SVER=	0
-OPENBLAS_FILES=	${OPENBLAS_LIBS:S|$|.so|} ${OPENBLAS_LIBS:S|$|.so.${OPENBLAS_SVER}|} ${OPENBLAS_LIBS:S|$|.a|}
 TEST_TARGET=	tests
 MAXTHREADS?=	8
+
+# No openmp for now
 BUILDFLAGS_THREAD+=	NUM_THREADS=${MAXTHREADS} USE_THREAD=1
+BENCHMARK_THREADS_FLAG=		OPENBLAS_NUM_THREADS=${BENCHMARK_MAXTHREADS}
+
+# CPU-agnostic build for now.  Provide option for CPU-optimized build later.
 BUILDFLAGS+=	DYNAMIC_ARCH=1
-BUILDFLAGS_THREAD+=	USE_OPENMP=1
 BUILDFLAGS+=	NO_AVX=1
 BUILDFLAGS+=	NO_AVX2=1
+
+.if ${MACHINE_ARCH:M*64} == ""
+BUILDFLAGS+=	BINARY32=1
+.else
+BUILDFLAGS+=	BINARY64=1
+.endif
+
+# Not yet implemented, from FreeBSD port
+#.if ${PORT_OPTIONS:MINTERFACE64}
+#BUILDFLAGS+=	INTERFACE64=1
+#.endif
+#.if ${PORT_OPTIONS:MOPENMP}
+#BUILDFLAGS_THREAD+=	USE_OPENMP=1
+#CFLAGS+=	-fopenmp
+#CXXFLAGS+=	-fopenmp
+#FFLAGS+=	-fopenmp
+#.endif
+#.if ! ${PORT_OPTIONS:MAVX}
+#BUILDFLAGS+=	NO_AVX=1
+#.endif
+#.if ! ${PORT_OPTIONS:MAVX2}
+#BUILDFLAGS+=	NO_AVX2=1
+#.endif
 
 SUBST_CLASSES+=		find
 SUBST_STAGE.find=	post-patch
@@ -130,11 +106,11 @@ SUBST_CLASSES+=		system
 SUBST_STAGE.system=	post-patch
 SUBST_SED.system+=	-e "s+(ARCH)+(ARCH_)+"
 SUBST_SED.system+=	-e 's+%%LDFLAGS%%+${LDFLAGS}+'
-SUBST_SED.system+=	-e 's+%%LOCALBASE%%+${LOCALBASE}+'
+SUBST_SED.system+=	-e 's+%%LOCALBASE%%+${PREFIX}+'
 SUBST_SED.system+=	-e 's+%%FIND%%+${FIND}+'
 SUBST_SED.system+=	-e 's+%%XARGS%%+${XARGS}+'
 SUBST_SED.system+=	-e 's+%%REINPLACE_CMD%%+${REINPLACE_CMD}+'
-SUBST_SED.system+=	-e 's+$${CROSS_SUFFIX}+${LOCALBASE}/bin/+'
+SUBST_SED.system+=	-e 's+$${CROSS_SUFFIX}+${PREFIX}/bin/+'
 SUBST_SED.system+=	-e '/Clang.*OpenMP/g'
 SUBST_FILES.system+=	${WRKSRC}/Makefile.system
 
@@ -156,17 +132,17 @@ INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/doc share/examples
 
 post-extract:
 	cd ${DISTDIR}/${DIST_SUBDIR} ; \
-	${CP} ${LARGE_FILE} ${TIMING_FILE} ${WRKSRC}
+		${CP} ${LARGE_FILE} ${TIMING_FILE} ${WRKSRC}
 	${MKDIR} ${WRKDIR}/lib
 
 do-build:
 	cd ${WRKSRC} ; ${SETENV} ${BUILDFLAGS} NUM_THREADS=1 USE_THREAD=0 \
-	${MAKE_CMD} ${MAKE_ARGS}
+		${MAKE_PROGRAM} ${MAKE_ARGS}
 	${CP} ${WRKSRC}/libopenblas-${OPENBLAS_SUFX}.a ${WRKDIR}/lib/libopenblas.a
 	${CP} ${WRKSRC}/libopenblas-${OPENBLAS_SUFX}.so ${WRKDIR}/lib/libopenblas.so.${OPENBLAS_SVER}
-	cd ${WRKSRC} ; ${MAKE_CMD} ${MAKE_ARGS} clean
+	cd ${WRKSRC} ; ${MAKE_PROGRAM} ${MAKE_ARGS} clean
 	cd ${WRKSRC} ; ${SETENV} ${BUILDFLAGS} ${BUILDFLAGS_THREAD} \
-	${MAKE_CMD} ${MAKE_ARGS}
+	${MAKE_PROGRAM} ${MAKE_ARGS}
 	${CP} ${WRKSRC}/libopenblasp-${OPENBLAS_SUFX}.a ${WRKDIR}/lib/libopenblasp.a
 	${CP} ${WRKSRC}/libopenblasp-${OPENBLAS_SUFX}.so ${WRKDIR}/lib/libopenblasp.so.${OPENBLAS_SVER}
 
@@ -174,20 +150,21 @@ BENCHMARK_MAXTHREADS?=	${MAXTHREADS}
 #.if ${PORT_OPTIONS:MOPENMP}
 #BENCHMARK_THREADS_FLAG=		OMP_NUM_THREADS=${BENCHMARK_MAXTHREADS}
 #.else
-BENCHMARK_THREADS_FLAG=		OPENBLAS_NUM_THREADS=${BENCHMARK_MAXTHREADS}
+#BENCHMARK_THREADS_FLAG=		OPENBLAS_NUM_THREADS=${BENCHMARK_MAXTHREADS}
 #.endif
 
+.PHONY: benchmark
 benchmark: build
 	cd ${WRKSRC} ; ${SETENV} ${BUILDFLAGS} NUM_THREADS=${MAXTHREADS} \
-	USE_THREAD=1 ${MAKE_CMD} ${MAKE_ARGS} hpl
+	USE_THREAD=1 ${MAKE_PROGRAM} ${MAKE_ARGS} hpl
 	cd ${WRKSRC}/benchmark ; ${SETENV} ${BUILDFLAGS} NUM_THREADS=${MAXTHREADS} \
-	USE_THREAD=1 ${BENCHMARK_THREADS_FLAG} ${MAKE_CMD} ${MAKE_ARGS}
+	USE_THREAD=1 ${BENCHMARK_THREADS_FLAG} ${MAKE_PROGRAM} ${MAKE_ARGS}
 
 do-install:
-.for L in ${OPENBLAS_LIBS}
-	${INSTALL_DATA} ${WRKDIR}/lib/${L}.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_LIB} ${WRKDIR}/lib/${L}.so.${OPENBLAS_SVER} ${DESTDIR}${PREFIX}/lib
-	${LN} -sf ${L}.so.${OPENBLAS_SVER} ${DESTDIR}${PREFIX}/lib/${L}.so
+.for l in ${OPENBLAS_LIBS}
+	${INSTALL_DATA} ${WRKDIR}/lib/${l}.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKDIR}/lib/${l}.so.${OPENBLAS_SVER} ${DESTDIR}${PREFIX}/lib
+	${LN} -sf ${l}.so.${OPENBLAS_SVER} ${DESTDIR}${PREFIX}/lib/${l}.so
 .endfor
 
 # Linux doesn't have zlib in the base, so just in case...

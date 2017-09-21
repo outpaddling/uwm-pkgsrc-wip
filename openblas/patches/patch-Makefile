@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Avoid name collision on ARCH
 --- Makefile.orig	2015-10-27 20:44:50 UTC
 +++ Makefile
 @@ -238,7 +238,7 @@ ifndef NOFORTRAN

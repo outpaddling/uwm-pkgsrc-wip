@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Allow serial and parallel libs to coexist
 --- Makefile.system.orig	2015-10-27 20:44:50 UTC
 +++ Makefile.system
 @@ -218,6 +218,7 @@ MD5SUM = md5 -r
