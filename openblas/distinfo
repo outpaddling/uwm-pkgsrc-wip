@@ -1,14 +1,7 @@
 $NetBSD$
 
-SHA1 (openblas/large.tgz) = a689e5b180595b40c5719b0f358b31b15b57a2db
-RMD160 (openblas/large.tgz) = 8010ff4002ef42cf22a9ee9345011d68fc27d855
-SHA512 (openblas/large.tgz) = e24db2b8a4253ccff9ca196815901c1fefd55e882f4fe1085715ac84b8f318e1842a91072130c17fdd144344ffc80233a77500da9349acb54e504b3935825965
-Size (openblas/large.tgz) = 2595 bytes
-SHA1 (openblas/openblas-0.2.19.tar.gz) = df4ceb25d2529748ad0f2715e62fefb348477edd
-RMD160 (openblas/openblas-0.2.19.tar.gz) = 8472d90075a8c1d357b896eba7ce293be508bca0
-SHA512 (openblas/openblas-0.2.19.tar.gz) = 7081a8540b8037c0d4d6db0ec4b51277856c0e0f4e2575671984e5deb3482102da8936c43691087c8475d67070f89ac6925e4867ead60802aa2a29e8517e7495
-Size (openblas/openblas-0.2.19.tar.gz) = 10834034 bytes
-SHA1 (openblas/timing.tgz) = fd47fc3f26d142a791df51e4a422a49662507252
-RMD160 (openblas/timing.tgz) = f0fe220e7ab611d4db8d8cab960361955e2ab093
-SHA512 (openblas/timing.tgz) = be0abfcfffdf0e118ed7e25a8451639833cf0ad6bb04d101bbe194c16f656b6ce509b2f76acf4ad626d1fb5b126bd5498cfea262f2946c2d077751112a2906af
-Size (openblas/timing.tgz) = 1059485 bytes
+SHA1 (openblas-0.2.20.tar.gz) = a186074145a24823e82c65672dad1cd1ca6fe89c
+RMD160 (openblas-0.2.20.tar.gz) = 2b9728cd227894d7378b0f3686b90d0e7e7975d9
+SHA512 (openblas-0.2.20.tar.gz) = 8dfc8e8c8d456b834d2e9544c8eadd9f4770e30db8b8dd76af601ec0735fd86c9cf63dd6a03ccd23fc02ec2e05069a09875b9073dfe29f99aadab3a958ae2634
+Size (openblas-0.2.20.tar.gz) = 11637301 bytes
+SHA1 (patch-Makefile.system) = 876fe0bda3a6b664e18ba617f7c8cf7c4e131603
