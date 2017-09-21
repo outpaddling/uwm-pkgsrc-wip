@@ -60,8 +60,11 @@ fi
 # Clean up before moving
 cd ../uwm-pkgsrc-wip/$pkg
 
-printf "Running pkg-check...\n"
-pkg-check
+printf "Run pkg-check? [y]/n "
+read check
+if [ 0$check != 0n ]; then
+    pkg-check
+fi
 
 printf "Continue? y/[n] "
 read continue
@@ -69,21 +72,21 @@ if [ 0$continue != 0y ]; then
     exit
 fi
 
+$make clean || true
+
 # Copy pkg to wip
-cd ../wip
+cd ../../wip
 git pull --rebase || true
 
-$make clean || true
-cd ..
-rsync -av --delete $pkg ../wip
+rsync -av --delete ../uwm-pkgsrc-wip/$pkg .
 
 # Remove files from other version control systems
-cd ../wip/$pkg
+cd $pkg
 find . -depth -name CVS -exec rm -rf '{}' \;
 find . -depth -name .svn -exec rm -rf '{}' \;
-$make makesum || true
+# $make makesum || true
 
-suffix=uwm-pkgsrc-wip-to-wip
+suffix=to-wip
 sed -e 's|uwm-pkgsrc-wip|wip|g' Makefile > Makefile.$suffix
 mv -f Makefile.$suffix Makefile
 if [ -e buildlink3.mk ]; then
