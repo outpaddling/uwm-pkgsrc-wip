@@ -1,5 +1,6 @@
 $NetBSD$
 
+# Eliminate assumptions about install dir name
 --- pipelines/canu/Execution.pm.orig	2017-04-17 19:32:38.000000000 +0000
 +++ pipelines/canu/Execution.pm
 @@ -293,10 +293,6 @@ sub skipStage ($$@) {

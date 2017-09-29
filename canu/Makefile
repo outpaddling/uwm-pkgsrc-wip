@@ -39,42 +39,17 @@ SUBST_STAGE.perl=	post-patch
 SUBST_SED.perl=		-e 's|RealBin/lib|RealBin/../${SITE_PERL_REL}|g'
 SUBST_FILES.perl=	${WRKSRC}/pipelines/canu.pl
 
-REPLACE_PERL+=	bogart/plotErrorProfile.pl \
-		bogart/findOverlappingReads.pl \
-		pipelines/simple-repeat-test.pl \
-		pipelines/canu-object-store.pl \
-		pipelines/canu.pl \
-		pipelines/bogart-sweep.pl \
-		bogus/bogusness-run.pl \
-		bogart-analysis/analyze-nucmer-gaps.pl \
-		bogart-analysis/examine-mapping.pl \
-		bogart-analysis/bogart-build-fasta.pl \
-		bogart-analysis/examine-mapping-ideal.pl \
-		bogart-analysis/count-bubbles.pl \
-		bogart-analysis/locate-read-in-unitig-based-on-olaps.pl \
-		bogart-analysis/analyze-mapped-unitigs-for-joins.pl \
-		bogart-analysis/show-false-best-edges-from-mapping.pl \
-		overlapBasedTrimming/detect-unsplit-subreads-in-overlaps.pl \
-		overlapBasedTrimming/test-random-chimeric-fragments.pl \
-		overlapBasedTrimming/generate-random-chimeric-fragments.pl \
-		overlapInCore-analysis/infer-ovl-from-genomic-blasr.pl \
-		overlapInCore-analysis/infer-obt-from-genomic-blasr.pl \
-		overlapInCore-analysis/infer-olaps-from-pairwise-coords.pl \
-		overlapInCore-analysis/find-missed-true-overlaps.pl \
-		overlapInCore-analysis/infer-olaps-from-genomic-coords.pl \
-		overlapInCore-analysis/analyze-true-vs-test.pl \
-		overlapInCore-analysis/filterTrue.pl \
-		overlapInCore-analysis/infer-olaps-from-pairwise-blasr.pl \
-		overlapInCore-analysis/check-ordered-reads-for-missed-overlaps.pl \
-		merTrim/merTrim-compare-logs.pl \
-		erateEstimate/erate-estimate-test-based-on-mapping.pl \
-		erateEstimate/erate-estimate-plot-per-base-estimate.pl \
-		canu_version_update.pl \
-		meryl/gkrpt.pl \
-		fastq-utilities/fastqSimulate-checkCoverage.pl \
-		fastq-utilities/fastqSimulate-perfectSep.pl \
-		addCopyrights-BuildData.pl \
-		addCopyrights.pl
+REPLACE_PERL+=	bogart/*.pl \
+		pipelines/*.pl \
+		bogus/*.pl \
+		bogart-analysis/*.pl \
+		overlapBasedTrimming/*.pl \
+		overlapInCore-analysis/*.pl \
+		merTrim/*.pl \
+		erateEstimate/*.pl \
+		meryl/.pl \
+		fastq-utilities/*.pl \
+		*.pl
 
 # May work on other 64-bit processors, but untested
 ONLY_FOR_PLATFORM=	 *-*-x86_64
