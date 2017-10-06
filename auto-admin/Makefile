@@ -15,13 +15,15 @@ USE_LANGUAGES=	# none
 NO_BUILD=	yes
 REPLACE_SH=	*/Scripts/*
 
+# List /usr/pkg before /usr/local to prevent
+# /usr/local -> /usr/pkg-1 -> /usr/pkg-1-1
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-denyhosts-setup
 SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-denyhosts-remove-ip
 SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-pkgsrc-add-license
-SUBST_SED.prefix+=	-e "s|/usr/local|${PREFIX}|g"
 SUBST_SED.prefix+=	-e "s|/usr/pkg|${PREFIX}|g"
+SUBST_SED.prefix+=	-e "s|/usr/local|${PREFIX}|g"
 
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	post-patch
