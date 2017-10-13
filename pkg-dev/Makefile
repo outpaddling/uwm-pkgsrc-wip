@@ -14,7 +14,7 @@ EXTRACT_SUFX=	.tar.xz
 
 USE_LANGUAGES=	# none
 
-DEPENDS=	pkglint4>0:../../pkgtools/pkglint
+DEPENDS=	pkglint>0:../../pkgtools/pkglint
 DEPENDS+=	pkgdiff>0:../../pkgtools/pkgdiff
 DEPENDS+=	createbuildlink>0:../../pkgtools/createbuildlink
 
