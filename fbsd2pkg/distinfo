@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (fbsd2pkg-0.6.tar.xz) = 45840924400fa55e29478fcbd826d43cbcdf3129
-RMD160 (fbsd2pkg-0.6.tar.xz) = d05c10470fd4329b59a6d9d342b4ce9e53c32486
-SHA512 (fbsd2pkg-0.6.tar.xz) = b7474071030bb896ba1096cf79bfdcbc80cd363f9606a71867c2b096fab3b8c6e83ec9ea39fa0fead65d75f903abeeca76ab24d80bf59a3fa5cdeec16397f550
-Size (fbsd2pkg-0.6.tar.xz) = 6468 bytes
+SHA1 (fbsd2pkg-0.6.tar.xz) = be410fb6c14f9988ea7cd9c26fc85540177147fc
+RMD160 (fbsd2pkg-0.6.tar.xz) = 067147c8a6923eae74b7532341c5e11b8f3efa96
+SHA512 (fbsd2pkg-0.6.tar.xz) = eb2c7a85a37df361052366615ea9101572e6314b00bbd813f41b43544310590afced4f5e40fbf7689b99d7ad68415c360ff03aaeebe575401a7df9a49e3c4e4f
+Size (fbsd2pkg-0.6.tar.xz) = 6480 bytes
