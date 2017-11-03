@@ -2,6 +2,7 @@
 sbin/pkg-check
 sbin/pkg-diff
 sbin/pkg-grep
+sbin/pkg-list
 sbin/pkg-pbulk-setup
 sbin/pkg-reinstall
 sbin/pkg-remake
