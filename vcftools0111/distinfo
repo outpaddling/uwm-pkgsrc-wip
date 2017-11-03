@@ -2,7 +2,8 @@ $NetBSD$
 
 SHA1 (vcftools_0.1.11.tar.gz) = 00081e99c0f66316d92ee356580885331cadb46f
 RMD160 (vcftools_0.1.11.tar.gz) = 9a6c8e8ff527f20ddef0920b44fac07bdf7fa2e0
+SHA512 (vcftools_0.1.11.tar.gz) = 5cc815f4511014154727400760aa680bd16a8b76cd9852ca509d3206c06fdc5550d86f4b6e008d4adeabe548866126aeea5a5a5e50820ec394a28dda37729b24
 Size (vcftools_0.1.11.tar.gz) = 857812 bytes
 SHA1 (patch-Makefile) = 4e742e443ee2868445fa7ad1e92665d5e38b4419
-SHA1 (patch-cpp_Makefile) = bbaa28e4d0cc1d272b3c05a470524aaba718c436
+SHA1 (patch-cpp_Makefile) = 901d7d6cd1079a407187f64f0339942859e38293
 SHA1 (patch-perl_Makefile) = 9de754764ad4f6900bfdbe9464e93f268f60cc84

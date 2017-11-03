@@ -1,6 +1,6 @@
 $NetBSD$
 
-# Fix Makefile to respect env
+# Help locate libz
 --- cpp/Makefile.orig	2013-06-13 14:40:54.000000000 +0000
 +++ cpp/Makefile
 @@ -4,6 +4,6 @@
@@ -12,7 +12,7 @@ $NetBSD$
 +CXX ?= g++
  # Output executable
  EXECUTABLE = vcftools
-@@ -13,8 +13,8 @@ ifndef VCFTOOLS_PCA
+@@ -13,23 +13,23 @@ ifndef VCFTOOLS_PCA
  endif
  # Compiler flags
 -CFLAGS = -O2 -m64
@@ -23,8 +23,9 @@ $NetBSD$
 +CXXFLAGS += -D_FILE_OFFSET_BITS=64 
 +#CXXFLAGS = -O2 -Wall -pg -D_FILE_OFFSET_BITS=64
  # Included libraries (zlib)
- LIB = -lz 
-@@ -22,14 +22,14 @@ LIB = -lz 
+-LIB = -lz 
++LIB = -L${PREFIX}/lib -lz 
+ #LIB = -lz -I/opt/local/include/ -L/opt/local/lib/
  
  OBJS = vcftools.o bcf_file.o vcf_file.o variant_file.o \
 -		bcf_entry.o vcf_entry.o entry.o entry_setters.o entry_getters.o \
