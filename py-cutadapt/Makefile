@@ -7,7 +7,7 @@
 DISTNAME=	cutadapt-${PORTVERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	biology
-MASTER_SITES=	https://pypi.python.org/packages/source/c/cutadapt/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cutadapt/}
 
 MAINTAINER=	bacon4000@gmail.com
 
@@ -17,7 +17,7 @@ LICENSE=	mit
 USE_LANGUAGES=	c
 PYDISTUTILSPKG=	yes
 
-PORTVERSION=	1.8.3
+PORTVERSION=	1.14
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

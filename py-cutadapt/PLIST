@@ -1,14 +1,20 @@
 @comment $NetBSD$
 bin/cutadapt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/cutadapt/__init__.py
 ${PYSITELIB}/cutadapt/__init__.pyc
 ${PYSITELIB}/cutadapt/__init__.pyo
-${PYSITELIB}/cutadapt/__main__.py
-${PYSITELIB}/cutadapt/__main__.pyc
-${PYSITELIB}/cutadapt/__main__.pyo
 ${PYSITELIB}/cutadapt/_align.so
 ${PYSITELIB}/cutadapt/_qualtrim.so
 ${PYSITELIB}/cutadapt/_seqio.so
+${PYSITELIB}/cutadapt/_version.py
+${PYSITELIB}/cutadapt/_version.pyc
+${PYSITELIB}/cutadapt/_version.pyo
 ${PYSITELIB}/cutadapt/adapters.py
 ${PYSITELIB}/cutadapt/adapters.pyc
 ${PYSITELIB}/cutadapt/adapters.pyo
@@ -42,6 +48,3 @@ ${PYSITELIB}/cutadapt/scripts/cutadapt.pyo
 ${PYSITELIB}/cutadapt/seqio.py
 ${PYSITELIB}/cutadapt/seqio.pyc
 ${PYSITELIB}/cutadapt/seqio.pyo
-${PYSITELIB}/cutadapt/xopen.py
-${PYSITELIB}/cutadapt/xopen.pyc
-${PYSITELIB}/cutadapt/xopen.pyo
