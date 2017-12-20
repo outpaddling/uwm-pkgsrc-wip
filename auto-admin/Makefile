@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	auto-admin-0.4.1
+DISTNAME=	auto-admin-0.4.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
