@@ -1,0 +1,9 @@
+$NetBSD$
+
+SHA1 (monitor-core-3.7.2.tar.gz) = a6cc2378a54c0d9043416c84beaed82316f1c900
+RMD160 (monitor-core-3.7.2.tar.gz) = a389088af9b0698a55044c1ff52c9a58166e606a
+SHA512 (monitor-core-3.7.2.tar.gz) = 7e7988e8c24340937afb4400e537fb097b5600ffd36e2505c10d230f92776f8b8ece055afb2dbc1d7d08a44f1107590996eca6474321615dfa39e0597159df42
+Size (monitor-core-3.7.2.tar.gz) = 832093 bytes
+SHA1 (patch-gmetad_conf.c.in) = 4c7366b508d7825510935cab853873f122c4678d
+SHA1 (patch-gmond_modules_conf.d_modpython.conf.in) = 24450550b3d0c787e8ee1e290cd797eb02375387
+SHA1 (patch-libmetrics_freebsd_metrics.c) = e64f0cce575201ee4dd7bde15e92ee0a559b4d0b
