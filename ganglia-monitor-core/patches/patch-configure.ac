@@ -1,0 +1,32 @@
+$NetBSD$
+
+# Remove non-portable ==
+--- configure.ac.orig	2017-12-24 04:29:53.577272627 +0000
++++ configure.ac
+@@ -431,7 +431,7 @@ AC_ARG_WITH( memcached,
+ [  --with-memcached        enable memcached metrics publishing],
+ if test x"$withval" = xyes; then memcache="yes"; fi)
+ 
+-if test x"$memcache" == xyes; then
++if test x"$memcache" = xyes; then
+   PKG_CHECK_MODULES(DEPS, libmemcached >= 1.0.2)
+   AC_SUBST(DEPS_CFLAGS)
+   AC_SUBST(DEPS_LIBS)
+@@ -441,7 +441,7 @@ fi
+ AC_ARG_WITH( riemann, AS_HELP_STRING([--with-riemann], [enable riemann metric forwarding]),
+ if test x"$withval" = xyes; then with_riemann="yes"; fi)
+ 
+-if test x"$with_riemann" == xyes; then
++if test x"$with_riemann" = xyes; then
+ echo
+ echo Checking for Protocol Buffers
+ 
+@@ -519,7 +519,7 @@ if test x"$libpcrepath" != x && test x"$
+   echo "Added -I$libpcrepath/include to CFLAGS"
+   echo "Added -L$libpcrepath/${LIB_SUFFIX} to LDFLAGS"
+ fi
+-if test x"$libpcre" == xyes ; then
++if test x"$libpcre" = xyes ; then
+   AC_CHECK_HEADERS([pcre/pcre.h pcre.h])
+   AC_CHECK_LIB(pcre, pcre_compile)
+   if test x"$ac_cv_lib_pcre_pcre_compile" = xyes; then
