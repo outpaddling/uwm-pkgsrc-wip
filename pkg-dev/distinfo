@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (pkg-dev-0.1.tar.xz) = 9238f42b850edbc0ae7372256bc26b67bd35f0f1
-RMD160 (pkg-dev-0.1.tar.xz) = d11965138f3fdba97eaabd4f40f297710db5b549
-SHA512 (pkg-dev-0.1.tar.xz) = b2bba8aa64b4939912daa92a083a088d48235e11ca0fbdf519551f1458f0f0bec1eb46a9cfe091b3eb5c6eeb24cadf3f297a0980aeb601f3b7f5e93e2e1d2acc
-Size (pkg-dev-0.1.tar.xz) = 6552 bytes
+SHA1 (pkg-dev-0.1.tar.xz) = 92f0ed815c344b621e0a74c601ab50502902c429
+RMD160 (pkg-dev-0.1.tar.xz) = dc4397f5bb1db13a49d1cd4583cd3cb9210fb4fc
+SHA512 (pkg-dev-0.1.tar.xz) = cf62f0037968121f78442165ee0ffd0731f91c5cd4e3f9dbcaa54ec7239143b04cb54b6d5de9174952eb8f6afa06395cc0e91f2554fec8e5fb721acf3230ffe0
+Size (pkg-dev-0.1.tar.xz) = 6884 bytes
