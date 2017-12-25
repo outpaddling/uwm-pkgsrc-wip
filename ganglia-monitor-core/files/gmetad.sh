@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: gmetad.sh,v 1.3 2015/04/06 20:57:30 outpaddling Exp $
+# $NetBSD: gmetad.sh,v 1.1 2007/09/16 10:29:53 joerg Exp $
 #
 # PROVIDE: gmetad
 # REQUIRE: DAEMON

@@ -1,9 +1,7 @@
-@comment $NetBSD$
+@comment $NetBSD: PLIST,v 1.7 2016/02/16 12:48:18 fhajny Exp $
 bin/ganglia-config
 bin/gmetric
 bin/gstat
-etc/conf.d/modpython.conf
-etc/gmetad.conf
 include/ganglia.h
 include/ganglia_gexec.h
 include/gm_file.h
@@ -19,7 +17,7 @@ lib/ganglia/modmem.so
 lib/ganglia/modmulticpu.so
 lib/ganglia/modnet.so
 lib/ganglia/modproc.so
-lib/ganglia/modpython.so
+${PLIST.python}lib/ganglia/modpython.so
 lib/ganglia/modsys.so
 lib/libganglia.la
 man/man1/gmetad.1
@@ -29,10 +27,8 @@ man/man1/gmond.1
 man/man1/gstat.1
 man/man5/gmond.conf.5
 sbin/gmetad
-sbin/gmetasnap
 sbin/gmond
-share/examples/ganglia-monitor-core/gmetad.conf
-share/examples/ganglia-monitor-core/gmetad.init.linux
-share/examples/ganglia-monitor-core/gmond.conf
-share/examples/ganglia-monitor-core/gmond.init.linux
-@pkgdir lib/ganglia/python_modules
+share/doc/ganglia/README
+share/examples/ganglia/gmetad.conf
+share/examples/ganglia/gmond.conf
+${PLIST.python}share/examples/ganglia/conf.d/modpython.conf

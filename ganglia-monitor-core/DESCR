@@ -1,7 +1,17 @@
-Ganglia provides a complete real-time monitoring and execution
-environment that is in use by hundreds of universities, private and
-government laboratories and commercial cluster implementors around the
-world. Whether you want to monitor hundreds of computers in real-time
-across a university campus or around the world, ganglia is for you.
+Ganglia is a scalable distributed monitoring system for high-performance
+computing systems such as clusters and Grids. It is based on a hierarchical
+design targeted at federations of clusters. It relies on a multicast-based
+listen/announce protocol to monitor state within clusters and uses a tree of
+point-to-point connections amongst representative cluster nodes to federate
+clusters and aggregate their state. It leverages widely used technologies such
+as XML for data representation, XDR for compact, portable data transport, and
+RRDtool for data storage and visualization. It uses carefully engineered data
+structures and algorithms to achieve very low per-node overheads and high
+concurrency. The implementation is robust, has been ported to an extensive set
+of operating systems and processor architectures, and is currently in use on
+over 500 clusters around the world. It has been used to link clusters across
+university campuses and around the world and can scale to handle clusters with
+2000 nodes.
 
-WWW: http://ganglia.info/
+You may wish to install www/ganglia-webfrontend to monitor your systems via
+the web.

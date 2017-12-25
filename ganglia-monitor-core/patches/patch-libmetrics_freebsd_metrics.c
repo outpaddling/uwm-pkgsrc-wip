@@ -1,6 +1,7 @@
-$NetBSD: patch-libmetrics_freebsd_metrics.c,v 1.1 2015/04/06 20:57:31 outpaddling Exp $
+$NetBSD: patch-libmetrics_freebsd_metrics.c,v 1.1 2016/02/16 12:48:18 fhajny Exp $
 
-# Dummy function for FreeBSD
+Portability.
+
 --- libmetrics/freebsd/metrics.c.orig	2013-05-07 09:39:40.000000000 -0500
 +++ libmetrics/freebsd/metrics.c	2014-10-14 15:32:43.000000000 -0500
 @@ -461,6 +461,17 @@
