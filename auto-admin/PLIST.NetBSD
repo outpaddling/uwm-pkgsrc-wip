@@ -8,6 +8,7 @@ sbin/auto-change-group-gid
 sbin/auto-change-group-ownership
 sbin/auto-change-primary-group
 sbin/auto-change-uid
+sbin/auto-clean-disk
 sbin/auto-clean-pkgsrc
 sbin/auto-clean-tmp
 sbin/auto-denyhosts-remove-ip
