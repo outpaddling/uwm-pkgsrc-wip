@@ -9,7 +9,7 @@ CATEGORIES=	biology
 MASTER_SITES=	https://github.com/agordon/fastx_toolkit/releases/download/0.0.14/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	CLI tools for Short-Reads FASTA/FASTQ files preprocessing
 # LICENSE=	AGPLv3

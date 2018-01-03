@@ -8,7 +8,7 @@ DISTNAME=	pyfasta-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	https://pypi.python.org/packages/source/p/pyfasta/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Fast, memory-efficient, pythonic access to fasta sequence files
 #LICENSE=	MIT

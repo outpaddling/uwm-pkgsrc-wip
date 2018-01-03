@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=klusta-team/}
 GITHUB_PROJECT=	spikedetekt2
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/klusta-team/spikedetekt2
 COMMENT=	Detecting and extracting spikes from raw recordings
 # LICENSE=

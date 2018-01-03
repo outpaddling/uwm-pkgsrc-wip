@@ -5,7 +5,7 @@ DISTNAME=	convert-lib-0.1
 CATEGORIES=	devel
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	Convert between static and dynamic libraries
 #LICENSE=	# TODO: (see mk/license.mk)

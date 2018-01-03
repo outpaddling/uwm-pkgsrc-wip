@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=PacificBiosciences/}
 GITHUB_PROJECT=	${PORTNAME}
 GITHUB_TAG=	c7d95cc8aec85ccb85161b67a613413c9ceee3cf
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/PacificBiosciences/blasr_libcpp
 COMMENT=	Library for analyzing PacBio sequences
 LICENSE=	modified-bsd

@@ -8,7 +8,7 @@
 ###########################################################
 # Unconverted and partially converted FreeBSD port syntax:
 
-## Created by: Jason Bacon <bacon4000@gmail.com>
+## Created by: Jason Bacon <bacon@NetBSD.org>
 ## $FreeBSD$
 ## Deps: http://ceres-solver.org/building.html
 ## eigen 3.2.2+, cmake 2.8.0+, Google Log 0.3.1+, Google Flags, SuiteSparse,

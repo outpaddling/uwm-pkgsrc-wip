@@ -9,7 +9,7 @@ PKGNAME=	vcftools-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vcftools/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://vcftools.sourceforge.net/
 COMMENT=	Accessible methods for working with complex genetic variation data
 LICENSE=	gnu-lgpl-v3

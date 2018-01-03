@@ -5,7 +5,7 @@ DISTNAME=	angora-0.18.5
 CATEGORIES=	science
 MASTER_SITES=	http://angorafdtd.org/angora/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://angorafdtd.org/angora/
 COMMENT=	FDTD simulator
 #LICENSE=	# TODO: (see mk/license.mk)

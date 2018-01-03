@@ -5,7 +5,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/openvex.php
 COMMENT=	Open firmware for Vex robotics controllers
 

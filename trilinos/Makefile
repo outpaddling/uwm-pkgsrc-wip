@@ -6,7 +6,7 @@ CATEGORIES=	science
 # Requires registration
 MASTER_SITES=	http://trilinos.sandia.gov/download/trilinos-10.10.html/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://trilinos.sandia.gov/index.html
 COMMENT=	Object-oriented math libraries
 #LICENSE=	# lgpl and bsd, working toward bsd for all

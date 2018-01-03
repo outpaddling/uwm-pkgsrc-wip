@@ -17,7 +17,7 @@ DIST_SUBDIR=	pysam
 CATEGORIES=	biology
 MASTER_SITES=	http://github.com/pysam-developers/pysam/archive/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Python module for reading and manipulating samfiles
 #LICENSE=	MIT

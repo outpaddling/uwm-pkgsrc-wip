@@ -5,7 +5,7 @@ DISTNAME=	ncview-2.1.2
 CATEGORIES=	science graphics
 MASTER_SITES=	ftp://cirrus.ucsd.edu/pub/ncview/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	ftp://cirrus.ucsd.edu/pub/ncview/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)

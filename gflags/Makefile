@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=gflags/}
 GITHUB_PROJECT=	gflags
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/gflags/gflags
 COMMENT=	Commandline flags module for C++
 

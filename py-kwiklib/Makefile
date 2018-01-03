@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=klusta-team/}
 GITHUB_PROJECT=	kwiklib
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/klusta-team/kwiklib
 COMMENT=	Shared features between the projects (files, statistics, utils)
 LICENSE=	modified-bsd

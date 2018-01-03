@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.stfc.ac.uk/CSE/randd/ccg/software/DL_POLY/25526.aspx
 DISTFILES=	decrypt.c.gz \
 		dl_poly_4.03.tar.gE
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.stfc.ac.uk/CSE/randd/ccg/software/DL_POLY/25526.aspx
 COMMENT=	General purpose classical molecular dynamics
 #LICENSE=	dlpoly-license

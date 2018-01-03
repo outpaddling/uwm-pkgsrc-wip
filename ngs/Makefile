@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 GITHUB_PROJECT=	ngs
 GITHUB_TAG=	06131412429136d32103203ff4397c8210e2bfd3
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/ncbi/ngs
 COMMENT=	NCBI NGS language bindings
 LICENSE=	public-domain

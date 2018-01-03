@@ -8,7 +8,7 @@ DISTNAME=	pedstats-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	http://csg.sph.umich.edu/abecasis/PedStats/download/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://csg.sph.umich.edu/abecasis/PedStats/index.html
 COMMENT=	Quick validation and summary of pedigree and data files
 # LICENSE=	

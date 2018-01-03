@@ -12,7 +12,7 @@ DISTFILES=	plinkseq-src-0.10.tgz
 CATEGORIES=	biology
 MASTER_SITES=	http://psychgen.u.hpc.mssm.edu/plinkseq_downloads/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Toolset for working with human genetic variation data
 LICENSE=	gnu-gpl-v2

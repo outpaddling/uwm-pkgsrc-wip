@@ -17,7 +17,7 @@ DISTNAME=	tophat-2.0.12
 CATEGORIES=	biology
 MASTER_SITES=	http://ccb.jhu.edu/software/tophat/downloads/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	A spliced read mapper for RNA-Seq
 # LICENSE=	

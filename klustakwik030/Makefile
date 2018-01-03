@@ -6,7 +6,7 @@ CATEGORIES=	science
 MASTER_SITES=	${MASTER_SITE_GITHUB:=klusta-team/}
 PORTVERSION=	0.3.0.rc3
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://downloads.sourceforge.net/project/klustakwik/klustakwik/
 COMMENT=	Unsupervised classification of multidimensional continuous data
 LICENSE=	gnu-gpl-v1

@@ -9,7 +9,7 @@ DISTNAME=	smrtanalysis-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	http://github.com/PacificBiosciences/pbh5tools/archive/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Tools for manipulating HDF5 files produced by Pacific Biosciences
 # Double-check this

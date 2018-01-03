@@ -9,7 +9,7 @@ DISTNAME=	v${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	https://github.com/jstjohn/SeqPrep/archive/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Strip adaptors and/or merge paired reads with overlap into single reads
 #LICENSE=	

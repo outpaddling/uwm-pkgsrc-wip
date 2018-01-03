@@ -21,7 +21,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=PacificBiosciences/}
 GITHUB_PROJECT=	blasr
 GITHUB_TAG=	0061445b1387c545780679776d3d483a30d4332b
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/PacificBiosciences/blasr
 COMMENT=	PacBio(R) long read aligner
 LICENSE=	modified-bsd

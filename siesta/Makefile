@@ -5,7 +5,7 @@ CATEGORIES=	science
 MASTER_SITES=	http://departments.icmab.es/leem/siesta/CodeAccess/Code/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://departments.icmab.es/leem/siesta/CodeAccess/Code/
 COMMENT=	Electronic structure calculations and ab initio molecular dynamics
 LICENSE=	gnu-gpl-v3

@@ -1,11 +1,10 @@
 # $NetBSD$
-#
 
-DISTNAME=	pkg-dev-0.1
+DISTNAME=	pkg-dev-0.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	Tools for pkgsrc development and testing
 LICENSE=	original-bsd

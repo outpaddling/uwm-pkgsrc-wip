@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=marbl/}
 GITHUB_PROJECT=	canu
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://canu.readthedocs.io/
 COMMENT=	Single molecule sequence assembler for genomes large and small
 

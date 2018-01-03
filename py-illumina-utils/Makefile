@@ -10,7 +10,7 @@ PKGNAME=	${PYPKGPREFIX}-illumina-utils-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_PYPI:=i/illumina-utils/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/illumina-utils
 COMMENT=	Tools for Illumina paired-end data (for CASAVA 1.7+ pipeline)
 # Check this

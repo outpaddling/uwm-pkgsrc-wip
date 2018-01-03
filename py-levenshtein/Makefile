@@ -13,7 +13,7 @@ PKGNAME=	${PYPKGPREFIX}-levenshtein-${PORTVERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-Levenshtein/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/pylevenshtein/
 COMMENT=	Python extension computing string distances and similarities
 # Check this

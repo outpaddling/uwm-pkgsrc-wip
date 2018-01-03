@@ -10,7 +10,7 @@ CATEGORIES=	python
 MASTER_SITES=	http://www.acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Analyzing transcriptome data generated using the PacBio(R)
 #LICENSE=	

@@ -17,7 +17,7 @@ DISTFILES=	${DISTNAME}.tar.gz large.tgz timing.tgz
 GITHUB_PROJECT=	OpenBLAS
 GITHUB_TAG=	v${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://github.com/xianyi/OpenBLAS
 COMMENT=	Optimized BLAS library based on GotoBLAS2
 # Check this

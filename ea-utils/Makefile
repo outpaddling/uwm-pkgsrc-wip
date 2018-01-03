@@ -9,7 +9,7 @@ DISTNAME=	ea-utils.${PORTVERSION}-806
 CATEGORIES=	biology
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Command-line tools for processing fastq sequence data
 LICENSE=	mit

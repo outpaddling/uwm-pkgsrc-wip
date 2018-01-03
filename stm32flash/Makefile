@@ -8,7 +8,7 @@ DISTNAME=	stm32flash-2011.05.30
 CATEGORIES=	devel
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Open source flash program for STM32 ARM processors using ST bootloader
 #LICENSE=	

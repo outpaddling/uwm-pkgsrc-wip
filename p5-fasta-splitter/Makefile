@@ -9,7 +9,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://kirill-kryukov.com/study/tools/fasta-splitter/files/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Divides a FASTA file into a set of smaller, approximately equally sized files
 #LICENSE=	

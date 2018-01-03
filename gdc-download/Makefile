@@ -10,7 +10,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://example.com/
 COMMENT=	Download tool for GDC (Genomic Data Commons) data
 LICENSE=	2-clause-bsd

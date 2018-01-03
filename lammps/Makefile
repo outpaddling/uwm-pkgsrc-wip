@@ -5,7 +5,7 @@ DISTNAME=	lammps-2013.04.04
 CATEGORIES=	science
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	Large-scale Atomic/Molecular Massively Parallel Simulator
 LICENSE=	gnu-gpl-v1

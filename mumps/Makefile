@@ -16,7 +16,7 @@ MASTER_SITES=	http://mumps.enseeiht.fr/ \
 		http://www.enseeiht.fr/apo/MUMPS/ \
 		http://www.enseeiht.fr/irit/apo/MUMPS/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://graal.ens-lyon.fr/MUMPS/
 COMMENT=	MUltifrontal Massively Parallel sparse direct Solver
 # LICENSE=	${WRKSRC}/LICENSE

@@ -10,7 +10,7 @@ DIST_SUBDIR=	pbcore
 CATEGORIES=	biology
 MASTER_SITES=	http://github.com/PacificBiosciences/pbcore/archive/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Python modules for building PacBio bioinformatics applications
 LICENSE=	modified-bsd

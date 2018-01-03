@@ -8,7 +8,7 @@ DISTFILES=	openmx3.7.tar.gz patch3.7.7.tar.gz
 EXTRACT_ONLY=	openmx3.7.tar.gz
 MASTER_SITES=	http://www.openmx-square.org/ \
 		http://www.openmx-square.org/bugfixed/14Jan31/
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://www.openmx-square.org/
 COMMENT=	Nano-scale material simulations based on DFT
 LICENSE=	gnu-gpl-v1

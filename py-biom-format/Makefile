@@ -7,7 +7,7 @@
 ###########################################################
 # Unconverted and partially converted FreeBSD port syntax:
 
-## Created by: Jason Bacon <bacon4000@gmail.com>
+## Created by: Jason Bacon <bacon@NetBSD.org>
 ## $FreeBSD$
 ## Version 1.3.1 is specifically listed as a dep for qiime
 ## PORTVERSION=	1.3.1
@@ -22,7 +22,7 @@ DISTNAME=	biom${PKGNAMESUFFIX}-2.1
 CATEGORIES=	biology
 MASTER_SITES=	http://pypi.python.org/packages/source/b/biom-format/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	The Biological Observation Matrix (BIOM) Format Project
 #LICENSE=	BSD3CLAUSE

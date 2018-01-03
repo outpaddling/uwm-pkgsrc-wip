@@ -6,7 +6,7 @@ CATEGORIES=	science
 MASTER_SITES=	http://downloads.sourceforge.net/project/klustakwik/klustakwik/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://downloads.sourceforge.net/project/klustakwik/klustakwik/
 COMMENT=	Unsupervised classification of multidimensional continuous data
 LICENSE=	gnu-gpl-v1

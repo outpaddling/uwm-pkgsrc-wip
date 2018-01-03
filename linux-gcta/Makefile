@@ -18,7 +18,7 @@ CATEGORIES=	biology
 MASTER_SITES=	http://cnsgenomics.com/software/gcta/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://cnsgenomics.com/software/gcta/index.html
 COMMENT=	Tool for Genome-wide Complex Trait Analysis
 LICENSE=	mit

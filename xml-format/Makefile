@@ -5,7 +5,7 @@ DISTNAME=	xml-format-0.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	XML Beautifier
 #LICENSE=	# TODO: (see mk/license.mk)

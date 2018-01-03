@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=NCI-GDC/}
 GITHUB_PROJECT=	gdc-client
 GITHUB_TAG=	${PORTVERSION}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	https://gdc.cancer.gov/access-data/gdc-data-transfer-tool
 COMMENT=	Genomic Data Commons download tool
 # Check this

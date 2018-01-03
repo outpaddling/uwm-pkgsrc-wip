@@ -4,7 +4,7 @@ DISTNAME=	auto-admin-0.4.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	Automate common systems administration tasks
 LICENSE=	2-clause-bsd

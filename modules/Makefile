@@ -8,7 +8,7 @@ DISTNAME=	modules-${PORTVERSION}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=modules/Modules/modules-${PORTVERSION}/}
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Dynamic modification of a user environment
 LICENSE=	gnu-gpl-v2

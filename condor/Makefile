@@ -73,7 +73,7 @@ DISTNAME=	condor_src-${PORTVERSION}-all-all
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.acadix.biz/Ports/distfiles/
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	High-throughput computing on distributively owned resources
 #LICENSE=	APACHE20

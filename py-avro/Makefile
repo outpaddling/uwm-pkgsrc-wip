@@ -10,7 +10,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://www.sai.msu.su/apache/avro/avro-${PORTVERSION}/
 #		APACHE/${PORTNAME}/stable
 
-MAINTAINER=	bacon4000@gmail.com
+MAINTAINER=	bacon@NetBSD.org
 
 COMMENT=	Data serialization system for python
 LICENSE=	apache-2.0
