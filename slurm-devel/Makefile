@@ -22,6 +22,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl pkg-config
 USE_LIBTOOL=	yes
 
+# Help find pkgsrc man2html
+CONFIGURE_ARGS+=	--bindir=${PREFIX}/bin
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html
 CONFIGURE_ARGS+=	--with-munge=${BUILDLINK_PREFIX.munge}
 # Add mysql option
