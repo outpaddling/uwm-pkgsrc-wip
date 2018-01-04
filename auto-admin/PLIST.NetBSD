@@ -36,6 +36,7 @@ sbin/auto-replace-file
 sbin/auto-restore-pw
 sbin/auto-restore-user
 sbin/auto-select-pkgsrc-dist
+sbin/auto-set-hostname
 sbin/auto-set-sysctl
 sbin/auto-set-umask
 sbin/auto-ssh-authorize
