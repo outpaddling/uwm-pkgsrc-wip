@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.8 2015/04/29 12:40:50 outpaddling Exp $
 
-DISTNAME=	slurm-17.11.1
+DISTNAME=	slurm-17.11.2
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.schedmd.com/download/archive/ \
 		http://www.schedmd.com/download/latest/ \
@@ -64,6 +64,33 @@ SUBST_CLASSES+=		make-ex
 SUBST_STAGE.make-ex=	post-install
 SUBST_FILES.make-ex=	etc/Makefile
 SUBST_SED.make-ex=	-e 's|${WRKDIR}|<build-prefix>|g'
+
+SUBST_CLASSES+=		undef1
+SUBST_STAGE.undef1=	post-configure
+SUBST_FILES.undef1=	src/plugins/acct_gather_profile/hdf5/sh5util/Makefile
+SUBST_SED.undef1=	-e 's|$$(LDFLAGS) -o|$$(LDFLAGS) -L../../../../api -lslurmfull -o|'
+
+SUBST_CLASSES+=		undef2
+SUBST_STAGE.undef2=	post-configure
+SUBST_FILES.undef2=	src/sacct/Makefile
+SUBST_FILES.undef2+=	src/sacctmgr/Makefile
+SUBST_FILES.undef2+=	src/salloc/Makefile
+SUBST_FILES.undef2+=	src/sattach/Makefile
+SUBST_FILES.undef2+=	src/sbatch/Makefile
+SUBST_FILES.undef2+=	src/bcast/Makefile
+SUBST_FILES.undef2+=	src/scancel/Makefile
+SUBST_FILES.undef2+=	src/scontrol/Makefile
+SUBST_FILES.undef2+=	src/sdiag/Makefile
+SUBST_FILES.undef2+=	src/sinfo/Makefile
+SUBST_FILES.undef2+=	src/slurmctld/Makefile
+SUBST_FILES.undef2+=	src/slurmd/Makefile
+SUBST_SED.undef2=	-e 's|$$(LDFLAGS) -o|$$(LDFLAGS) -L../api -lslurmfull -L../db_api -lslurmdb -o|'
+
+SUBST_CLASSES+=		undef3
+SUBST_STAGE.undef3=	post-configure
+SUBST_FILES.undef3=	src/slurmd/slurmd/Makefile
+SUBST_FILES.undef3=	src/slurmd/slurmstepd/Makefile
+SUBST_SED.undef3=	-e 's|$$(LDFLAGS) -o|$$(LDFLAGS) -L../../api -lslurmfull -L../../db_api -lslurmdb -o|'
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 
