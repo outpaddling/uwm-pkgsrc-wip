@@ -8,6 +8,7 @@ sbin/auto-change-group-gid
 sbin/auto-change-group-ownership
 sbin/auto-change-primary-group
 sbin/auto-change-uid
+sbin/auto-clean-disk
 sbin/auto-clean-pkgsrc
 sbin/auto-clean-tmp
 sbin/auto-denyhosts-remove-ip
@@ -29,6 +30,7 @@ sbin/auto-pxe-node-discover
 sbin/auto-replace-file
 sbin/auto-restore-pw
 sbin/auto-restore-user
+sbin/auto-set-hostname
 sbin/auto-set-sysctl
 sbin/auto-set-umask
 sbin/auto-ssh-authorize
