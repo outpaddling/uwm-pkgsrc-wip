@@ -13,7 +13,7 @@ COMMENT=	Simple Linux Utility for Resource Management
 
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
+#BUILD_DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
 BUILD_DEPENDS+=	man2html-[0-9]*:../../wip/man2html
 
 USE_LANGUAGES=	c c++
@@ -73,26 +73,6 @@ SUBST_SED.undef1=	-e 's|$$(LDFLAGS) -o|$$(LDFLAGS) -L${WRKSRC}/src/api/.libs -ls
 
 SUBST_CLASSES+=		undef2
 SUBST_STAGE.undef2=	post-configure
-#SUBST_FILES.undef2=	src/sacct/Makefile
-#SUBST_FILES.undef2+=	src/sacctmgr/Makefile
-#SUBST_FILES.undef2+=	src/salloc/Makefile
-#SUBST_FILES.undef2+=	src/sattach/Makefile
-#SUBST_FILES.undef2+=	src/sbatch/Makefile
-#SUBST_FILES.undef2+=	src/bcast/Makefile
-#SUBST_FILES.undef2+=	src/scancel/Makefile
-#SUBST_FILES.undef2+=	src/scontrol/Makefile
-#SUBST_FILES.undef2+=	src/sdiag/Makefile
-#SUBST_FILES.undef2+=	src/sinfo/Makefile
-#SUBST_FILES.undef2+=	src/slurmctld/Makefile
-#SUBST_FILES.undef2+=	src/slurmd/Makefile
-#SUBST_FILES.undef2+=	src/slurmd/slurmd/Makefile
-#SUBST_FILES.undef2+=	src/slurmd/slurmstepd/Makefile
-#SUBST_FILES.undef2+=	src/slurmdbd/Makefile
-#SUBST_FILES.undef2+=	src/common/Makefile
-#SUBST_FILES.undef2+=	src/smap/Makefile
-#SUBST_FILES.undef2+=	src/sprio/Makefile
-#SUBST_FILES.undef2+=	src/squeue/Makefile
-#SUBST_FILES.undef2+=	src/sreport/Makefile
 SUBST_FILES.undef2+=	src/*/Makefile
 SUBST_FILES.undef2+=	src/*/*/Makefile
 SUBST_SED.undef2=	-e 's|$$(LDFLAGS) -o|$$(LDFLAGS) -L${WRKSRC}/src/api/.libs -lslurmfull -L${WRKSRC}/src/db_api/.libs -lslurmdb -o|'
