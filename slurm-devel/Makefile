@@ -1,6 +1,6 @@
 # $NetBSD: Makefile,v 1.8 2015/04/29 12:40:50 outpaddling Exp $
 
-DISTNAME=	slurm-17.11.2
+DISTNAME=	slurm-17.11.3
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.schedmd.com/download/archive/ \
 		http://www.schedmd.com/download/latest/ \
@@ -66,6 +66,9 @@ SUBST_STAGE.make-ex=	post-install
 SUBST_FILES.make-ex=	etc/Makefile
 SUBST_SED.make-ex=	-e 's|${WRKDIR}|<build-prefix>|g'
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == NetBSD
 SUBST_CLASSES+=		undef1
 SUBST_STAGE.undef1=	post-configure
 SUBST_FILES.undef1=	src/plugins/acct_gather_profile/hdf5/sh5util/Makefile
@@ -76,6 +79,7 @@ SUBST_STAGE.undef2=	post-configure
 SUBST_FILES.undef2+=	src/*/Makefile
 SUBST_FILES.undef2+=	src/*/*/Makefile
 SUBST_SED.undef2=	-e 's|$$(LDFLAGS) -o|$$(LDFLAGS) -L${WRKSRC}/src/api/.libs -lslurmfull -L${WRKSRC}/src/db_api/.libs -lslurmdb -o|'
+.endif
 
 INSTALLATION_DIRS+=	share/examples/${PKGBASE}
 
