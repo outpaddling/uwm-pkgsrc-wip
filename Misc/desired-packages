@@ -1,21 +1,18 @@
+
 Check both the committed and wip versions of each port listed below and
-decide if it needs to be implemented or upgraded.
+verify that it needs to be implemented or upgraded.
 
 The one problem a version control system doesn't mitigate is duplicated
 effort, so keep the rest of us informed about what you're working on.
 
-Send us an email before beginning new work and add your name or initials
-next to any port you're working on, e.g.
+Send us an email before beginning new work and if taking over
+work on someone else's package, set MAINTAINER to your email.
 
-bwa             JB
-
-Commit IMMEDIATELY after changing this file.
+Lastly, commit early, commit often, so everyone has access to the latest.
 
 ---
 
 trimmomatic
-bwa
-samtools
 snpfinder
-resistome
-rarefaction
+resistomeanalyzer
+rarefactionanalyzer
