@@ -16,6 +16,7 @@ USE_LANGUAGES=	# none
 DEPENDS=	pkglint>0:../../pkgtools/pkglint
 DEPENDS+=	pkgdiff>0:../../pkgtools/pkgdiff
 DEPENDS+=	createbuildlink>0:../../pkgtools/createbuildlink
+DEPENDS+=	auto-admin>0:../../uwm-pkgsrc-wip/auto-admin
 
 NO_BUILD=	yes
 
