@@ -5,17 +5,6 @@
 #              Mon Mar 12 09:59:32 CDT 2018               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-## $FreeBSD$
-# LIB_DEPENDS+=	libjsoncpp.so:devel/jsoncpp
-# Note: cmake:outsource
-# Unknown tool: USE_TOOLS=	compiler:c++11-lang
-#USE_LDCONFIG=	yes
-#CMAKE_ON+=	BUILD_SHARED_LIBS
-#.include <bsd.port.mk>
-
 DISTNAME=	bamtools-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_GITHUB:=pezmaster31/}
@@ -25,40 +14,20 @@ GITHUB_TAG=	v${PORTVERSION}
 MAINTAINER=	dsiercks@uwm.edu
 HOMEPAGE=	https://github.com/pezmaster31/bamtools
 COMMENT=	API and toolkit for handling BAM files
-# Check this
 LICENSE=	mit
-
-# Test and change if necessary.
-# MAKE_JOBS_SAFE=	no
 
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON
 CMAKE_ARG_PATH= ..
 CONFIGURE_DIRS= _build
-
-# CMAKE_ARG_PATH=      ${WRKDIR}/${DISTNAME}
-# WRKSRC=         ${WRKDIR}/build
 
 PORTVERSION=	2.5.1
 
 post-extract:
 	${RUN} mkdir -p ${WRKSRC}/_build
 
-
-# Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
-# .include "../../mk/bsd.prefs.mk"
-
-# Keep this if there are user-selectable options.
-# .include "options.mk"
-
-# Specify which directories to create before install.
-# You should only need this if using your own install target.
-INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 share/doc share/examples
-
-# Convert any _DEPENDS above that have a buildlink3.mk
-# .include "../..///buildlink3.mk"
-# Linux doesn't have zlib in the base, so just in case...
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/jsoncpp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

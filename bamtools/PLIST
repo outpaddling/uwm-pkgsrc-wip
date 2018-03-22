@@ -20,8 +20,6 @@ include/bamtools/api/SamSequenceDictionary.h
 include/bamtools/api/algorithms/Sort.h
 include/bamtools/api/api_global.h
 include/bamtools/shared/bamtools_global.h
-lib/libbamtools.a
+lib/libbamtools.so
+lib/libbamtools.so.${PKGVERSION}
 lib/pkgconfig/bamtools-1.pc
-@pkgdir share/examples
-@pkgdir share/doc
-@pkgdir man/man1
