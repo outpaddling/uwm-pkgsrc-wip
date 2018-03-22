@@ -34,14 +34,16 @@ LICENSE=	mit
 # Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+CMAKE_ARG_PATH= ..
+CONFIGURE_DIRS= _build
 
-CMAKE_ARG_PATH=      ${WRKDIR}/${DISTNAME}
-WRKSRC=         ${WRKDIR}/build
+# CMAKE_ARG_PATH=      ${WRKDIR}/${DISTNAME}
+# WRKSRC=         ${WRKDIR}/build
 
 PORTVERSION=	2.5.1
 
 post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
+	${RUN} mkdir -p ${WRKSRC}/_build
 
 
 # Sets OPSYS, OS_VERSION, MACHINE_ARCH, etc..
