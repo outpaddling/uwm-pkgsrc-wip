@@ -1,9 +1,11 @@
 
-PKG_DEVELOPER=yes in ${PREFIX}/etc/mk.conf
+PKG_DEVELOPER=yes in ${PREFIX}/etc/mk.conf (/etc/mk.conf on NetBSD)
 
 Makefile:
 
     USE_TOOLS+=perl if any perl scripts intalled
+
+    Use VAR+= instead of line continuations
 
     Do not use FETCH_USING in Makefile
 
@@ -25,6 +27,7 @@ Patching:
     pkgconfigdir= $(exec_prefix)/lib/pkgconfig
 
 DESCR:
+    fmt -w 79
 
     Homepage URL in DESCR is redundant (pkg_info will display HOMEPAGE)
 
