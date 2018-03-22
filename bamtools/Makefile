@@ -16,7 +16,6 @@ HOMEPAGE=	https://github.com/pezmaster31/bamtools
 COMMENT=	API and toolkit for handling BAM files
 LICENSE=	mit
 
-# Just assuming C and C++: Adjust this!
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DBUILD_SHARED_LIBS:BOOL=ON
