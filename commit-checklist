@@ -11,8 +11,10 @@ For pkgsrc imports:
 5.  add it to $CATEGORY/Makefile
     pkglint -F in pkgsrc/$CATEGORY will help
     commit, message = category/Makefile: Add pkgname
-    
-5.  make a changes entry (if you have PKG_DEVELOPER set, and you
+
+Package adds, removals, moves, upgrades (other cases, see guide):
+
+1.  make a changes entry (if you have PKG_DEVELOPER set, and you
     should, 'make cce CTYPE=Added' will do it).
     
     make cce CTYPE=Added NETBSD_LOGIN_NAME=bacon

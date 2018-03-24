@@ -20,6 +20,8 @@ Makefile:
     
     INSTALLATION_DIRS instead of AUTO_MKDIRS or MKDIR
 
+    If not changing version, bump PKGREVISION?
+
 Patching:
 
     Use BSD_INSTALL_*_DIR to create directories
