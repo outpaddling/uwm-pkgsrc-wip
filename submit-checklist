@@ -44,7 +44,7 @@ Test on other supported platforms (CentOS, Darwin, ...)
 
 Make pkglint -Wall and pkglint -e run clean
 
-Remove extraneous files
+Remove TODO and other extraneous files
 
 Add to pkgsrc-wip
 
