@@ -26,6 +26,11 @@ Patching:
     
     pkgconfigdir= $(exec_prefix)/lib/pkgconfig
 
+PLIST:
+    Remove unneeded pkgdir entries
+    
+    Inspect carefully
+
 DESCR:
     fmt -w 79
 
