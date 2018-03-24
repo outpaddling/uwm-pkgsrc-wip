@@ -20,7 +20,7 @@ Makefile:
     
     INSTALLATION_DIRS instead of AUTO_MKDIRS or MKDIR
 
-    If not changing version, bump PKGREVISION?
+    If the binary package changes, bump PKGREVISION
 
 Patching:
 

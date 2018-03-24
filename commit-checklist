@@ -12,7 +12,8 @@ For pkgsrc imports:
     pkglint -F in pkgsrc/$CATEGORY will help
     commit, message = category/Makefile: Add pkgname
 
-Package adds, removals, moves, upgrades (other cases, see guide):
+Package adds, removals, moves, upgrades (including PKGREVISION changes,
+other cases, see guide):
 
 1.  make a changes entry
     
