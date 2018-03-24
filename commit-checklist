@@ -14,11 +14,14 @@ For pkgsrc imports:
 
 Package adds, removals, moves, upgrades (other cases, see guide):
 
-1.  make a changes entry (if you have PKG_DEVELOPER set, and you
-    should, 'make cce CTYPE=Added' will do it).
-    
-    make cce CTYPE=Added NETBSD_LOGIN_NAME=bacon
+1.  make a changes entry
     
     Must have PKG_DEVELOPER=yes
 	NetBSD: /etc/mk.conf
-	Custom trees: sysprefix/etc/mk.conf
+	Custom trees: sysprefix/etc/mk.conf    
+
+    make help topic=cce
+    
+    cd category/pkg
+    make cce CTYPE=Added NETBSD_LOGIN_NAME=bacon
+    make cce CTYPE=Updated NETBSD_LOGIN_NAME=bacon
