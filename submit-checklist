@@ -16,11 +16,11 @@ Makefile:
 
     USE_LANGUAGES=c is the default and can be omitted if only C is used
 
-    HOMEPAGE should not have /../
+    URLs should not have /../
     
     INSTALLATION_DIRS instead of AUTO_MKDIRS or MKDIR
 
-    If the binary package changes, bump PKGREVISION
+    If update changes the binary package, bump PKGREVISION
 
 Patching:
 
