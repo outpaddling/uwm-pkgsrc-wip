@@ -5,14 +5,19 @@
 #              Mon Mar 26 08:34:17 CDT 2018               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
 # LIB_DEPENDS=
 #		libtspi.so:security/trousers \
-#		libhogweed.so:security/nettle \
-#		libgpg-error.so:security/libgpg-error \
-# RUN_DEPENDS=	p5-List-MoreUtils>=0:lang/p5-List-MoreUtils
+
+DISTNAME=	ncbi-blast-${PORTVERSION}+-src
+PKGNAME=	ncbi-blast+-${PORTVERSION}
+CATEGORIES=	biology
+MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
+		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PORTVERSION}/
+
+MAINTAINER=	jwb@FreeBSD.org
+HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
+COMMENT=	NCBI implementation of Basic Local Alignment Search Tool
+LICENSE=	public-domain
 
 # Fix "undefined _ThreadRuneLocale" error on FreeBSD 10.0
 # Fix unknown options in configure
@@ -26,19 +31,8 @@ SUBST_FILES.thread+=	${WRKSRC}/src/build-system/configure
 
 SUBST_CLASSES+=		stage
 SUBST_STAGE.stage=	post-patch
-SUBST_SED.stage+=	-e 's|@prefix@|${STAGEDIR}@prefix@|g'
+SUBST_SED.stage+=	-e 's|@prefix@|${DESTDIR}@prefix@|g'
 SUBST_FILES.stage+=	${WRKSRC}/src/build-system/Makefile.in.top
-
-DISTNAME=	ncbi-blast-${PORTVERSION}+-src
-PKGNAME=	ncbi-blast+-${PORTVERSION}
-CATEGORIES=	biology
-MASTER_SITES=	https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ \
-		https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/${PORTVERSION}/
-
-MAINTAINER=	jwb@FreeBSD.org
-HOMEPAGE=	http://blast.ncbi.nlm.nih.gov/
-COMMENT=	NCBI implementation of Basic Local Alignment Search Tool
-LICENSE=	public-domain
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
@@ -67,8 +61,6 @@ INSTALLATION_DIRS=	lib/ncbi-tools++
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/ncbi-tools++/*/*/.cvsignore.extra
 	${MV} ${DESTDIR}${PREFIX}/lib/lib* \
-		${DESTDIR}${PREFIX}/lib/X11 \
-		${DESTDIR}${PREFIX}/lib/debug \
 		${DESTDIR}${PREFIX}/lib/ncbi-tools++
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
 
@@ -84,6 +76,7 @@ post-install:
 .include "../../security/p11-kit/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../security/libgpg-error/buildlink3.mk"
 # Based on USES=python.  Check this.
 .include "../../lang/python/application.mk"
 # Linux doesn't have zlib in the base, so just in case...
