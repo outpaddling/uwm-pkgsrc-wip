@@ -73,7 +73,7 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/ncbi-tools++
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
 
-.include "../../archivers/zlib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
