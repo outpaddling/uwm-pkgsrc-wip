@@ -21,7 +21,6 @@ LICENSE=	public-domain
 
 # Fix "undefined _ThreadRuneLocale" error on FreeBSD 10.0
 # Fix unknown options in configure
-# Add staging support to configure-generated Makefile
 SUBST_CLASSES+=		thread
 SUBST_STAGE.thread=	post-patch
 SUBST_SED.thread+=	-e 's|-D_THREAD_SAFE|-D_THREAD_SAFE -D__RUNETYPE_INTERNAL|'
@@ -29,6 +28,7 @@ SUBST_SED.thread+=	-e '/--infodir=DIR/d'
 SUBST_SED.thread+=	-e '/--mandir=DIR/d'
 SUBST_FILES.thread+=	${WRKSRC}/src/build-system/configure
 
+# Add staging support to configure-generated Makefile
 SUBST_CLASSES+=		stage
 SUBST_STAGE.stage=	post-patch
 SUBST_SED.stage+=	-e 's|@prefix@|${DESTDIR}@prefix@|g'
@@ -50,7 +50,7 @@ CONFIGURE_ENV=		ncbi_cv_prog_amq_w=no
 CONFIGURE_ARGS+=	AR="ar cr" --without-boost
 
 CFLAGS+=	-fopenmp
-CXXFLAGS+=	-fopenmp -DHAVE_STATVFS
+CXXFLAGS+=	-fopenmp
 # MAKE_JOBS_SAFE=	no
 
 PORTVERSION=	2.7.1
@@ -73,9 +73,11 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/ncbi-tools++
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
 
+.include "../../archivers/zlib/buildlink3.mk"
+.include "../../archivers/lzo/buildlink3.mk"
+.include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
-.include "../../archivers/lzo/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/libidn2/buildlink3.mk"
