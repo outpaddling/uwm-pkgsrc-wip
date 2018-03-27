@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	AR="ar cr" --without-boost
 
 CFLAGS+=	-fopenmp
 CXXFLAGS+=	-fopenmp
-# MAKE_JOBS_SAFE=	no
+MAKE_JOBS_SAFE=	no	# Intermittent issues
 
 PORTVERSION=	2.7.1
 
