@@ -3874,8 +3874,6 @@ lib/ncbi-tools++/libblastxml-static.a
 lib/ncbi-tools++/libblastxml.a
 lib/ncbi-tools++/libblastxml2-static.a
 lib/ncbi-tools++/libblastxml2.a
-lib/ncbi-tools++/libbz2-static.a
-lib/ncbi-tools++/libbz2.a
 lib/ncbi-tools++/libcdd-static.a
 lib/ncbi-tools++/libcdd.a
 lib/ncbi-tools++/libcn3d-static.a
