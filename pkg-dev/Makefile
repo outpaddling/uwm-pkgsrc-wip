@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	pkg-dev-0.2
+DISTNAME=	pkg-dev-0.3
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
