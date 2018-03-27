@@ -53,7 +53,7 @@ PORTVERSION=	2.7.1
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == NetBSD
-# statfs is deprecated on NetBSD, but still exists in the library
+# statfs is deprecated on NetBSD, but still exists in libc
 # configure checks only for undefined reference, not for usability
 CONFIGURE_ENV+=         ac_cv_func_statfs=no
 .endif
