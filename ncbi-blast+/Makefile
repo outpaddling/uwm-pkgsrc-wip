@@ -34,8 +34,8 @@ SUBST_STAGE.stage=	post-patch
 SUBST_SED.stage+=	-e 's|@prefix@|${DESTDIR}@prefix@|g'
 SUBST_FILES.stage+=	${WRKSRC}/src/build-system/Makefile.in.top
 
-USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 REPLACE_BASH=	compilers/xcode30_prj/configure
 REPLACE_PERL=	src/app/blast/legacy_blast.pl src/app/blast/update_blastdb.pl
@@ -50,11 +50,20 @@ CONFIGURE_ENV=		ncbi_cv_prog_amq_w=no
 CONFIGURE_ARGS+=	AR="ar cr" --without-boost
 
 CFLAGS+=	-fopenmp
-CXXFLAGS+=	-fopenmp
+CXXFLAGS+=	-fopenmp -DHAVE_STATVFS
+# MAKE_JOBS_SAFE=	no
 
 PORTVERSION=	2.7.1
 
 INSTALLATION_DIRS=	lib/ncbi-tools++
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == NetBSD
+# statfs is deprecated on NetBSD, but still exists in the library
+# configure checks only for undefined reference, not for usability
+CONFIGURE_ENV+=         ac_cv_func_statfs=no
+.endif
 
 # --libdir=${PREFIX}/lib/ncbi-tools++ doesn't respect DESTDIR, so do
 # a postinstall mv.
@@ -64,7 +73,6 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/ncbi-tools++
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
 
-# Convert any _DEPENDS above that have a buildlink3.mk
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../databases/lmdb/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
@@ -77,8 +85,5 @@ post-install:
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"
-# Based on USES=python.  Check this.
 .include "../../lang/python/application.mk"
-# Linux doesn't have zlib in the base, so just in case...
-# .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
