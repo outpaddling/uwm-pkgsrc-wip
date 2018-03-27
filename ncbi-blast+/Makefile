@@ -28,12 +28,6 @@ SUBST_SED.thread+=	-e '/--infodir=DIR/d'
 SUBST_SED.thread+=	-e '/--mandir=DIR/d'
 SUBST_FILES.thread+=	${WRKSRC}/src/build-system/configure
 
-# Add staging support to configure-generated Makefile
-SUBST_CLASSES+=		stage
-SUBST_STAGE.stage=	post-patch
-SUBST_SED.stage+=	-e 's|@prefix@|${DESTDIR}@prefix@|g'
-SUBST_FILES.stage+=	${WRKSRC}/src/build-system/Makefile.in.top
-
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
@@ -48,14 +42,13 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/c++
 # FreeBSD boost port flagged by configure as untested version
 CONFIGURE_ENV=		ncbi_cv_prog_amq_w=no
 CONFIGURE_ARGS+=	AR="ar cr" --without-boost
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ncbi-tools++
 
 CFLAGS+=	-fopenmp
 CXXFLAGS+=	-fopenmp
 MAKE_JOBS_SAFE=	no	# Intermittent issues
 
 PORTVERSION=	2.7.1
-
-INSTALLATION_DIRS=	lib/ncbi-tools++
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -69,8 +62,6 @@ CONFIGURE_ENV+=         ac_cv_func_statfs=no
 # a postinstall mv.
 post-install:
 	${RM} ${DESTDIR}${PREFIX}/include/ncbi-tools++/*/*/.cvsignore.extra
-	${MV} ${DESTDIR}${PREFIX}/lib/lib* \
-		${DESTDIR}${PREFIX}/lib/ncbi-tools++
 	${STRIP} ${DESTDIR}${PREFIX}/lib/ncbi-tools++/*.so
 
 .include "../../devel/zlib/buildlink3.mk"
