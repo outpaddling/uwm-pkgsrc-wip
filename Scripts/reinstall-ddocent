@@ -3,8 +3,7 @@
 printf "Remove everything? y/[n] "
 read remove
 if [ 0$remove = 0y ]; then
-    pkg_delete='pkg_delete -f'
-    $pkg_delete tabixpp smithwaterman fastahack filevercmp fsom multichoose \
+    pkgin remove -y tabixpp smithwaterman fastahack filevercmp fsom multichoose \
 	intervaltree vcflib vcftools rainbow bamtools freebayes stacks \
 	Trimmomatic seqtk bedtools2 pear-merger samtools parallel ddocent || true
 fi
