@@ -9,7 +9,6 @@ sbin/auto-change-group-ownership
 sbin/auto-change-primary-group
 sbin/auto-change-uid
 sbin/auto-clean-disk
-sbin/auto-clean-pkgsrc
 sbin/auto-clean-tmp
 sbin/auto-cuda-install
 sbin/auto-denyhosts-remove-ip
@@ -26,9 +25,7 @@ sbin/auto-ldap-adduser
 sbin/auto-ldap-client-setup
 sbin/auto-ostype
 sbin/auto-passwd-user-expiration
-sbin/auto-pkgsrc-add-license
 sbin/auto-pkgsrc-setup
-sbin/auto-pkgsrc-wip-checkout
 sbin/auto-print-make-variable
 sbin/auto-pxe-installer-setup
 sbin/auto-pxe-node-discover
