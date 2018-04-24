@@ -8,11 +8,11 @@ if [ 0$remove = 0y ]; then
 	Trimmomatic seqtk bedtools2 pear-merger samtools parallel ddocent || true
 fi
 
-prefix=$(dirname $(dirname $(which bmake)) | sed -e 's|pkg|pkgsrc|g')
-echo $prefix
-cd $prefix/wip/ddocent
+pkgin install -y coreutils glib gnuplot parallel automake
+pkgsrc=`auto-pkgsrc-dir`
+cd $pkgsrc/wip/ddocent
 bmake clean
-bmake clean-depends
+#bmake clean-depends
 bmake
 # Do this late to minimize uninstalled time
 bmake deinstall
