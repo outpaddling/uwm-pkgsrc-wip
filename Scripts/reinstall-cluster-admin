@@ -7,6 +7,7 @@ cd $prefix/uwm-pkgsrc-wip
 pwd
 svn up
 
+# Allow auto-admin deinstall
 pkg_delete cluster-admin || true
 
 cd $prefix/uwm-pkgsrc-wip/auto-admin
@@ -21,4 +22,3 @@ cd ..
 yes | ./clean-all
 
 yes | cluster-sync-pkgsrc
-
