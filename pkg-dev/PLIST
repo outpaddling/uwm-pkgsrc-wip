@@ -12,7 +12,6 @@ sbin/pkg-reinstall
 sbin/pkg-remake
 sbin/pkg-vuln
 sbin/pkgsrc-add-license
-sbin/pkgsrc-clean
 sbin/pkgsrc-dir
 sbin/pkgsrc-make
 sbin/pkgsrc-prefix
