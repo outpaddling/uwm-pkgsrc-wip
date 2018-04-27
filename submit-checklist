@@ -28,6 +28,8 @@ Patching:
     
     pkgconfigdir= $(exec_prefix)/lib/pkgconfig
 
+    Inspect every patch file
+
 PLIST:
     Remove unneeded pkgdir entries
     
