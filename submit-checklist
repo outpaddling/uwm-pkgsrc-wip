@@ -5,6 +5,8 @@ Makefile:
 
     USE_TOOLS+=perl if any perl scripts intalled
 
+    VAR= where VAR+= is not needed
+    
     Use VAR+= instead of line continuations
 
     Do not use FETCH_USING in Makefile
@@ -21,6 +23,8 @@ Makefile:
     INSTALLATION_DIRS instead of AUTO_MKDIRS or MKDIR
 
     If update changes the binary package, bump PKGREVISION
+    
+    Eliminate unneded deps
 
 Patching:
 
