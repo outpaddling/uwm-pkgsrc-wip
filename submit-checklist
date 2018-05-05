@@ -3,7 +3,7 @@ PKG_DEVELOPER=yes in ${PREFIX}/etc/mk.conf (/etc/mk.conf on NetBSD)
 
 Makefile:
 
-    USE_TOOLS+=perl if any perl scripts intalled
+    USE_TOOLS+=perl[:run] if any perl scripts intalled
 
     VAR= where VAR+= is not needed
     
@@ -24,7 +24,7 @@ Makefile:
 
     If update changes the binary package, bump PKGREVISION
     
-    Eliminate unneded deps
+    Eliminate unneeded deps
 
 Patching:
 
