@@ -14,6 +14,8 @@ Makefile:
     Use MASTER_SITE_SOURCEFORGE, MASTER_SITE_GITHUB, etc. if possible
 	See mk/fetch/github for packages downloading from Github
 
+    Remove GITHUB_PROJECT if it matches PKGBASE.
+    
     Use REPLACE_PERL, REPLACE_PYTHON, etc.
 
     USE_LANGUAGES=c is the default and can be omitted if only C is used
