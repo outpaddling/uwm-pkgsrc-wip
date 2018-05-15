@@ -1,4 +1,5 @@
 @comment $NetBSD$
+sbin/auto-ad-adduser
 sbin/auto-adduser
 sbin/auto-admin
 sbin/auto-append-line
@@ -22,6 +23,7 @@ sbin/auto-enable-passwdqc
 sbin/auto-file-secure
 sbin/auto-harden
 sbin/auto-insert-line
+sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
 sbin/auto-ldap-client-setup
 sbin/auto-ostype
