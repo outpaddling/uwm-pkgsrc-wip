@@ -24,7 +24,9 @@ SUBST_FILES.prefix=	${WRKSRC}/Common/User-scripts/slurm-shell
 SUBST_FILES.prefix+=	${WRKSRC}/Common/Src/cluster-passwd.c
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 
-DEPENDS+=		auto-admin>=0.3.8:../../uwm-pkgsrc-wip/auto-admin
+DEPENDS+=	auto-admin>=0.3.8:../../uwm-pkgsrc-wip/auto-admin
+
+REPLACE_BASH=	Common/Sys-scripts/cluster-adduser
 
 .include "../../mk/bsd.prefs.mk"
 
