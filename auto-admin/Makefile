@@ -15,36 +15,19 @@ USE_LANGUAGES=	# none
 NO_BUILD=	yes
 REPLACE_SH=	*/Scripts/*
 
-# List /usr/pkg before /usr/local to prevent
-# /usr/local -> /usr/pkg-1 -> /usr/pkg-1-1
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
-SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-denyhosts-setup
-SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-denyhosts-remove-ip
-SUBST_FILES.prefix+=	${WRKSRC}/Common/Scripts/auto-pkgsrc-add-license
-SUBST_SED.prefix+=	-e "s|/usr/pkg|${PREFIX}|g"
-SUBST_SED.prefix+=	-e "s|/usr/local|${PREFIX}|g"
-
-SUBST_CLASSES+=		pkgsrc
-SUBST_STAGE.pkgsrc=	post-patch
-SUBST_SED.pkgsrc=	-e 's|/usr/pkgsrc|${BUILD_DIR}/../..|g'
-SUBST_FILES.pkgsrc+=	${WRKSRC}/Common/Scripts/auto-clean-pkgsrc
-SUBST_FILES.pkgsrc+=	${WRKSRC}/Common/Scripts/auto-print-make-variable
-
 INSTALLATION_DIRS=	sbin
 
-REDHAT_RELEASE=		/etc/redhat-release
+.include "../../mk/bsd.prefs.mk"
+
+SCRIPTS=	${WRKSRC}/Common/Scripts/*
+.if ${OS_VARIANT} == "redhat"
+PLIST.redhat=	yes
+SCRIPTS+=	${WRKSRC}/CentOS/Scripts/*
+.else
+SCRIPTS+=	${WRKSRC}/${OPSYS}/Scripts/*
+.endif
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/Common/Scripts/* \
-		${DESTDIR}${PREFIX}/sbin
-	if ${TEST} -e ${WRKSRC}/${OPSYS}/Scripts; then \
-	    ${INSTALL_SCRIPT} ${WRKSRC}/${OPSYS}/Scripts/* \
-		${DESTDIR}${PREFIX}/sbin; \
-	fi
-	if ${TEST} -e ${REDHAT_RELEASE}; then \
-	    ${INSTALL_SCRIPT} ${WRKSRC}/CentOS/Scripts/* \
-		${DESTDIR}${PREFIX}/sbin; \
-	fi
+	${INSTALL_SCRIPT} ${SCRIPTS} ${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"
