@@ -28,6 +28,11 @@ Makefile:
     
     Eliminate unneeded deps
 
+Testing:
+
+    Test with PKGSRC_USE_RELRO
+	Should work if build system respects LDFLAGS
+
 Patching:
 
     Use BSD_INSTALL_*_DIR to create directories
@@ -37,11 +42,13 @@ Patching:
     Inspect every patch file
 
 PLIST:
+
     Remove unneeded pkgdir entries
     
     Inspect carefully
 
 DESCR:
+
     fmt -w 79
 
     Homepage URL in DESCR is redundant (pkg_info will display HOMEPAGE)
