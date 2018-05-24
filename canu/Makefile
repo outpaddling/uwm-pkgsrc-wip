@@ -5,21 +5,19 @@
 #              Thu Jul 20 18:34:44 CDT 2017               #
 ###########################################################
 
-DISTNAME=	canu-${PORTVERSION}
+DISTNAME=	canu-${PV}
 CATEGORIES=	biology java
 MASTER_SITES=	${MASTER_SITE_GITHUB:=marbl/}
 GITHUB_PROJECT=	canu
-GITHUB_TAG=	v${PORTVERSION}
+GITHUB_TAG=	v${PV}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://canu.readthedocs.io/
 COMMENT=	Single molecule sequence assembler for genomes large and small
 
-# Check this
 LICENSE=	gnu-gpl-v2
 
-# Too heavy.  Disable check in canu command instead.
-# DEPENDS+=	gnuplot>0:../../graphics/gnuplot
+DEPENDS+=	gnuplot>0:../../graphics/gnuplot
 
 # Screwy Makefile compiles directly into ${DESTDIR}${PREFIX}
 SUBST_CLASSES+=		optimize
@@ -58,29 +56,24 @@ USE_LANGUAGES=	c c++
 USE_JAVA=	run
 USE_JAVA2=	8
 USE_TOOLS+=	gmake pax perl
-
 GCC_REQD+=	4.8
 
-WRKSRC=		${WRKDIR}/canu-${PORTVERSION}/src
-
+WRKSRC=		${WRKDIR}/canu-${PV}/src
 MAKE_ENV+=	DESTDIR=${WRKSRC}
 
-PORTVERSION=	1.6
+PV=		1.7
 
 TMP_INST=	${WRKSRC}${PREFIX}/${OPSYS}-${MACHINE_ARCH:S/x86_64/amd64/}
 SITE_PERL_REL=	lib/perl5/site_perl
 JAVAJARDIR=	share/java/classes
-INSTALLATION_DIRS=	bin \
-			${SITE_PERL_REL} \
-			${JAVAJARDIR}
+INSTALLATION_DIRS=	bin ${JAVAJARDIR}
+
+post-extract:
+	${CHMOD} -R g-w ${WRKDIR}
 
 post-build:
-	${MKDIR} ${TMP_INST}/${SITE_PERL_REL}
-	${MV} ${TMP_INST}/bin/lib/canu ${TMP_INST}/${SITE_PERL_REL}
-	${RMDIR} ${TMP_INST}/bin/lib
-	${MV} ${TMP_INST}/bin/*.a ${TMP_INST}/lib
-	${MKDIR} ${TMP_INST}/${JAVAJARDIR}
-	${MV} ${TMP_INST}/bin/*.jar ${TMP_INST}/${JAVAJARDIR}
+	${MKDIR} ${TMP_INST}/lib/perl5
+	${MV} ${TMP_INST}/lib/site_perl ${TMP_INST}/lib/perl5
 
 do-install:
 	cd ${TMP_INST}/bin && ${PAX} -wr * ${DESTDIR}${PREFIX}/bin
