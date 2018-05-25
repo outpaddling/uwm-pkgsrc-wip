@@ -1,4 +1,5 @@
 @comment $NetBSD$
+sbin/auto-ad-adduser
 sbin/auto-add-fdesc-mount
 sbin/auto-add-linproc-mount
 sbin/auto-add-proc-mount
@@ -13,6 +14,7 @@ sbin/auto-change-group-gid
 sbin/auto-change-group-ownership
 sbin/auto-change-primary-group
 sbin/auto-change-uid
+sbin/auto-clean-disk
 sbin/auto-clean-pkgsrc
 sbin/auto-clean-ports
 sbin/auto-clean-tmp
@@ -36,15 +38,17 @@ sbin/auto-insert-line
 sbin/auto-install-packages
 sbin/auto-ipfw-gateway-setup
 sbin/auto-kdm3-toggle
+sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
 sbin/auto-ldap-client-setup
 sbin/auto-mount-any
 sbin/auto-ostype
 sbin/auto-package-installed
 sbin/auto-passwd-user-expiration
-sbin/auto-pkgsrc-add-license
+sbin/auto-pkg-latest
+sbin/auto-pkgsrc-dir
+sbin/auto-pkgsrc-prefix
 sbin/auto-pkgsrc-setup
-sbin/auto-pkgsrc-wip-checkout
 sbin/auto-ports-checkout
 sbin/auto-ports-setup
 sbin/auto-print-make-variable
@@ -54,6 +58,7 @@ sbin/auto-replace-file
 sbin/auto-restore-pw
 sbin/auto-restore-user
 sbin/auto-service-enabled
+sbin/auto-set-hostname
 sbin/auto-set-lid-switch-mode
 sbin/auto-set-sysctl
 sbin/auto-set-umask
