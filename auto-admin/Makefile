@@ -20,7 +20,7 @@ INSTALLATION_DIRS=	sbin
 .include "../../mk/bsd.prefs.mk"
 
 SCRIPTS=	${WRKSRC}/Common/Scripts/*
-.if ${OS_VARIANT} == "redhat"
+.if exists(/etc/redhat-release)
 PLIST.redhat=	yes
 SCRIPTS+=	${WRKSRC}/CentOS/Scripts/*
 .else
