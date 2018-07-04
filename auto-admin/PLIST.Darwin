@@ -1,4 +1,5 @@
 @comment $NetBSD$
+sbin/auto-ad-adduser
 sbin/auto-adduser
 sbin/auto-admin
 sbin/auto-append-line
@@ -19,12 +20,13 @@ sbin/auto-enable-passwdqc
 sbin/auto-file-secure
 sbin/auto-harden
 sbin/auto-insert-line
+sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
 sbin/auto-ostype
 sbin/auto-passwd-user-expiration
-sbin/auto-pkgsrc-add-license
+sbin/auto-pkgsrc-dir
+sbin/auto-pkgsrc-prefix
 sbin/auto-pkgsrc-setup
-sbin/auto-pkgsrc-wip-checkout
 sbin/auto-print-make-variable
 sbin/auto-pxe-node-discover
 sbin/auto-replace-file

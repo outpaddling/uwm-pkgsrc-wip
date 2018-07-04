@@ -23,7 +23,7 @@ SCRIPTS=	${WRKSRC}/Common/Scripts/*
 .if exists(/etc/redhat-release)
 PLIST.redhat=	yes
 SCRIPTS+=	${WRKSRC}/CentOS/Scripts/*
-.else
+.elif exists(${WRKSRC}/${OPSYS}/Scripts)
 SCRIPTS+=	${WRKSRC}/${OPSYS}/Scripts/*
 .endif
 
