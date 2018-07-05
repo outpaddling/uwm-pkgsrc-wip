@@ -51,6 +51,8 @@ PLIST:
 
 DESCR:
 
+    More than one line.
+
     fmt -w 79
 
     Homepage URL in DESCR is redundant (pkg_info will display HOMEPAGE)
