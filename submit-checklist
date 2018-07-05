@@ -1,6 +1,8 @@
 
 PKG_DEVELOPER=yes in ${PREFIX}/etc/mk.conf (/etc/mk.conf on NetBSD)
 
+Check for CVEs on this version of the software
+
 Makefile:
 
     USE_TOOLS+=perl[:run] if any perl scripts intalled
