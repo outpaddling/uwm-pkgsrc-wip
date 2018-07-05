@@ -5,6 +5,7 @@ sbin/auto-admin
 sbin/auto-append-line
 sbin/auto-ask
 sbin/auto-backup-file
+sbin/auto-binary-pkgsrc-setup
 sbin/auto-change-group-gid
 sbin/auto-change-group-ownership
 sbin/auto-change-primary-group
@@ -26,6 +27,7 @@ sbin/auto-insert-line
 sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
 sbin/auto-ldap-client-setup
+sbin/auto-os-release
 sbin/auto-ostype
 sbin/auto-passwd-user-expiration
 sbin/auto-pkgsrc-dir
