@@ -1,9 +1,11 @@
 @comment $NetBSD$
+sbin/auto-ad-adduser
 sbin/auto-adduser
 sbin/auto-admin
 sbin/auto-append-line
 sbin/auto-ask
 sbin/auto-backup-file
+sbin/auto-binary-pkgsrc-setup
 sbin/auto-change-group-gid
 sbin/auto-change-group-ownership
 sbin/auto-change-primary-group
@@ -13,19 +15,16 @@ sbin/auto-clean-pkgsrc
 sbin/auto-clean-tmp
 sbin/auto-denyhosts-remove-ip
 sbin/auto-denyhosts-setup
-sbin/auto-desktop-setup
 sbin/auto-disable-tcp-timestamps
 sbin/auto-enable-autologout
 sbin/auto-enable-passwdqc
 sbin/auto-file-secure
 sbin/auto-harden
 sbin/auto-insert-line
-sbin/auto-install-packages
-sbin/auto-install-packages-from-source
-sbin/auto-install-pkgsrc-tree
+sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
+sbin/auto-os-release
 sbin/auto-ostype
-sbin/auto-package-installed
 sbin/auto-passwd-user-expiration
 sbin/auto-pkgsrc-dir
 sbin/auto-pkgsrc-prefix
@@ -35,7 +34,6 @@ sbin/auto-pxe-node-discover
 sbin/auto-replace-file
 sbin/auto-restore-pw
 sbin/auto-restore-user
-sbin/auto-select-pkgsrc-dist
 sbin/auto-set-hostname
 sbin/auto-set-sysctl
 sbin/auto-set-umask
