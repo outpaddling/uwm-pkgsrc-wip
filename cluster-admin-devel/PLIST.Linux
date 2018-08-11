@@ -118,4 +118,5 @@ sbin/update-yum-pkgs
 share/cluster-admin/WWW/centos-power.jpg
 share/cluster-admin/WWW/global_styles.css
 share/cluster-admin/WWW/index.php
+share/cluster-admin/WWW/pkgsrc.jpg
 share/cluster-admin/sys-update.sbatch
