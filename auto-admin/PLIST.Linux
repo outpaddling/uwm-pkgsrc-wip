@@ -17,6 +17,7 @@ sbin/auto-cuda-install
 sbin/auto-denyhosts-remove-ip
 sbin/auto-denyhosts-setup
 sbin/auto-disable-file-transfers
+sbin/auto-disable-host-key-prompt
 sbin/auto-disable-hyperthreading
 sbin/auto-disable-tcp-timestamps
 sbin/auto-enable-autologout
