@@ -65,11 +65,9 @@ sbin/cluster-slurm-enable
 sbin/cluster-sync-all-groups
 sbin/cluster-sync-all-pws
 sbin/cluster-sync-backup-login-nodes
-sbin/cluster-sync-data-nodes
 sbin/cluster-sync-files
 sbin/cluster-sync-groups
 sbin/cluster-sync-node
-sbin/cluster-sync-pkgsrc
 sbin/cluster-sync-pw
 sbin/cluster-sync-sysfiles
 sbin/cluster-sync-user
