@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (cluster-admin-0.4.tar.xz) = c22d028203014a9d00ef4ea98b0a37179cc9b0fd
-RMD160 (cluster-admin-0.4.tar.xz) = f66e03bb7f82e1814c0eb03555b770d1cb58deeb
-SHA512 (cluster-admin-0.4.tar.xz) = 3331d53448f0063242e02f7a2603b2da9ecc97e1e2cd3976178907095e9ca901a3fd1db59e57f34b6524a16f02111cf9b6152cd58f3d5d966ce27fc70964c9cf
-Size (cluster-admin-0.4.tar.xz) = 99572 bytes
+SHA1 (cluster-admin-0.4.tar.xz) = f785a455b94992ee6945860cf1c24943a5093c0a
+RMD160 (cluster-admin-0.4.tar.xz) = 48a7fa010f8e353980f1089182c3ae0c5b721551
+SHA512 (cluster-admin-0.4.tar.xz) = 70375940f2828bd1cfdcf592f2d82ef91e97ddd8be3db36b3ff78ddadb00d39bb36ffed653a935409d43d745a0f3bdbd5fdbcdffd2fc14fb930c5410e5970d26
+Size (cluster-admin-0.4.tar.xz) = 99204 bytes
