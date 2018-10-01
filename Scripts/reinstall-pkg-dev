@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+pkgin install pkglint pkgdiff createbuildlink
+bmake clean
+bmake clean-depends
+bmake distclean
+bmake deinstall
+bmake install
