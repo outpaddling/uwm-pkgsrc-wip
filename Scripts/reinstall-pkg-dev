@@ -1,6 +1,7 @@
 #!/bin/sh -e
 
 pkgin install pkglint pkgdiff createbuildlink
+cd $(auto-pkgsrc-dir)/uwm-pkgsrc-wip/pkg-dev
 bmake clean
 bmake clean-depends
 bmake distclean
