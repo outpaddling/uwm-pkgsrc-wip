@@ -32,5 +32,4 @@ REPLACE_BASH=	Common/Sys-scripts/cluster-adduser
 
 MAKE_ENV+=	PREFIX=${PREFIX} DATADIR=${DATADIR}
 
-.include "../../wip/py-hostlist/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
