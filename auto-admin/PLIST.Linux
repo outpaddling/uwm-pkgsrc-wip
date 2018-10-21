@@ -25,6 +25,7 @@ sbin/auto-enable-passwdqc
 sbin/auto-file-secure
 sbin/auto-harden
 sbin/auto-insert-line
+sbin/auto-ipmi-install
 sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
 sbin/auto-ldap-client-setup
@@ -41,6 +42,7 @@ sbin/auto-register-dhcp-hostname
 sbin/auto-replace-file
 sbin/auto-restore-pw
 sbin/auto-restore-user
+sbin/auto-secure-directory
 sbin/auto-set-hostname
 sbin/auto-set-memory-limits
 sbin/auto-set-sysctl
