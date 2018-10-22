@@ -15,12 +15,14 @@ sbin/auto-clean-pkgsrc
 sbin/auto-clean-tmp
 sbin/auto-denyhosts-remove-ip
 sbin/auto-denyhosts-setup
+sbin/auto-disable-host-key-prompt
 sbin/auto-disable-tcp-timestamps
 sbin/auto-enable-autologout
 sbin/auto-enable-passwdqc
 sbin/auto-file-secure
 sbin/auto-harden
 sbin/auto-insert-line
+sbin/auto-ipmi-install
 sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
 sbin/auto-os-release
@@ -34,6 +36,7 @@ sbin/auto-pxe-node-discover
 sbin/auto-replace-file
 sbin/auto-restore-pw
 sbin/auto-restore-user
+sbin/auto-secure-directory
 sbin/auto-set-hostname
 sbin/auto-set-sysctl
 sbin/auto-set-umask
