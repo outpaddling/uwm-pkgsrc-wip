@@ -29,6 +29,7 @@ sbin/auto-ipmi-install
 sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
 sbin/auto-ldap-client-setup
+sbin/auto-lock-user
 sbin/auto-os-release
 sbin/auto-ostype
 sbin/auto-passwd-user-expiration
@@ -39,6 +40,7 @@ sbin/auto-print-make-variable
 sbin/auto-pxe-installer-setup
 sbin/auto-pxe-node-discover
 sbin/auto-register-dhcp-hostname
+sbin/auto-remove-user
 sbin/auto-replace-file
 sbin/auto-restore-pw
 sbin/auto-restore-user
@@ -49,5 +51,6 @@ sbin/auto-set-sysctl
 sbin/auto-set-umask
 sbin/auto-ssh-authorize
 sbin/auto-ssh-reverse-authorize
+sbin/auto-unlock-user
 sbin/auto-update-system
 sbin/auto-using-pkgsrc
