@@ -33,6 +33,7 @@ sbin/auto-lock-user
 sbin/auto-os-release
 sbin/auto-ostype
 sbin/auto-passwd-user-expiration
+sbin/auto-password-status
 sbin/auto-pkgsrc-dir
 sbin/auto-pkgsrc-prefix
 sbin/auto-pkgsrc-setup
