@@ -1,5 +1,7 @@
 @comment $NetBSD$
 sbin/auto-ad-adduser
+sbin/auto-add-group
+sbin/auto-add-to-group
 sbin/auto-adduser
 sbin/auto-admin
 sbin/auto-append-line
