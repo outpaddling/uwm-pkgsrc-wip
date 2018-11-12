@@ -29,6 +29,7 @@ libexec/add-gecos.awk
 sbin/cluster-add-to-group
 sbin/cluster-adduser
 sbin/cluster-admin
+sbin/cluster-archive-user-dir
 sbin/cluster-backup-sysfiles
 sbin/cluster-change-group-gid
 sbin/cluster-change-primary-group
