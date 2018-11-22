@@ -26,6 +26,8 @@ SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 
 DEPENDS+=	auto-admin>=0.4.5:../../uwm-pkgsrc-wip/auto-admin
 
+USE_TOOLS+=	bash
+
 REPLACE_BASH=	Common/Sys-scripts/cluster-adduser
 
 .include "../../mk/bsd.prefs.mk"
