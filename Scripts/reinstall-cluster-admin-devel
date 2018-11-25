@@ -5,7 +5,7 @@ cd $prefix/uwm-pkgsrc-wip
 svn up
 
 # Allow auto-admin deinstall
-pkgin remove -y cluster-admin || true
+pkgin remove -y auto-admin cluster-admin || true
 
 cd $prefix/uwm-pkgsrc-wip/auto-admin
 bmake distclean && bmake deinstall && bmake install
