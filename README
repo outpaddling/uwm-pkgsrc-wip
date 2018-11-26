@@ -3,6 +3,11 @@ This is a collection of work-in-progress pkgsrc packages developed by
 the research computing support group at the University of Wisconsin
 Milwaukee.
 
+THIS COLLECTION IS DEPRECATED.  IT WAS CREATED MAINLY TO WORK AROUND
+SOURCEFORGE RELIABILITY ISSUES WHEN THE OFFICIAL PKGSRC WIP COLLECTION
+WAS HOSTED THERE.  NOW THAT PKGSRC WIP IS RELIABLY SELF-HOSTED, THIS
+COLLECTION IS NO LONGER BEING MAINTAINED.
+
 It supplements the global pkgsrc-wip project:
 
     https://pkgsrc.org/wip/
