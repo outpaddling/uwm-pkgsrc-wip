@@ -37,6 +37,7 @@ sbin/cluster-change-uid
 sbin/cluster-diagnostics
 sbin/cluster-disable-iptables
 sbin/cluster-dist-file
+sbin/cluster-enable-autologout
 sbin/cluster-firewalld-config
 sbin/cluster-ganglia-restart
 sbin/cluster-get-sync-file
