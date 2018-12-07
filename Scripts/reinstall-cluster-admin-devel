@@ -16,4 +16,4 @@ bmake distclean && bmake deinstall && bmake install
 cd ..
 yes | ./clean-all
 
-cluster-run -c "cd $prefix/uwm-pkgsrc-wip && svn up && (pkgin remove -y auto-admin cluster-admin || true) && rm -rf */work && cd cluster-admin-devel && rm -f $prefix/distfiles/auto-admin* && bmake deinstall && bmake install" all
+cluster-run -c "cd $prefix/uwm-pkgsrc-wip && svn up && (pkgin remove -y auto-admin cluster-admin || true) && rm -rf */work && cd cluster-admin-devel && rm -f $prefix/distfiles/auto-admin* && rm -f $prefix/distfiles/cluster-admin* && bmake deinstall && bmake install" all
