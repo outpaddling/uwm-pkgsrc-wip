@@ -26,6 +26,7 @@ sbin/auto-ostype
 sbin/auto-passwd-user-expiration
 sbin/auto-pkgsrc-dir
 sbin/auto-pkgsrc-prefix
+sbin/auto-pkgsrc-remote-x11
 sbin/auto-pkgsrc-setup
 sbin/auto-print-make-variable
 sbin/auto-pxe-node-discover
