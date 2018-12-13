@@ -116,6 +116,7 @@ sbin/slurm-usage-report
 sbin/ssh-keygen-for-user
 sbin/ssh-keygen.csh
 sbin/ssh-keygen.sh
+sbin/update-cluster-admin-wip
 sbin/update-idle-nodes
 sbin/update-yum-pkgs
 share/cluster-admin/WWW/centos-power.jpg
