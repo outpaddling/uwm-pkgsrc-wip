@@ -58,7 +58,6 @@ sbin/cluster-recreate-user
 sbin/cluster-remove-expired-ldap-users
 sbin/cluster-remove-from-known-hosts
 sbin/cluster-remove-user
-sbin/cluster-restore-pw
 sbin/cluster-restore-user
 sbin/cluster-run
 sbin/cluster-set-compute-memory-limits
@@ -76,6 +75,7 @@ sbin/cluster-sync-pw
 sbin/cluster-sync-sysfiles
 sbin/cluster-sync-user
 sbin/cluster-sync-yum-packages
+sbin/cluster-transfer-pw
 sbin/cluster-unlock-user
 sbin/cluster-update-backup-nodes
 sbin/cluster-update-io-nodes
