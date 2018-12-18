@@ -22,8 +22,6 @@ bin/slurm-pending-jobs
 bin/slurm-shell
 bin/slurm-user-cores
 bin/topnode
-etc/profile.d/cluster.csh
-etc/profile.d/cluster.sh
 libexec/add-gecos.awk
 sbin/cluster-add-to-group
 sbin/cluster-adduser
@@ -99,3 +97,5 @@ share/cluster-admin/WWW/gmond.conf.template
 share/cluster-admin/WWW/index.php
 share/cluster-admin/WWW/pkgsrc.jpg
 share/cluster-admin/sys-update.sbatch
+share/profile.d/cluster.csh
+share/profile.d/cluster.sh
