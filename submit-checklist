@@ -32,7 +32,7 @@ Makefile:
 
 Testing:
 
-    Test with PKGSRC_USE_RELRO
+    Test with PKGSRC_USE_RELRO in mk.conf
 	Should work if build system respects LDFLAGS
 
 Patching:
@@ -42,6 +42,8 @@ Patching:
     pkgconfigdir= $(exec_prefix)/lib/pkgconfig
 
     Inspect every patch file
+    
+    Inspect installed files (e.g. files/*) for hard-coded paths
 
 PLIST:
 
