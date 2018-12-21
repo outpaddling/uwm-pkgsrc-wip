@@ -32,6 +32,8 @@ Makefile:
 
 Testing:
 
+    Test build in an empty tree
+
     Test with PKGSRC_USE_RELRO in mk.conf
 	Should work if build system respects LDFLAGS
 
