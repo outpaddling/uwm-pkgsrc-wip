@@ -10,6 +10,8 @@ Makefile:
     VAR= where VAR+= is not needed
     
     Use VAR+= instead of line continuations
+    
+    VAR+= for CGLAGS, etc.
 
     Do not use FETCH_USING in Makefile
 
@@ -21,6 +23,7 @@ Makefile:
     Use REPLACE_PERL, REPLACE_PYTHON, etc.
 
     USE_LANGUAGES=c is the default and can be omitted if only C is used
+	c++11, c++14, etc instead of GCC_REQD
 
     URLs should not have /../
     
@@ -36,6 +39,8 @@ Testing:
 
     Test with PKGSRC_USE_RELRO in mk.conf
 	Should work if build system respects LDFLAGS
+    
+    Check all installed scripts for empty shebang lines
 
 Patching:
 
