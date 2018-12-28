@@ -11,7 +11,7 @@ Makefile:
     
     Use VAR+= instead of line continuations
     
-    VAR+= for CGLAGS, etc.
+    VAR+= for GCC_REQD, CGLAGS, etc.
 
     Do not use FETCH_USING in Makefile
 
