@@ -28,7 +28,7 @@ SUBST_STAGE.sbin=	pre-configure
 SUBST_FILES.sbin+=	${WRKSRC}/Common/Src/cluster-passwd.c
 SUBST_SED.sbin=		-e 's|/usr/local/sbin|${PREFIX}/sbin|g'
 
-DEPENDS+=	auto-admin>=0.4.6:../../uwm-pkgsrc-wip/auto-admin
+DEPENDS+=	auto-admin>=0.4.7:../../uwm-pkgsrc-wip/auto-admin
 
 USE_TOOLS+=	bash
 
