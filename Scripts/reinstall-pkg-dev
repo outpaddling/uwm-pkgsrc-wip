@@ -1,9 +1,14 @@
 #!/bin/sh -e
 
+if which bmake; then
+    make=bmake
+else
+    make=make
+fi
 pkgin install pkglint pkgdiff createbuildlink
 cd $(auto-pkgsrc-dir)/uwm-pkgsrc-wip/pkg-dev
-bmake clean
-bmake clean-depends
-bmake distclean
-bmake deinstall
-bmake install
+$make clean
+$make clean-depends
+$make distclean
+$make deinstall
+$make install
