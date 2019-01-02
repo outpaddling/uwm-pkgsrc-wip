@@ -5,6 +5,9 @@ Check for CVEs on this version of the software
 
 Makefile:
 
+    Code version into DISTNAME and use PKGVERSION_NOREV elsewhere
+	Derive PKGNAME from ${DISTNAME:S/x/y/}
+
     USE_TOOLS+=perl[:run] if any perl scripts intalled
 
     VAR= where VAR+= is not needed
@@ -21,6 +24,7 @@ Makefile:
     Remove GITHUB_PROJECT if it matches PKGBASE.
     
     Use REPLACE_PERL, REPLACE_PYTHON, etc.
+	* REPLACE_BASH can replace /bin/sh
 
     USE_LANGUAGES=c is the default and can be omitted if only C is used
 	c++11, c++14, etc instead of GCC_REQD
