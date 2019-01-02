@@ -42,6 +42,12 @@ Testing:
     
     Check all installed scripts for empty shebang lines
 
+    Test on NetBSD
+    
+    Test on other supported platforms (CentOS, Darwin, ...)
+    
+    Make pkglint -Wall and pkglint -e run clean
+
 Patching:
 
     Use BSD_INSTALL_*_DIR to create directories
@@ -66,13 +72,11 @@ DESCR:
 
     Homepage URL in DESCR is redundant (pkg_info will display HOMEPAGE)
 
-Create buildlink3.mk only if installing libraries or headers
+buildlink3.mk:
 
-Test on NetBSD
-
-Test on other supported platforms (CentOS, Darwin, ...)
-
-Make pkglint -Wall and pkglint -e run clean
+    Create only if installing libraries or headers
+    
+    Update BUILDLINK_API_DEPENDS if API has changed
 
 Remove TODO and other extraneous files
 
