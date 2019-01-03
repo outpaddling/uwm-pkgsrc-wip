@@ -80,7 +80,7 @@ buildlink3.mk:
 
     Create only if installing libraries or headers
     
-    Update BUILDLINK_API_DEPENDS if API has changed
+    Update BUILDLINK_API_DEPENDS only if necessary.  See pkgsrc guide.
 
 Remove TODO and other extraneous files
 
