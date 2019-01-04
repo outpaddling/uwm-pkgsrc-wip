@@ -36,27 +36,21 @@ Makefile:
     If update changes the binary package, bump PKGREVISION
     
     Eliminate unneeded deps
-
-Testing:
-
-    Test build in an empty tree
-
-    Test with PKGSRC_USE_RELRO in mk.conf
-	Should work if build system respects LDFLAGS
     
-    Check all installed scripts for empty shebang lines
-
-    Test on NetBSD
-    
-    Test on other supported platforms (CentOS, Darwin, ...)
-    
-    Make pkglint -Wall and pkglint -e run clean
+    Final check: Walk through line-by-line
 
 Patching:
 
     Use BSD_INSTALL_*_DIR to create directories
     
     pkgconfigdir= $(exec_prefix)/lib/pkgconfig
+    
+    Build should respect pkgsrc env
+	Disable addition of non-portable and extraneous compile options, e.g.
+	    Overaggressive optimizations
+	    -g3
+	pkgsrc user should be able to control these, not upstream
+	Upstream build system should only add flags that are necessary
 
     Inspect every patch file
     
@@ -74,14 +68,31 @@ DESCR:
 
     fmt -w 79
 
-    Homepage URL in DESCR is redundant (pkg_info will display HOMEPAGE)
-
 buildlink3.mk:
 
     Create only if installing libraries or headers
     
     Update BUILDLINK_API_DEPENDS only if necessary.  See pkgsrc guide.
 
+Testing:
+
+    Make pkglint -Wall and pkglint -e run clean
+
+    Test with PKGSRC_USE_RELRO in mk.conf
+	Should work if build system respects LDFLAGS
+    
+    Test build in an empty tree
+    
+    Inspect compiler output for non-portable flags
+
+    Run verifypc to check dependencies
+    
+    Check all installed scripts for empty shebang lines
+
+    Test on NetBSD
+    
+    Test on other supported platforms (CentOS, Darwin, ...)
+    
 Remove TODO and other extraneous files
 
 Add to pkgsrc-wip
