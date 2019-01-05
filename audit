@@ -15,7 +15,7 @@ for dir in *; do
 	    if [ $category != uwm-pkgsrc-wip ] && [ -e $PKGSRCDIR/$category/$dir ]; then
 		committed=1
 		printf "Found $category/$dir\n"
-		egrep '^PKGVERSION=|^DISTVERSION=' \
+		egrep '^PKGNAME=|^DISTNAME=' \
 		    $PKGSRCDIR/uwm-pkgsrc-wip/$dir/Makefile \
 		    $PKGSRCDIR/$category/$dir/Makefile
 		read -p "Diff? y/[n] " diff
