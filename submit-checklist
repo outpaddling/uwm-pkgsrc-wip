@@ -37,6 +37,12 @@ Makefile:
     
     Eliminate unneeded deps
     
+    Pthreads
+	.include "../../mk/pthread.buildlink3.mk"
+	PTHREAD_AUTO_VARS
+	
+	Check for mk files for other common deps
+    
     Final check: Walk through line-by-line
 
 Patching:
