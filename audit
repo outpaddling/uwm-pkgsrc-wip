@@ -9,7 +9,7 @@ fi
 
 for dir in *; do
     if [ -e $dir/Makefile ]; then
-	categories=`awk -F = '$1 == "CATEGORIES" { print $2 }' $dir/Makefile`
+	categories=`ls $PKGSRCDIR/*/Makefile | awk -F / '{ print $4 }'`
 	committed=0
 	for category in $categories; do
 	    if [ $category != uwm-pkgsrc-wip ] && [ -e $PKGSRCDIR/$category/$dir ]; then
