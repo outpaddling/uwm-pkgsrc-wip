@@ -1,0 +1,41 @@
+#!/bin/sh -e
+
+: ${PKGSRCDIR:=/usr/pkgsrc}
+
+if [ $0 != ./audit ]; then
+    printf "Must be run as ./audit.\n"
+    exit 1
+fi
+
+for dir in *; do
+    if [ -e $dir/Makefile ]; then
+	categories=`awk -F = '$1 == "CATEGORIES" { print $2 }' $dir/Makefile`
+	committed=0
+	for category in $categories; do
+	    if [ $category != uwm-pkgsrc-wip ] && [ -e $PKGSRCDIR/$category/$dir ]; then
+		committed=1
+		printf "Found $category/$dir\n"
+		egrep '^PKGVERSION=|^DISTVERSION=' \
+		    $PKGSRCDIR/uwm-pkgsrc-wip/$dir/Makefile \
+		    $PKGSRCDIR/$category/$dir/Makefile
+		read -p "Diff? y/[n] " diff
+		if [ 0$diff = 0y ]; then
+		    diff -ruN \
+			$PKGSRCDIR/$category/$dir \
+			$PKGSRCDIR/uwm-pkgsrc-wip/$dir | more
+		    printf "\nDependent packages:\n"
+		    fgrep uwm-pkgsrc-wip/$dir */Makefile || true
+		    read -p "Remove? y/[n] " remove
+		    if [ 0$remove = 0y ]; then
+			svn rm $dir
+			svn ci -m "${dir}: Remove obsolete package"
+		    fi
+		fi
+	    fi
+	done
+	if [ $committed = 0 ]; then
+	    printf "No committed version of $dir.\n"
+	fi
+    fi
+done
+
