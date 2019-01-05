@@ -4,6 +4,7 @@ sbin/auto-add-group
 sbin/auto-add-to-group
 sbin/auto-adduser
 sbin/auto-admin
+sbin/auto-amend-fstab
 sbin/auto-append-line
 sbin/auto-ask
 sbin/auto-backup-file
