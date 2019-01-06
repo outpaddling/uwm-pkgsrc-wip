@@ -10,7 +10,8 @@ Makefile:
 
     USE_TOOLS+=perl[:run] if any perl scripts intalled
 
-    Generally prefer VAR+= over VAR=, unlike FreeBSD project
+    Generally prefer VAR+= over VAR= for anything likely to have
+    += lines added, unlike FreeBSD project
     
     Use VAR+= instead of line continuations
     
