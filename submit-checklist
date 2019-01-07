@@ -8,6 +8,8 @@ Makefile:
     Code version into DISTNAME and use PKGVERSION_NOREV elsewhere
 	Derive PKGNAME from ${DISTNAME:S/x/y/}
 
+    LICENSE can be grouped with COMMENT, unlike FreeBSD
+    
     USE_TOOLS+=perl[:run] if any perl scripts intalled
 
     Generally prefer VAR+= over VAR= for anything likely to have
