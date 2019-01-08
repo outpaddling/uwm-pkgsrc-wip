@@ -148,7 +148,7 @@ Regards,
 
     [Your name]
 
-[Software name] can be installed on many POSIX platforms using the pkgsrc
+[Software name] can be installed on most POSIX platforms using the pkgsrc
 package manager.
 
 Binary packages are available for Mac OS X, NetBSD, RHEL/CentOS,
