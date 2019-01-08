@@ -107,3 +107,74 @@ Remove TODO and other extraneous files
 Add to pkgsrc-wip
 
 Email ?? to request a review
+
+Remove poudriere logs if present
+
+After commit:
+
+Switch dependencies in other wip ports from /usr/wip to \${PORTSDIR}
+
+If maintaining source
+
+    Tag this version of source and create next one
+
+    Update wip ports if present
+
+else
+
+    1)  Send patches through proper channels.
+    
+    2)  Contact author(s):
+
+    People often assume the only supported platforms are those listed on
+    the software's home page and that they should follow the (usually
+    inadequate) instructions on the developer's site to install the software.
+    A simple note about using a package manager and a link to the ports site
+    can do a lot to raise awareness of the advantages of FreeBSD ports and
+    other package managers.
+
+    Send the following message AFTER THE PORT IS COMMITTED and then
+    update FreeBSD-citing.
+	
+============================================================================
+
+FYI:
+
+[Software name] has been committed to the pkgsrc package collection.
+It might be helpful to users if you could post a message like
+the following on your website:
+
+Regards,
+
+    [Your name]
+
+[Software name] can be installed on many POSIX platforms using the pkgsrc
+package manager.
+
+Binary packages are available for Mac OS X, NetBSD, RHEL/CentOS,
+and SmartOS. To install via the binary package, simply run:
+
+    pkgin install [put package name here]
+
+This will very quickly install a binary using only highly-portable
+optimizations, much like apt-get, yum, etc.
+
+Pkgsrc packages can just as easily be built and installed from source,
+although this will take more time:
+
+    cd /usr/pkgsrc/category/[put port name here]
+    [b]make install
+
+Building from source allows installing on virtually any POSIX platform,
+installing to a different prefix, compiling with additional options, and in
+some cases, building with non-default options such as different compilers
+or dependencies, e.g.:
+
+    [b]make CFLAGS=-march=native install
+
+We, the [software name ] developers, do not directly support installation
+via pkgsrc. To report any issues, please submit a PR at:
+
+    https://www.netbsd.org/support/send-pr.html
+
+For more information, visit https://www.pkgsrc.org.
