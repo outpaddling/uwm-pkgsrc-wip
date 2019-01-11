@@ -1,6 +1,0 @@
-$NetBSD$
-
-SHA1 (tensorflow-1.0.0-cp34-cp34m-linux_x86_64.whl) = ab613cbab46676461c2b5ebb4880a45350a5c896
-RMD160 (tensorflow-1.0.0-cp34-cp34m-linux_x86_64.whl) = dd41ae9713ba290c81027ac9edf9988a00ff2c9c
-SHA512 (tensorflow-1.0.0-cp34-cp34m-linux_x86_64.whl) = 17a45bc13a6c04b42b35bcab923a79dea91a06f01a3cbc6b443e7b839c7d7c12d381eb544249e8e6e5db2ebb0f3d464809abf7cae2111be06393550c841ad7fd
-Size (tensorflow-1.0.0-cp34-cp34m-linux_x86_64.whl) = 44078034 bytes
