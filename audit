@@ -8,13 +8,14 @@ if [ $0 != ./audit ]; then
 fi
 
 for dir in *; do
+    clear
     if [ -e $dir/Makefile ]; then
 	categories=`ls $PKGSRCDIR/*/Makefile | awk -F / '{ print $4 }'`
 	committed=0
 	for category in $categories; do
 	    if [ $category != uwm-pkgsrc-wip ] && [ -e $PKGSRCDIR/$category/$dir ]; then
 		committed=1
-		printf "Found $category/$dir\n"
+		printf "Found $category/$dir\n\n"
 		egrep '^PKGNAME=|^DISTNAME=' \
 		    $PKGSRCDIR/uwm-pkgsrc-wip/$dir/Makefile \
 		    $PKGSRCDIR/$category/$dir/Makefile
@@ -34,7 +35,7 @@ for dir in *; do
 	    fi
 	done
 	if [ $committed = 0 ]; then
-	    printf "No other version of $dir.\n"
+	    printf "No other version of $dir.\n\n"
 	    more $dir/DESCR $dir/Makefile
 	    
 	    chosen=0
