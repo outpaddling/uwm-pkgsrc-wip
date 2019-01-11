@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (openblas-0.2.20.tar.gz) = a186074145a24823e82c65672dad1cd1ca6fe89c
-RMD160 (openblas-0.2.20.tar.gz) = 2b9728cd227894d7378b0f3686b90d0e7e7975d9
-SHA512 (openblas-0.2.20.tar.gz) = 8dfc8e8c8d456b834d2e9544c8eadd9f4770e30db8b8dd76af601ec0735fd86c9cf63dd6a03ccd23fc02ec2e05069a09875b9073dfe29f99aadab3a958ae2634
-Size (openblas-0.2.20.tar.gz) = 11637301 bytes
-SHA1 (patch-Makefile.system) = 876fe0bda3a6b664e18ba617f7c8cf7c4e131603
