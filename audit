@@ -44,7 +44,7 @@ for dir in *; do
 
 1.. Remove
 2.. Move to wip
-3.. Ignore
+*.. Ignore
 
 EOM
 		read -p "Your choice? " choice
@@ -62,12 +62,8 @@ EOM
 		    chosen=1
 		    ;;
 		
-		03)
-		    chosen=1
-		    ;;
-		
 		*)
-		    printf "Invalid choice.\n"
+		    chosen=1
 		    ;;
 		esac
 		    
