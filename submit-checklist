@@ -55,6 +55,7 @@ Patching:
     pkgconfigdir= $(exec_prefix)/lib/pkgconfig
     
     Build should respect pkgsrc env
+	CC, CXX, FC, LD, CFLAGS, CXXFLAGS, FFLAGS, LDFLAGS
 	Disable addition of non-portable and extraneous compile options, e.g.
 	    Overaggressive optimizations
 	    -g3
