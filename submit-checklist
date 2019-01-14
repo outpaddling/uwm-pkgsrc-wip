@@ -109,9 +109,7 @@ Remove TODO and other extraneous files
 
 Add to pkgsrc-wip
 
-Email ?? to request a review
-
-Remove poudriere logs if present
+Email tech-pkg to request a review
 
 After commit:
 
