@@ -41,6 +41,8 @@ Makefile:
     Eliminate unneeded deps
     
     Pthreads
+	Disable hard-coded -lpthread
+	
 	.include "../../mk/pthread.buildlink3.mk"
 	PTHREAD_AUTO_VARS
 	
