@@ -22,9 +22,16 @@ Makefile:
     Do not use FETCH_USING in Makefile
 
     Use MASTER_SITE_SOURCEFORGE, MASTER_SITE_GITHUB, etc. if possible
-	See mk/fetch/github for packages downloading from Github
-
-    Remove GITHUB_PROJECT if it matches PKGBASE.
+    
+    Github
+	See mk/fetch/github
+	Commits between releases
+	    - Set GITHUB_TAG
+	    - DISTNAME=pkgbase-release.commits-since-release, e.g.
+		12th commit after 1.4.1: 1.4.1.12
+	    - release.YYYYMMDD also OK
+	    - make sure upgrades increment PKGVERSION correctly
+	Remove GITHUB_PROJECT if it matches PKGBASE.
     
     Use REPLACE_PERL, REPLACE_PYTHON, etc.
 	* REPLACE_BASH can replace /bin/sh
