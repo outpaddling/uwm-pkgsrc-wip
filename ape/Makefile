@@ -10,6 +10,8 @@ HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	Another Programmer's Editor
 LICENSE=	2-clause-bsd
 
+DEPENDS=	webbrowser>=0:../../uwm-pkgsrc-wip/webbrowser
+
 MAKE_ENV+=	STAGEDIR=${DESTDIR}
 
 pre-build:
@@ -18,5 +20,4 @@ pre-build:
 .include "../../uwm-pkgsrc-wip/libpare/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/libbacon/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/twintk/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/webbrowser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
