@@ -11,6 +11,7 @@ sbin/auto-backup-file
 sbin/auto-binary-pkgsrc-setup
 sbin/auto-change-group-gid
 sbin/auto-change-group-ownership
+sbin/auto-change-ownership
 sbin/auto-change-primary-group
 sbin/auto-change-uid
 sbin/auto-clean-disk
