@@ -13,7 +13,6 @@ LICENSE=	2-clause-bsd
 USE_LANGUAGES=	# none
 
 NO_BUILD=	yes
-REPLACE_SH=	*/Scripts/*
 
 INSTALLATION_DIRS=	sbin
 PLIST_VARS+=	redhat
