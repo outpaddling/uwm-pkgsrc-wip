@@ -32,8 +32,6 @@ DEPENDS+=	auto-admin>=0.4.7:../../uwm-pkgsrc-wip/auto-admin
 
 USE_TOOLS+=	bash
 
-REPLACE_BASH=	Common/Sys-scripts/cluster-adduser
-
 .include "../../mk/bsd.prefs.mk"
 
 MAKE_ENV+=	PREFIX=${PREFIX} DATADIR=${DATADIR}
