@@ -18,7 +18,7 @@ USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
 SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-patch
+SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	${WRKSRC}/fbsd2pkg
 SUBST_SED.prefix=	\
 	-e 's|fbsd2pkg.awk|${PREFIX}/libexec/fbsd2pkg/fbsd2pkg.awk|g'
