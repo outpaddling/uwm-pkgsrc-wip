@@ -11,6 +11,8 @@ sbin/auto-backup-file
 sbin/auto-binary-pkgsrc-setup
 sbin/auto-change-group-gid
 sbin/auto-change-group-ownership
+sbin/auto-change-nfsd-count
+sbin/auto-change-ownership
 sbin/auto-change-primary-group
 sbin/auto-change-uid
 sbin/auto-clean-disk
@@ -29,6 +31,7 @@ sbin/auto-ipmi-install
 sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
 sbin/auto-lock-user
+sbin/auto-nfs-restart
 sbin/auto-os-release
 sbin/auto-ostype
 sbin/auto-passwd-user-expiration
