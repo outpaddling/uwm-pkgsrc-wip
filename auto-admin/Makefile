@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	auto-admin-0.4.7
+DISTNAME=	auto-admin-0.4.8
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
