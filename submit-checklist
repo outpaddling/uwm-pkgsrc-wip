@@ -55,6 +55,11 @@ Makefile:
 	
 	Check for mk files for other common deps
     
+    Use :sh rather than != to limit command execution to targets that need it
+    
+    When using variables such as PYTHONBIN outside build targets, wrap them
+    in .if exists in case the command is not installed yet.
+    
     Final check: Walk through line-by-line
 
 Patching:
