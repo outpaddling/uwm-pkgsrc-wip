@@ -5,7 +5,8 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://acadix.biz/Ports/distfiles/
+HOMEPAGE=	http://acadix.biz/Ports/distfiles/ \
+		http://outpaddling.mooo.com/~bacon/Acadix/Ports/distfiles/
 COMMENT=	Tools for pkgsrc development and testing
 LICENSE=	original-bsd
 
