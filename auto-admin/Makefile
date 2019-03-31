@@ -2,12 +2,12 @@
 
 DISTNAME=	auto-admin-0.4.8
 CATEGORIES=	pkgtools
-MASTER_SITES=	http://acadix.biz/Ports/distfiles/
+MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
+		http://outpaddling.mooo.com/~bacon/Acadix/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://acadix.biz/Ports/distfiles/ \
-		http://outpaddling.mooo.com/~bacon/Acadix/Ports/distfiles/
+HOMEPAGE=	http://acadix.biz
 COMMENT=	Automate common systems administration tasks
 LICENSE=	2-clause-bsd
 
