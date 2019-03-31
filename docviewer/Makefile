@@ -3,8 +3,8 @@
 
 DISTNAME=	docviewer-0.1
 CATEGORIES=	textproc
-MASTER_SITES=	http://acadix.biz/Ports/distfiles/
-
+MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
+		http://outpaddling.mooo.com/~bacon/Acadix/Ports/distfiles/
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	Generic command to automatically select a document viewer

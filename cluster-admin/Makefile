@@ -2,7 +2,8 @@
 
 DISTNAME=	cluster-admin-0.4
 CATEGORIES=	sysutils
-MASTER_SITES=	http://acadix.biz/Ports/distfiles/
+MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
+		http://outpaddling.mooo.com/~bacon/Acadix/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bacon@NetBSD.org

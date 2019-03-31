@@ -6,7 +6,8 @@ MASTER_SITES=	http://acadix.biz/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://acadix.biz/Ports/distfiles/
+HOMEPAGE=	http://acadix.biz/Ports/distfiles/ \
+		http://outpaddling.mooo.com/~bacon/Acadix/Ports/distfiles/
 COMMENT=	Automate common systems administration tasks
 LICENSE=	2-clause-bsd
 
