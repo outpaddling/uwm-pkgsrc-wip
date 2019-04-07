@@ -56,6 +56,7 @@ sbin/cluster-set-compute-memory-limits
 sbin/cluster-setup
 sbin/cluster-shutdown
 sbin/cluster-slurm-enable
+sbin/cluster-ssh-keygen
 sbin/cluster-sync-backup-nodes
 sbin/cluster-sync-files
 sbin/cluster-sync-node
