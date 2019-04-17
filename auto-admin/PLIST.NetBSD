@@ -15,3 +15,9 @@ sbin/auto-remove-user
 sbin/auto-secure-directory
 sbin/auto-transfer-pw
 sbin/auto-unlock-user
+sbin/auto-desktop-setup
+sbin/auto-install-packages
+sbin/auto-install-packages-from-source
+sbin/auto-install-pkgsrc-tree
+sbin/auto-package-installed
+sbin/auto-select-pkgsrc-dist
