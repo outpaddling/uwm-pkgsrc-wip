@@ -1,20 +1,4 @@
 @comment $NetBSD$
-sbin/auto-add-group
-sbin/auto-add-to-group
-sbin/auto-amend-fstab
-sbin/auto-binary-pkgsrc-setup
-sbin/auto-change-nfsd-count
-sbin/auto-change-ownership
-sbin/auto-disable-host-key-prompt
-sbin/auto-ipmi-install
-sbin/auto-lock-user
-sbin/auto-nfs-restart
-sbin/auto-os-release
-sbin/auto-password-status
-sbin/auto-remove-user
-sbin/auto-secure-directory
-sbin/auto-transfer-pw
-sbin/auto-unlock-user
 sbin/auto-desktop-setup
 sbin/auto-install-packages
 sbin/auto-install-packages-from-source

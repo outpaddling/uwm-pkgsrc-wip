@@ -1,24 +1,8 @@
 @comment $NetBSD$
-sbin/auto-add-group
-sbin/auto-add-to-group
-sbin/auto-amend-fstab
-sbin/auto-binary-pkgsrc-setup
-sbin/auto-change-nfsd-count
-sbin/auto-change-ownership
 sbin/auto-cuda-install
 sbin/auto-disable-file-transfers
-sbin/auto-disable-host-key-prompt
 sbin/auto-disable-hyperthreading
-sbin/auto-ipmi-install
 sbin/auto-ldap-client-setup
-sbin/auto-lock-user
-sbin/auto-nfs-restart
-sbin/auto-os-release
-sbin/auto-password-status
 sbin/auto-pxe-installer-setup
 sbin/auto-register-dhcp-hostname
-sbin/auto-remove-user
-sbin/auto-secure-directory
 sbin/auto-set-memory-limits
-sbin/auto-transfer-pw
-sbin/auto-unlock-user
