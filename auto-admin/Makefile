@@ -17,14 +17,11 @@ NO_BUILD=	yes
 
 INSTALLATION_DIRS=	sbin
 
-.include "../../mk/bsd.prefs.mk"
-
-SCRIPTS=	${WRKSRC}/Common/Scripts/*
-.if exists(${WRKSRC}/${OPSYS}/Scripts)
-SCRIPTS+=	${WRKSRC}/${OPSYS}/Scripts/*
-.endif
-
 do-install:
-	${INSTALL_SCRIPT} ${SCRIPTS} ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/Common/Scripts/* ${DESTDIR}${PREFIX}/sbin
+	if ${TEST} -d ${WRKSRC}/${OPSYS}/Scripts; then \
+		${INSTALL_SCRIPT} ${WRKSRC}/${OPSYS}/Scripts/* \
+			${DESTDIR}${PREFIX}/sbin; \
+	fi
 
 .include "../../mk/bsd.pkg.mk"
