@@ -2,7 +2,6 @@
 sbin/auto-add-fdesc-mount
 sbin/auto-add-linproc-mount
 sbin/auto-add-proc-mount
-sbin/auto-amd-nfs-setup
 sbin/auto-autofs-nfs-setup
 sbin/auto-clean-ports
 sbin/auto-config-snd-driver
@@ -19,7 +18,6 @@ sbin/auto-install-infiniband-modules
 sbin/auto-install-linux_base
 sbin/auto-install-packages
 sbin/auto-ipfw-gateway-setup
-sbin/auto-kdm3-toggle
 sbin/auto-ldap-client-setup
 sbin/auto-mount-any
 sbin/auto-package-installed
@@ -32,6 +30,5 @@ sbin/auto-set-lid-switch-mode
 sbin/auto-update-infiniband-modules
 sbin/auto-update-port-framework
 sbin/auto-update-xorg.conf
-sbin/auto-using-pkgng
 sbin/auto-wifi-failover
 sbin/auto-xdm-toggle
