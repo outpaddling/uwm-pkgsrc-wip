@@ -20,9 +20,7 @@ INSTALLATION_DIRS=	sbin
 .include "../../mk/bsd.prefs.mk"
 
 SCRIPTS=	${WRKSRC}/Common/Scripts/*
-.if ${LOWER_VENDOR} == "redhat"
-SCRIPTS+=	${WRKSRC}/CentOS/Scripts/*
-.elif exists(${WRKSRC}/${OPSYS}/Scripts)
+.if exists(${WRKSRC}/${OPSYS}/Scripts)
 SCRIPTS+=	${WRKSRC}/${OPSYS}/Scripts/*
 .endif
 
