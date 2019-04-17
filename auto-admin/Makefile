@@ -7,7 +7,7 @@ MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bacon@NetBSD.org
-HOMEPAGE=	http://acadix.biz
+HOMEPAGE=	http://acadix.biz/
 COMMENT=	Automate common systems administration tasks
 LICENSE=	2-clause-bsd
 
@@ -16,13 +16,11 @@ USE_LANGUAGES=	# none
 NO_BUILD=	yes
 
 INSTALLATION_DIRS=	sbin
-PLIST_VARS+=	redhat
 
 .include "../../mk/bsd.prefs.mk"
 
 SCRIPTS=	${WRKSRC}/Common/Scripts/*
-.if exists(/etc/redhat-release)
-PLIST.redhat=	yes
+.if ${LOWER_VENDOR} == "redhat"
 SCRIPTS+=	${WRKSRC}/CentOS/Scripts/*
 .elif exists(${WRKSRC}/${OPSYS}/Scripts)
 SCRIPTS+=	${WRKSRC}/${OPSYS}/Scripts/*
