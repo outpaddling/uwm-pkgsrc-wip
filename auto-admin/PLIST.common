@@ -26,6 +26,7 @@ sbin/auto-enable-autologout
 sbin/auto-enable-passwdqc
 sbin/auto-file-secure
 sbin/auto-harden
+sbin/auto-idrac-passwd
 sbin/auto-insert-line
 sbin/auto-ipmi-install
 sbin/auto-krb-auth-setup
