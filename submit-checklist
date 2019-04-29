@@ -60,6 +60,8 @@ Makefile:
     When using variables such as PYTHONBIN outside build targets, wrap them
     in .if exists in case the command is not installed yet.
     
+    Add a test target if practical
+
     Final check: Walk through line-by-line
 
 Patching:
