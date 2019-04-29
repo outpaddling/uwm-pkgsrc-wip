@@ -90,7 +90,7 @@ PLIST:
 
 DESCR:
 
-    More than one line.
+    More than one line, but not more than a dozen or so
 
     fmt -w 79
 
