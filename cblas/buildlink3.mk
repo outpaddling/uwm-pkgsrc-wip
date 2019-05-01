@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	cblas
 CBLAS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.cblas+=	cblas>=1.0
-BUILDLINK_PKGSRCDIR.cblas?=	../../wip/cblas
+BUILDLINK_PKGSRCDIR.cblas?=	../../uwm-pkgsrc-wip/cblas
 BUILDLINK_DEPMETHOD.cblas?=	full
 .endif
 
