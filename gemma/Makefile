@@ -20,17 +20,17 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-# CXXFLAGS+=	-I${PREFIX}/include/eigen3 -DOPENBLAS -DOPENBLAS_LEGACY
-CXXFLAGS+=	-I${PREFIX}/include/eigen3
+CXXFLAGS+=	-I${PREFIX}/include/eigen3 -DOPENBLAS -DOPENBLAS_LEGACY
 CXXFLAGS+=	-fpermissive
-MAKE_FLAGS+=	LDFLAGS+="-llapack -lblas -lgsl -lcblas -lz"
+MAKE_FLAGS+=	LDFLAGS+="-lopenblas -lgsl -lcblas -lz"
 MAKE_FILE=	${FILESDIR}/Makefile
 
 PV=		0.98.1
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../math/blas/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+#.include "../../math/blas/buildlink3.mk"
+#.include "../../math/lapack/buildlink3.mk"
+.include "../../uwm-pkgsrc-wip/openblas-devel/buildlink3.mk"
 .include "../../uwm-pkgsrc-wip/cblas/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../math/eigen3/buildlink3.mk"
