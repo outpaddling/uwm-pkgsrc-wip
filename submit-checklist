@@ -42,8 +42,15 @@ Makefile:
     URLs should not have /../
     
     INSTALLATION_DIRS instead of AUTO_MKDIRS or MKDIR
+    
+    Respect INSTALL_UNSTRIPPED
+	e.g. use ${STRIP}, which is a no-op with INSTALL_UNSTRIPPED set,
+	 in post-install
 
     If update changes the binary package, bump PKGREVISION
+    
+    Check developer website for optional dependencies not flagged by
+    pkglint and QA
     
     Eliminate unneeded deps
     
