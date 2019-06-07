@@ -11,6 +11,8 @@ HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	HPC cluster admin tools
 LICENSE=	2-clause-bsd
 
+# Add py-hostlist dep
+
 DATADIR=	${PREFIX}/share/cluster-admin
 
 SUBST_CLASSES+=		datadir
