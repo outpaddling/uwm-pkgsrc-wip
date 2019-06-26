@@ -28,6 +28,7 @@ sbin/auto-file-secure
 sbin/auto-harden
 sbin/auto-idrac-passwd
 sbin/auto-insert-line
+sbin/auto-install-linux-flash
 sbin/auto-ipmi-install
 sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
