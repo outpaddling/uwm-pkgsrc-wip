@@ -17,6 +17,7 @@ sbin/auto-change-primary-group
 sbin/auto-change-uid
 sbin/auto-clean-disk
 sbin/auto-clean-pkgsrc
+sbin/auto-clean-ports
 sbin/auto-clean-tmp
 sbin/auto-denyhosts-remove-ip
 sbin/auto-denyhosts-setup
