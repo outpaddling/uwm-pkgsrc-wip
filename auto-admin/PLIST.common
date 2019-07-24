@@ -25,11 +25,13 @@ sbin/auto-disable-host-key-prompt
 sbin/auto-disable-tcp-timestamps
 sbin/auto-enable-autologout
 sbin/auto-enable-passwdqc
+sbin/auto-fetch-install-media
 sbin/auto-file-secure
 sbin/auto-harden
 sbin/auto-idrac-passwd
 sbin/auto-insert-line
 sbin/auto-install-linux-flash
+sbin/auto-install-media-distname
 sbin/auto-ipmi-install
 sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser

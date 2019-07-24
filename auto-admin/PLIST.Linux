@@ -2,8 +2,6 @@
 sbin/auto-cuda-install
 sbin/auto-disable-file-transfers
 sbin/auto-disable-hyperthreading
-sbin/auto-fetch-install-media
-sbin/auto-install-media-distname
 sbin/auto-ldap-client-setup
 sbin/auto-pxe-installer-setup
 sbin/auto-register-dhcp-hostname
