@@ -7,7 +7,7 @@ MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
 		http://outpaddling.mooo.com/~bacon/Acadix/Ports/distfiles/
 EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	jwbacon@tds.net
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
