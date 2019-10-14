@@ -18,5 +18,17 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+post-patch:
+	${MV} ${WRKSRC}/terminfo/M ${WRKSRC}/terminfo/m
+	${MV} ${WRKSRC}/terminfo/N ${WRKSRC}/terminfo/n
+	${MV} ${WRKSRC}/terminfo/P ${WRKSRC}/terminfo/p
+	${MV} ${WRKSRC}/terminfo/Q ${WRKSRC}/terminfo/q
+	${MV} ${WRKSRC}/terminfo/T ${WRKSRC}/terminfo/t
+	${MV} ${WRKSRC}/terminfo/X ${WRKSRC}/terminfo/x
+.endif
+
 .include "../../uwm-pkgsrc-wip/libbacon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
