@@ -48,6 +48,7 @@ sbin/auto-pkgsrc-remote-x11
 sbin/auto-pkgsrc-setup
 sbin/auto-print-make-variable
 sbin/auto-pxe-node-discover
+sbin/auto-remove-from-group
 sbin/auto-remove-user
 sbin/auto-replace-file
 sbin/auto-restore-ownership
