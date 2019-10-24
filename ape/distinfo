@@ -4,3 +4,5 @@ SHA1 (ape-3.5.3.tar.xz) = 2b376005b3f21eef28a844c71290e0a5de097dd4
 RMD160 (ape-3.5.3.tar.xz) = 5c167dfb55b4d2c32f84a81879e49bd1b2bb7b77
 SHA512 (ape-3.5.3.tar.xz) = 758e0615bff8599200e09f66fe7dcbd75df87620bfa8a8e23dd06754221db9de291ad46459ac8ef566a2543415ad7e3c6c3753a53dfe47abb15ffc886bf4ede9
 Size (ape-3.5.3.tar.xz) = 137944 bytes
+SHA1 (patch-build__m.c) = e384ede2c6750ebe1a969a1dfb8b4ead14de857c
+SHA1 (patch-edit.h) = 61825cd79a9e2cab4107b0124f6da694c02bda97
