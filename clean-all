@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if ! which bmake; then
+if ! which bmake > /dev/null; then
     MAKE=make
 else
     MAKE=bmake
@@ -16,4 +16,5 @@ for pkg in *; do
     fi
 done
 find . -name '.*.bak' -exec rm '{}' \;
+find . -name svn-commit.tmp -exec rm '{}' \;
 
