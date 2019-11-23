@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	auto-admin-0.4.9
+DISTNAME=	auto-admin-0.4.10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
 		http://outpaddling.mooo.com/~bacon/Acadix/Ports/distfiles/
