@@ -30,6 +30,7 @@ sbin/auto-enable-autologout
 sbin/auto-enable-passwdqc
 sbin/auto-fetch-install-media
 sbin/auto-file-secure
+sbin/auto-fusefs-install
 sbin/auto-harden
 sbin/auto-idrac-passwd
 sbin/auto-insert-line
