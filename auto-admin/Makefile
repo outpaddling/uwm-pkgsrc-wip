@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	auto-admin-0.4.10
+DISTNAME=	auto-admin-0.5.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
 		http://outpaddling.mooo.com/~bacon/Acadix/Ports/distfiles/
@@ -18,10 +18,6 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	sbin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/Common/Scripts/* ${DESTDIR}${PREFIX}/sbin
-	if ${TEST} -d ${WRKSRC}/${OPSYS}/Scripts; then \
-		${INSTALL_SCRIPT} ${WRKSRC}/${OPSYS}/Scripts/* \
-			${DESTDIR}${PREFIX}/sbin; \
-	fi
+	${INSTALL_SCRIPT} ${WRKSRC}/Scripts/* ${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"
