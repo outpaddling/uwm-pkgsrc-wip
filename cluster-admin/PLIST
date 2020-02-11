@@ -105,6 +105,7 @@ sbin/slurm-sync-backup
 sbin/slurm-sync-config
 sbin/slurm-update-idle-nodes
 sbin/slurm-usage-report
+sbin/spcm-banner
 sbin/ssh-keygen-for-user
 sbin/update-cluster-admin-wip
 share/cluster-admin/WWW/centos-power.jpg
