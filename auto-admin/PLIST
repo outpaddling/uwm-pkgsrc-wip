@@ -58,6 +58,9 @@ sbin/auto-install-packages
 sbin/auto-install-pkgsrc-tree
 sbin/auto-ipfw-gateway-setup
 sbin/auto-ipmi-install
+sbin/auto-ipmi-remote-access
+sbin/auto-ipmi-remote-power
+sbin/auto-ipmi-remote-status
 sbin/auto-krb-auth-setup
 sbin/auto-ldap-adduser
 sbin/auto-ldap-client-setup
@@ -70,6 +73,7 @@ sbin/auto-nfs-add-share
 sbin/auto-nfs-restart
 sbin/auto-nfs-server-setup
 sbin/auto-octet-to-hex
+sbin/auto-operator-check
 sbin/auto-os-release
 sbin/auto-ostype
 sbin/auto-package-installed
@@ -112,5 +116,6 @@ sbin/auto-update-system
 sbin/auto-user-admin
 sbin/auto-useradd
 sbin/auto-using-pkgsrc
+sbin/auto-wheel-check
 sbin/auto-wifi-failover
 sbin/auto-xdm-toggle
