@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (spcm-0.4.1.tar.xz) = 4213f8d4cac10d8e522723131c62fd1a1778be3a
-RMD160 (spcm-0.4.1.tar.xz) = 8a7125114fb2647490d8926f0426f7f5d4c31ee9
-SHA512 (spcm-0.4.1.tar.xz) = 5fe41c4c26434186bf76abd0bab74c437d117f342f1cb31089b4de0bdb8416dfc3d50f56479f5a9738776b7dc858cb84d780dd447230992d65dfcab13d77038f
-Size (spcm-0.4.1.tar.xz) = 115616 bytes
+SHA1 (spcm-0.4.1.tar.xz) = 5e3c50db3bf41c036e0988083367e664d66e4021
+RMD160 (spcm-0.4.1.tar.xz) = 1aa71d647c79c6a6ee6f304b7d4625eb7cc3c531
+SHA512 (spcm-0.4.1.tar.xz) = 414608ef2e8ffb47f89ee6aaecc534737140c7762d3af5d9e5626d31abd6a691f41273ff9c4c4f3cbd16033b4ab2f037dd334aedb2db7825d7a15d1036d5c4bc
+Size (spcm-0.4.1.tar.xz) = 116424 bytes

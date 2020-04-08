@@ -29,6 +29,8 @@ bin/slurm-shell
 bin/slurm-user-cores
 bin/topjob
 bin/topnode
+etc/spcm/slurm-node-resume
+etc/spcm/slurm-node-suspend
 libexec/add-gecos.awk
 sbin/cluster-add-to-group
 sbin/cluster-adduser
@@ -48,6 +50,7 @@ sbin/cluster-ganglia-restart
 sbin/cluster-get-sync-file
 sbin/cluster-highest-uid
 sbin/cluster-init-node
+sbin/cluster-ipmi-power-on
 sbin/cluster-krb-auth-setup
 sbin/cluster-lock-local-pw
 sbin/cluster-lock-user
@@ -59,6 +62,7 @@ sbin/cluster-passwd-expiration
 sbin/cluster-passwd-user-expiration
 sbin/cluster-pkgsrc-admin
 sbin/cluster-power-saver
+sbin/cluster-power-waster
 sbin/cluster-recreate-user
 sbin/cluster-remove-from-group
 sbin/cluster-remove-from-known-hosts
