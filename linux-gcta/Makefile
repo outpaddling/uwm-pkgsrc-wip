@@ -5,17 +5,10 @@
 #              Tue Mar 14 11:21:21 CDT 2017               #
 ###########################################################
 
-###########################################################
-# Unconverted and partially converted FreeBSD port syntax:
-
-#LICENSE_FILE=	${WRKSRC}/MIT_License.txt
-# Unknown tool: USE_TOOLS=	linux
-## ${UNZIP_CMD} looking for /usr/local/bin/unzip for some reason
-
 DISTNAME=	gcta_${PORTVERSION}
 PKGNAME=	linux-gcta-${PORTVERSION}
 CATEGORIES=	biology
-MASTER_SITES=	http://cnsgenomics.com/software/gcta/
+MASTER_SITES=	https://cnsgenomics.com/software/gcta/pre_gcta/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	bacon@NetBSD.org
