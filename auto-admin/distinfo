@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (auto-admin-0.5.0.tar.xz) = 370d9f7d1de949c0cdffd7466466e64e58dd4ec5
-RMD160 (auto-admin-0.5.0.tar.xz) = d9c2d8d2eaf621abf13ce8585cf05c2c34cd13aa
-SHA512 (auto-admin-0.5.0.tar.xz) = 9efcd073b69922aa096db01c6a1c5e56da45dfd5e16f8aa7c2ff1f262a0dbb7eaa52dd8df35f8f0a86e78a95cd0abbdab08bef80984775f5700c5d955e18f1e9
-Size (auto-admin-0.5.0.tar.xz) = 68832 bytes
+SHA1 (auto-admin-0.6.2.tar.xz) = 2b6a844dd797e4ec81e6e2ed3f8a0d08beadc05d
+RMD160 (auto-admin-0.6.2.tar.xz) = 86ff1faf8aa00a35967e8e5746a487cb2110ffd7
+SHA512 (auto-admin-0.6.2.tar.xz) = 2639c100914469ec8db281ca8028f21194f915872c7d37bf98b89b1e1014723aae20a78ef30ead5c6d4d6e16d0649b503a4d9b424fcb8908849267d5381ad2d4
+Size (auto-admin-0.6.2.tar.xz) = 72624 bytes
