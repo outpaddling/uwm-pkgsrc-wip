@@ -5,10 +5,10 @@
 #              Tue Mar 14 11:21:21 CDT 2017               #
 ###########################################################
 
-DISTNAME=	gcta_${PORTVERSION}
+DISTNAME=	gcta_${PORTVERSION}beta
 PKGNAME=	linux-gcta-${PORTVERSION}
 CATEGORIES=	biology
-MASTER_SITES=	https://cnsgenomics.com/software/gcta/pre_gcta/
+MASTER_SITES=	https://cnsgenomics.com/software/gcta/bin/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	bacon@NetBSD.org
@@ -20,14 +20,10 @@ NO_BUILD=	yes
 
 USE_TOOLS=	unzip
 
-PORTVERSION=	1.26.0
+PORTVERSION=	1.93.1
 DATADIR=	${PREFIX}/share/gcta
 
 INSTALLATION_DIRS=	bin ${DATADIR}
-
-do-extract:
-	${MKDIR} ${WRKSRC}
-	cd ${WRKSRC} && unzip ${DISTDIR}/${DISTFILES}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/gcta64 ${DESTDIR}${PREFIX}/bin
