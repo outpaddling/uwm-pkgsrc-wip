@@ -1,9 +1,8 @@
 # $NetBSD$
 
-DISTNAME=	spcm-0.4.1
+DISTNAME=	SPCM-0.4.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://acadix.biz/Ports/distfiles/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
 MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/spcm.php
