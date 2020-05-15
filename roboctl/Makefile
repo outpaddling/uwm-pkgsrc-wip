@@ -1,10 +1,9 @@
 # $NetBSD$
 # FreeBSD Id: ports/devel/roboctl/Makefile,v 1.9 2010/03/28 06:33:38 dinoex Exp
 
-DISTNAME=	roboctl-0.3.9
+DISTNAME=	RoboCTL-0.3.9
 CATEGORIES=	devel
-MASTER_SITES=	http://acadix.biz/Ports/distfiles/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports
@@ -41,5 +40,5 @@ post-install:
 
 # Not working yet
 # .include "../../uwm-pkgsrc-wip/libgamepad/buildlink3.mk"
-.include "../../uwm-pkgsrc-wip/libusb/buildlink3.mk"
+.include "../../devel/libusb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

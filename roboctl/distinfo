@@ -1,5 +1,6 @@
 $NetBSD$
 
-SHA1 (roboctl-0.3.9.tar.xz) = 5c88368519754b76cd6a998686c5695aa4163592
-RMD160 (roboctl-0.3.9.tar.xz) = 1ca80c38114eef61047bf4fa1f39305a3710d907
-Size (roboctl-0.3.9.tar.xz) = 270264 bytes
+SHA1 (RoboCTL-0.3.9.tar.gz) = 9326adf25fb78a683afeabb6541a101534f2ed6f
+RMD160 (RoboCTL-0.3.9.tar.gz) = eb0d1b643fd420e4aff2b43ca7bbe251db05f404
+SHA512 (RoboCTL-0.3.9.tar.gz) = 6cdd91e3af45d56ac41d621fed8cb445922b568d07518b0627f11cecc74569645fce39d5dae29118f4ced381da7328914fdb0e376ed2e5865cdda9312cafc6af
+Size (RoboCTL-0.3.9.tar.gz) = 413078 bytes
