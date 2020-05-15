@@ -1,15 +1,13 @@
 # $NetBSD$
 #
 
-DISTNAME=	detab-0.1
+DISTNAME=	detab-0.1.0
 CATEGORIES=	textproc
-MASTER_SITES=	http://acadix.biz/Ports/distfiles/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	bacon@NetBSD.org
 HOMEPAGE=	http://acadix.biz/Ports/distfiles/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Replace tabs with spaces in a text file
 #LICENSE=	# TODO: (see mk/license.mk)
-
-INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 .include "../../mk/bsd.pkg.mk"
