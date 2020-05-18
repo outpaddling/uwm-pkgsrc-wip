@@ -1,9 +1,0 @@
-$NetBSD$
-
-SHA1 (blasr_libcpp-2016.09.07-c7d95cc8aec85ccb85161b67a613413c9ceee3cf.tar.gz) = ce7be64592650459708afe6d09ea8b12b511f611
-RMD160 (blasr_libcpp-2016.09.07-c7d95cc8aec85ccb85161b67a613413c9ceee3cf.tar.gz) = 4e78854291f2e96ed138ab50cf9303659fd21859
-SHA512 (blasr_libcpp-2016.09.07-c7d95cc8aec85ccb85161b67a613413c9ceee3cf.tar.gz) = 8669151f7401773b527ace8631dffd2709c142011c2b2457c4a3e711d03b3b51acda8c348d29cd24674adb49e530eb6fa398a2d530ca396b48ae16f1114c6764
-Size (blasr_libcpp-2016.09.07-c7d95cc8aec85ccb85161b67a613413c9ceee3cf.tar.gz) = 1342915 bytes
-SHA1 (patch-alignment_ipc_SharedMemoryAllocator.hpp) = 75c69a0e9764efcad2476838e1832dd03ea777cc
-SHA1 (patch-alignment_tuples_TupleMask.h) = 27c7db0719aecd5c8b674b2973fa89502ae9b21f
-SHA1 (patch-configure.py) = 4b6d0d61ee4caf3686e324e04986b9d05d8d024e

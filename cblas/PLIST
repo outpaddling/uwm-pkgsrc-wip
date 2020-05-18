@@ -1,5 +1,0 @@
-@comment $NetBSD$
-include/cblas.h
-include/cblas_f77.h
-lib/libcblas.a
-lib/libcblas.so

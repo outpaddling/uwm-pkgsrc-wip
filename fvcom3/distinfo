@@ -1,7 +1,0 @@
-$NetBSD$
-
-SHA1 (sourcecode.tar.gz) = 9894e4b388f4248d39a3e453dcd20ccc5cfd6d60
-RMD160 (sourcecode.tar.gz) = 9e178bca3bbe67d6edf33bedf2ccb15f8c9b53f9
-Size (sourcecode.tar.gz) = 92938063 bytes
-SHA1 (patch-METIS__source_makefile) = e89ffbd93143a3a8216275b15c055f2150c492ca
-SHA1 (patch-Makefile) = 6dfc6bcc483bbccfdbdd19ac82d605dfa3e39732

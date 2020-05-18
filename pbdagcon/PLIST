@@ -1,4 +1,0 @@
-@comment $NetBSD$
-bin/dazcon
-bin/pbdagcon
-bin/pbdagcon_wf.sh
