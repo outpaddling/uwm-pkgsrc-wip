@@ -1,6 +1,0 @@
-$NetBSD$
-
-SHA1 (nco-4.4.8.tar.gz) = e57cbba1f6e3e5df64424a25859b0da03abc72f9
-RMD160 (nco-4.4.8.tar.gz) = b7d58fbd0ea4e0b4d54d618bc382f09205cb1f25
-Size (nco-4.4.8.tar.gz) = 8249281 bytes
-SHA1 (patch-src_nco++_ncoLexer.hpp) = 9fb780c9b0f2495ec0bed70b1521089dc7160b5e

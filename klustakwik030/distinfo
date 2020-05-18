@@ -1,6 +1,0 @@
-$NetBSD$
-
-SHA1 (klustakwik-0.3.0.rc3.tar.gz) = e489d64d86d49cf8a11adb42ec8d963ff8a86f7f
-RMD160 (klustakwik-0.3.0.rc3.tar.gz) = 3b3aaf4a61f7b3e67030419a9cc841382e368b1a
-Size (klustakwik-0.3.0.rc3.tar.gz) = 49617 bytes
-SHA1 (patch-makefile) = 5526e388eec05659d53ef814e0b25e57a970223f
