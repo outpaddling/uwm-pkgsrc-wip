@@ -1,6 +1,6 @@
 $NetBSD$
 
-SHA1 (libbacon-1.2.2.tar.xz) = 02f8e63837ba61ee8e5e861e82378b8b1b1cf87a
-RMD160 (libbacon-1.2.2.tar.xz) = 17c1c3e5c7b1615b1a8bc1f86ab0524a348312dc
-SHA512 (libbacon-1.2.2.tar.xz) = 693a0734e7547b85a79d07fd7993c9538a7d49d0bed469d5dbc49b891f2d509bd7d03946ae8dc64eef0fa6f52a0d05c01a45aecbfccf0268f3c101b80e3c9b8f
-Size (libbacon-1.2.2.tar.xz) = 42880 bytes
+SHA1 (libbacon-1.2.2.tar.gz) = 5e11179be6a27942fb30cc890b9a635fbec6757d
+RMD160 (libbacon-1.2.2.tar.gz) = a2935f52d736ea303bec71fe9bb475f095fb7c42
+SHA512 (libbacon-1.2.2.tar.gz) = 018b8efb88ddf683419cfefd0ee7baa9063d8cf9d149152f42feef541b4eac2834f8d675ef7b0de0126b95eb738630fbfe2d109ffad4c9e41f955dd1d7783bf7
+Size (libbacon-1.2.2.tar.gz) = 51178 bytes

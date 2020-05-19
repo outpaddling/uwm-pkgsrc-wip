@@ -5,9 +5,9 @@ BUILDLINK_TREE+=	libbacon
 .if !defined(LIBBACON_BUILDLINK3_MK)
 LIBBACON_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libbacon+=	libbacon>=1.2.1
-BUILDLINK_PKGSRCDIR.libbacon?=	../../uwm-pkgsrc-wip/libbacon
-BUILDLINK_DEPMETHOD.libbacon?=	build
+BUILDLINK_API_DEPENDS.libbacon+=	libbacon>=1.2.2
+BUILDLINK_PKGSRCDIR.libbacon?=		../../wip/libbacon
+BUILDLINK_DEPMETHOD.libbacon?=		build
 .endif	# LIBBACON_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libbacon

@@ -3,17 +3,14 @@
 
 DISTNAME=	libbacon-1.2.2
 CATEGORIES=	devel
-MASTER_SITES=	http://acadix.biz/Ports/distfiles/ \
-		http://outpaddling.mooo.com/~bacon/Acadix/Ports/distfiles/
-EXTRACT_SUFX=	.tar.xz
+MASTER_SITES=	${MASTER_SITE_GITHUB:=outpaddling/}
 
-MAINTAINER=	jwbacon@tds.net
-HOMEPAGE=	http://acadix.biz/Ports/distfiles/
-COMMENT=	Miscellaneous functions that needed a home
+MAINTAINER=	bacon@NetBSD.org
+HOMEPAGE=	https://github.com/outpaddling/libbacon
+COMMENT=	Miscellaneous experimental functions
 LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-EXTRACT_SUFX=	.tar.xz
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
